@@ -5,6 +5,7 @@
 **Problem Statement ID:** 26044  
 **Problem Statement:** Portal for Academia–Industry collaboration for Skill Mapping, Internships and Placement  
 **Team:** Code Pirates
+**Team ID:** 148842
 
 PlacementOS is a unified Academia–Industry collaboration and placement intelligence platform that connects students, industry, academicians, and institutions in one skill-driven ecosystem.
 
