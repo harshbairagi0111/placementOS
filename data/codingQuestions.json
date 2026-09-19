@@ -1,0 +1,4448 @@
+[
+  {
+    "slug": "two-sum",
+    "title": "Two Sum",
+    "difficulty": "EASY",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Hashing",
+    "tags": [
+      "array",
+      "hash-table",
+      "two-pointers"
+    ],
+    "company": "Google, Amazon, Meta",
+    "acceptance": "88%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Return the answer sorted in ascending order.",
+    "inputFormat": "First line contains n, the size of array. Second line contains n space-separated integers. Third line contains integer target.",
+    "outputFormat": "Two space-separated integers representing the 0-based indices in ascending order.",
+    "constraints": [
+      "2 <= nums.length <= 10^4",
+      "-10^9 <= nums[i] <= 10^9",
+      "-10^9 <= target <= 10^9",
+      "Exactly one valid answer exists."
+    ],
+    "examples": [
+      {
+        "input": "4\n2 7 11 15\n9",
+        "output": "0 1",
+        "explanation": "nums[0] + nums[1] == 9, so we return 0 1."
+      },
+      {
+        "input": "3\n3 2 4\n6",
+        "output": "1 2",
+        "explanation": "nums[1] + nums[2] == 6, so we return 1 2."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // Your code here\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def twoSum(self, nums: list[int], target: int) -> list[int]:\n        # Your code here\n        return []",
+      "java": "import java.util.HashMap;\n\npublic class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // Your code here\n        return new int[0];\n    }\n}",
+      "javascript": "function twoSum(nums, target) {\n  // Your code here\n  return [];\n}",
+      "typescript": "function twoSum(nums: number[], target: number): number[] {\n  // Your code here\n  return [];\n}",
+      "c": "int* twoSum(int* nums, int numsSize, int target, int* returnSize) {\n    *returnSize = 2;\n    return NULL;\n}",
+      "go": "package main\n\nfunc twoSum(nums []int, target int) []int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ts-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n2 7 11 15\n9",
+        "expectedOutput": "0 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3\n3 2 4\n6",
+        "expectedOutput": "1 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n3 3\n6",
+        "expectedOutput": "0 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-hid-1",
+        "visibility": "HIDDEN",
+        "input": "5\n-1 -2 -3 -4 -5\n-8",
+        "expectedOutput": "2 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\n0 4 3 0\n0",
+        "expectedOutput": "0 3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n1 5 10 20 30 40\n50",
+        "expectedOutput": "2 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5\n1000000000 500 200 300 -1000000000\n0",
+        "expectedOutput": "0 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ts-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n-10 7 19 15\n9",
+        "expectedOutput": "0 2",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "maximum-subarray",
+    "title": "Maximum Subarray (Kadane Algorithm)",
+    "difficulty": "MEDIUM",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Dynamic Programming",
+    "tags": [
+      "array",
+      "divide-and-conquer",
+      "dynamic-programming"
+    ],
+    "company": "Amazon, Microsoft, Apple",
+    "acceptance": "82%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given an integer array nums, find the subarray with the largest sum, and return its sum. A subarray is a contiguous non-empty sequence of elements within an array.",
+    "inputFormat": "First line contains n, the number of elements. Second line contains n space-separated integers.",
+    "outputFormat": "A single integer representing the maximum subarray sum.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "9\n-2 1 -3 4 -1 2 1 -5 4",
+        "output": "6",
+        "explanation": "Subarray [4, -1, 2, 1] has largest sum 6."
+      },
+      {
+        "input": "1\n1",
+        "output": "1",
+        "explanation": "Subarray [1] has largest sum 1."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxSubArray(vector<int>& nums) {\n        // Your code here\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def maxSubArray(self, nums: list[int]) -> int:\n        # Your code here\n        return 0",
+      "java": "public class Solution {\n    public int maxSubArray(int[] nums) {\n        // Your code here\n        return 0;\n    }\n}",
+      "javascript": "function maxSubArray(nums) {\n  // Your code here\n  return 0;\n}",
+      "typescript": "function maxSubArray(nums: number[]): number {\n  // Your code here\n  return 0;\n}",
+      "c": "int maxSubArray(int* nums, int numsSize) {\n    return 0;\n}",
+      "go": "package main\n\nfunc maxSubArray(nums []int) int {\n    return 0\n}",
+      "rust": "impl Solution {\n    pub fn max_sub_array(nums: Vec<i32>) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ms-pub-1",
+        "visibility": "PUBLIC",
+        "input": "9\n-2 1 -3 4 -1 2 1 -5 4",
+        "expectedOutput": "6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-pub-3",
+        "visibility": "PUBLIC",
+        "input": "5\n5 4 -1 7 8",
+        "expectedOutput": "23",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-1",
+        "visibility": "HIDDEN",
+        "input": "3\n-3 -2 -1",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-2",
+        "visibility": "HIDDEN",
+        "input": "6\n-1 -2 -3 -4 -5 -6",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n-2 1 -3 4 -1",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-4",
+        "visibility": "HIDDEN",
+        "input": "8\n10 -5 20 -15 30 -5 10 -40",
+        "expectedOutput": "40",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n100 -200 300 -50",
+        "expectedOutput": "300",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "move-zeroes",
+    "title": "Move Zeroes",
+    "difficulty": "EASY",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Two Pointers",
+    "tags": [
+      "array",
+      "two-pointers"
+    ],
+    "company": "Facebook, Bloomberg, Uber",
+    "acceptance": "90%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given an integer array nums, move all 0s to the end of it while maintaining the relative order of the non-zero elements. Must be done in-place without making a copy of the array.",
+    "inputFormat": "First line contains n, the number of elements. Second line contains n space-separated integers.",
+    "outputFormat": "The array elements after moving zeroes, space-separated.",
+    "constraints": [
+      "1 <= nums.length <= 10^4",
+      "-2^31 <= nums[i] <= 2^31 - 1"
+    ],
+    "examples": [
+      {
+        "input": "5\n0 1 0 3 12",
+        "output": "1 3 12 0 0",
+        "explanation": "Zeroes moved to the end, non-zero order maintained."
+      },
+      {
+        "input": "1\n0",
+        "output": "0",
+        "explanation": "Single 0 stays at index 0."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    void moveZeroes(vector<int>& nums) {\n        // Your code here\n    }\n};",
+      "python": "class Solution:\n    def moveZeroes(self, nums: list[int]) -> None:\n        # Do not return anything, modify nums in-place\n        pass",
+      "java": "public class Solution {\n    public void moveZeroes(int[] nums) {\n        // Your code here\n    }\n}",
+      "javascript": "function moveZeroes(nums) {\n  // Modify nums in-place\n}",
+      "typescript": "function moveZeroes(nums: number[]): void {\n  // Modify nums in-place\n}",
+      "c": "void moveZeroes(int* nums, int numsSize) {\n}",
+      "go": "package main\n\nfunc moveZeroes(nums []int) {\n}",
+      "rust": "impl Solution {\n    pub fn move_zeroes(nums: &mut Vec<i32>) {\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "mz-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\n0 1 0 3 12",
+        "expectedOutput": "1 3 12 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n0",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-pub-3",
+        "visibility": "PUBLIC",
+        "input": "4\n1 2 3 4",
+        "expectedOutput": "1 2 3 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-hid-1",
+        "visibility": "HIDDEN",
+        "input": "4\n0 0 0 1",
+        "expectedOutput": "1 0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n0 0 0 0 0",
+        "expectedOutput": "0 0 0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n4 0 5 0 6 0",
+        "expectedOutput": "4 5 6 0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-hid-4",
+        "visibility": "HIDDEN",
+        "input": "2\n2 1",
+        "expectedOutput": "2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mz-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n0 1 0 0 2",
+        "expectedOutput": "1 2 0 0 0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "EASY",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Greedy",
+    "tags": [
+      "array",
+      "dynamic-programming",
+      "greedy"
+    ],
+    "company": "Amazon, Microsoft, Goldman Sachs",
+    "acceptance": "86%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "You are given an array prices where prices[i] is the price of a given stock on the i-th day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock. Return the maximum profit you can achieve. If no profit can be achieved, return 0.",
+    "inputFormat": "First line contains n, the number of days. Second line contains n space-separated prices.",
+    "outputFormat": "A single integer representing the maximum profit.",
+    "constraints": [
+      "1 <= prices.length <= 10^5",
+      "0 <= prices[i] <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "6\n7 1 5 3 6 4",
+        "output": "5",
+        "explanation": "Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5."
+      },
+      {
+        "input": "5\n7 6 4 3 1",
+        "output": "0",
+        "explanation": "Prices decrease monotonically, no positive profit is possible."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // Your code here\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def maxProfit(self, prices: list[int]) -> int:\n        # Your code here\n        return 0",
+      "java": "public class Solution {\n    public int maxProfit(int[] prices) {\n        // Your code here\n        return 0;\n    }\n}",
+      "javascript": "function maxProfit(prices) {\n  // Your code here\n  return 0;\n}",
+      "typescript": "function maxProfit(prices: number[]): number {\n  // Your code here\n  return 0;\n}",
+      "c": "int maxProfit(int* prices, int pricesSize) {\n    return 0;\n}",
+      "go": "package main\n\nfunc maxProfit(prices []int) int {\n    return 0\n}",
+      "rust": "impl Solution {\n    pub fn max_profit(prices: Vec<i32>) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "bs-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\n7 1 5 3 6 4",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-pub-2",
+        "visibility": "PUBLIC",
+        "input": "5\n7 6 4 3 1",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n2 4",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n5",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n1 2 3 4 5",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n3 2 6 5 0 3",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-4",
+        "visibility": "HIDDEN",
+        "input": "7\n9 2 4 3 8 5 1",
+        "expectedOutput": "6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n5 5 5 5",
+        "expectedOutput": "0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "three-sum",
+    "title": "3Sum",
+    "difficulty": "MEDIUM",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Two Pointers",
+    "tags": [
+      "array",
+      "two-pointers",
+      "sorting"
+    ],
+    "company": "Meta, Amazon, Google",
+    "acceptance": "74%",
+    "timeComplexity": "O(N^2)",
+    "spaceComplexity": "O(1)",
+    "description": "Given an integer array nums, return all triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0. Notice that the solution set must not contain duplicate triplets. Triplets and internal numbers must be sorted in ascending order.",
+    "inputFormat": "First line contains n, the number of elements. Second line contains n space-separated integers.",
+    "outputFormat": "Each unique triplet printed on a new line with space-separated values, sorted ascending. If none, output NONE.",
+    "constraints": [
+      "3 <= nums.length <= 3000",
+      "-10^5 <= nums[i] <= 10^5"
+    ],
+    "examples": [
+      {
+        "input": "6\n-1 0 1 2 -1 -4",
+        "output": "-1 -1 2\n-1 0 1",
+        "explanation": "Distinct triplets summing to zero are [-1,-1,2] and [-1,0,1]."
+      },
+      {
+        "input": "3\n0 1 1",
+        "output": "NONE",
+        "explanation": "No three numbers sum to 0."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> threeSum(vector<int>& nums) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def threeSum(self, nums: list[int]) -> list[list[int]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<Integer>> threeSum(int[] nums) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function threeSum(nums) {\n  return [];\n}",
+      "typescript": "function threeSum(nums: number[]): number[][] {\n  return [];\n}",
+      "c": "int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes) {\n    *returnSize = 0;\n    return NULL;\n}",
+      "go": "package main\n\nfunc threeSum(nums []int) [][]int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "3s-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\n-1 0 1 2 -1 -4",
+        "expectedOutput": "-1 -1 2\n-1 0 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3\n0 1 1",
+        "expectedOutput": "NONE",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-pub-3",
+        "visibility": "PUBLIC",
+        "input": "3\n0 0 0",
+        "expectedOutput": "0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-hid-1",
+        "visibility": "HIDDEN",
+        "input": "4\n-2 0 1 1",
+        "expectedOutput": "-2 1 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n-5 2 3 -2 0",
+        "expectedOutput": "-5 2 3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n1 2 -2 -1 -4 3",
+        "expectedOutput": "-4 1 3\n-2 -1 3\n-1 -2 3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-hid-4",
+        "visibility": "HIDDEN",
+        "input": "4\n1 2 3 4",
+        "expectedOutput": "NONE",
+        "isActive": true
+      },
+      {
+        "testCaseId": "3s-hid-5",
+        "visibility": "HIDDEN",
+        "input": "6\n-2 0 0 2 2 -2",
+        "expectedOutput": "-2 0 2",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "product-of-array-except-self",
+    "title": "Product of Array Except Self",
+    "difficulty": "MEDIUM",
+    "category": "Arrays",
+    "categoryLabel": "Arrays & Prefix Products",
+    "tags": [
+      "array",
+      "prefix-sum"
+    ],
+    "company": "Amazon, Apple, Microsoft",
+    "acceptance": "84%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]. The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer. You must write an algorithm that runs in O(n) time and without using the division operation.",
+    "inputFormat": "First line contains n, the number of elements. Second line contains n space-separated integers.",
+    "outputFormat": "Space-separated integers representing the resulting array.",
+    "constraints": [
+      "2 <= nums.length <= 10^5",
+      "-30 <= nums[i] <= 30"
+    ],
+    "examples": [
+      {
+        "input": "4\n1 2 3 4",
+        "output": "24 12 8 6",
+        "explanation": "Product of all elements except index i."
+      },
+      {
+        "input": "5\n-1 1 0 -3 3",
+        "output": "0 0 9 0 0",
+        "explanation": "Product with zero handling."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> productExceptSelf(vector<int>& nums) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def productExceptSelf(self, nums: list[int]) -> list[int]:\n        return []",
+      "java": "public class Solution {\n    public int[] productExceptSelf(int[] nums) {\n        return new int[0];\n    }\n}",
+      "javascript": "function productExceptSelf(nums) {\n  return [];\n}",
+      "typescript": "function productExceptSelf(nums: number[]): number[] {\n  return [];\n}",
+      "c": "int* productExceptSelf(int* nums, int numsSize, int* returnSize) {\n    *returnSize = numsSize;\n    return NULL;\n}",
+      "go": "package main\n\nfunc productExceptSelf(nums []int) []int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn product_except_self(nums: Vec<i32>) -> Vec<i32> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "pes-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n1 2 3 4",
+        "expectedOutput": "24 12 8 6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-pub-2",
+        "visibility": "PUBLIC",
+        "input": "5\n-1 1 0 -3 3",
+        "expectedOutput": "0 0 9 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n5 10",
+        "expectedOutput": "10 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-hid-1",
+        "visibility": "HIDDEN",
+        "input": "3\n0 0 2",
+        "expectedOutput": "0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\n2 3 4 5",
+        "expectedOutput": "60 40 30 24",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4\n-1 -1 -1 -1",
+        "expectedOutput": "-1 -1 -1 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n10 0 5",
+        "expectedOutput": "0 50 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "pes-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n1 1 1 1 1",
+        "expectedOutput": "1 1 1 1 1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "EASY",
+    "category": "Strings",
+    "categoryLabel": "Strings & Hashing",
+    "tags": [
+      "hash-table",
+      "string",
+      "sorting"
+    ],
+    "company": "Uber, Google, Goldman Sachs",
+    "acceptance": "92%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given two strings s and t, return true if t is an anagram of s, and false otherwise. An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.",
+    "inputFormat": "First line contains string s. Second line contains string t.",
+    "outputFormat": "true or false",
+    "constraints": [
+      "1 <= s.length, t.length <= 5 * 10^4",
+      "s and t consist of lowercase English letters."
+    ],
+    "examples": [
+      {
+        "input": "anagram\nnagaram",
+        "output": "true",
+        "explanation": "Both strings have identical letter counts."
+      },
+      {
+        "input": "rat\ncar",
+        "output": "false",
+        "explanation": "Letters do not match."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <string>\n#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isAnagram(string s, string t) {\n        return false;\n    }\n};",
+      "python": "class Solution:\n    def isAnagram(self, s: str, t: str) -> bool:\n        return False",
+      "java": "public class Solution {\n    public boolean isAnagram(String s, String t) {\n        return false;\n    }\n}",
+      "javascript": "function isAnagram(s, t) {\n  return false;\n}",
+      "typescript": "function isAnagram(s: string, t: string): boolean {\n  return false;\n}",
+      "c": "bool isAnagram(char* s, char* t) {\n    return false;\n}",
+      "go": "package main\n\nfunc isAnagram(s string, t string) bool {\n    return false\n}",
+      "rust": "impl Solution {\n    pub fn is_anagram(s: String, t: String) -> bool {\n        false\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "va-pub-1",
+        "visibility": "PUBLIC",
+        "input": "anagram\nnagaram",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-pub-2",
+        "visibility": "PUBLIC",
+        "input": "rat\ncar",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-pub-3",
+        "visibility": "PUBLIC",
+        "input": "a\na",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-hid-1",
+        "visibility": "HIDDEN",
+        "input": "ab\na",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-hid-2",
+        "visibility": "HIDDEN",
+        "input": "listen\nsilent",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-hid-3",
+        "visibility": "HIDDEN",
+        "input": "fluster\nrestful",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-hid-4",
+        "visibility": "HIDDEN",
+        "input": "aabbcc\nabcabc",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "va-hid-5",
+        "visibility": "HIDDEN",
+        "input": "aabbcc\naabbcd",
+        "expectedOutput": "false",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "valid-palindrome",
+    "title": "Valid Palindrome",
+    "difficulty": "EASY",
+    "category": "Strings",
+    "categoryLabel": "Strings & Two Pointers",
+    "tags": [
+      "two-pointers",
+      "string"
+    ],
+    "company": "Meta, Microsoft, Apple",
+    "acceptance": "89%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers. Given a string s, return true if it is a palindrome, or false otherwise.",
+    "inputFormat": "A single line containing the string s.",
+    "outputFormat": "true or false",
+    "constraints": [
+      "1 <= s.length <= 2 * 10^5",
+      "s consists only of printable ASCII characters."
+    ],
+    "examples": [
+      {
+        "input": "A man, a plan, a canal: Panama",
+        "output": "true",
+        "explanation": "\"amanaplanacanalpanama\" is a palindrome."
+      },
+      {
+        "input": "race a car",
+        "output": "false",
+        "explanation": "\"raceacar\" is not a palindrome."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <string>\n#include <cctype>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isPalindrome(string s) {\n        return false;\n    }\n};",
+      "python": "class Solution:\n    def isPalindrome(self, s: str) -> bool:\n        return False",
+      "java": "public class Solution {\n    public boolean isPalindrome(String s) {\n        return false;\n    }\n}",
+      "javascript": "function isPalindrome(s) {\n  return false;\n}",
+      "typescript": "function isPalindrome(s: string): boolean {\n  return false;\n}",
+      "c": "bool isPalindrome(char* s) {\n    return false;\n}",
+      "go": "package main\n\nfunc isPalindrome(s string) bool {\n    return false\n}",
+      "rust": "impl Solution {\n    pub fn is_palindrome(s: String) -> bool {\n        false\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "vp-pub-1",
+        "visibility": "PUBLIC",
+        "input": "A man, a plan, a canal: Panama",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-pub-2",
+        "visibility": "PUBLIC",
+        "input": "race a car",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-pub-3",
+        "visibility": "PUBLIC",
+        "input": "Madam, I'm Adam",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-1",
+        "visibility": "HIDDEN",
+        "input": "0P",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-2",
+        "visibility": "HIDDEN",
+        "input": "Was it a car or a cat I saw?",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-3",
+        "visibility": "HIDDEN",
+        "input": "No lemon, no melon",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-4",
+        "visibility": "HIDDEN",
+        "input": "12321",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-5",
+        "visibility": "HIDDEN",
+        "input": "123421",
+        "expectedOutput": "false",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "longest-substring-without-repeating-characters",
+    "title": "Longest Substring Without Repeating Characters",
+    "difficulty": "MEDIUM",
+    "category": "Strings",
+    "categoryLabel": "Strings & Sliding Window",
+    "tags": [
+      "hash-table",
+      "string",
+      "sliding-window"
+    ],
+    "company": "Amazon, Bloomberg, Google",
+    "acceptance": "81%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(min(N, M))",
+    "description": "Given a string s, find the length of the longest substring without repeating characters.",
+    "inputFormat": "A single line containing the string s.",
+    "outputFormat": "A single integer representing the length of the longest substring.",
+    "constraints": [
+      "0 <= s.length <= 5 * 10^4",
+      "s consists of English letters, digits, symbols and spaces."
+    ],
+    "examples": [
+      {
+        "input": "abcabcbb",
+        "output": "3",
+        "explanation": "The answer is \"abc\", with the length of 3."
+      },
+      {
+        "input": "bbbbb",
+        "output": "1",
+        "explanation": "The answer is \"b\", with the length of 1."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <string>\n#include <unordered_map>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLongestSubstring(string s) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def lengthOfLongestSubstring(self, s: str) -> int:\n        return 0",
+      "java": "import java.util.HashMap;\n\npublic class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        return 0;\n    }\n}",
+      "javascript": "function lengthOfLongestSubstring(s) {\n  return 0;\n}",
+      "typescript": "function lengthOfLongestSubstring(s: string): number {\n  return 0;\n}",
+      "c": "int lengthOfLongestSubstring(char* s) {\n    return 0;\n}",
+      "go": "package main\n\nfunc lengthOfLongestSubstring(s string) int {\n    return 0\n}",
+      "rust": "impl Solution {\n    pub fn length_of_longest_substring(s: String) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "lswrc-pub-1",
+        "visibility": "PUBLIC",
+        "input": "abcabcbb",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-pub-2",
+        "visibility": "PUBLIC",
+        "input": "bbbbb",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-pub-3",
+        "visibility": "PUBLIC",
+        "input": "pwwkew",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-hid-1",
+        "visibility": "HIDDEN",
+        "input": "au",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-hid-2",
+        "visibility": "HIDDEN",
+        "input": "abcdefg",
+        "expectedOutput": "7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-hid-3",
+        "visibility": "HIDDEN",
+        "input": "abba",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-hid-4",
+        "visibility": "HIDDEN",
+        "input": "tmmzuxt",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lswrc-hid-5",
+        "visibility": "HIDDEN",
+        "input": "dvdf",
+        "expectedOutput": "3",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "group-anagrams",
+    "title": "Group Anagrams",
+    "difficulty": "MEDIUM",
+    "category": "Strings",
+    "categoryLabel": "Strings & Hash Map",
+    "tags": [
+      "array",
+      "hash-table",
+      "string",
+      "sorting"
+    ],
+    "company": "Amazon, Apple, Uber",
+    "acceptance": "84%",
+    "timeComplexity": "O(N * K log K)",
+    "spaceComplexity": "O(N * K)",
+    "description": "Given an array of strings strs, group the anagrams together. Return the groups. Each group should have its words sorted alphabetically, and the groups should be sorted alphabetically by their first word.",
+    "inputFormat": "First line contains n, number of words. Second line contains n space-separated words.",
+    "outputFormat": "Each group on a new line with space-separated words.",
+    "constraints": [
+      "1 <= strs.length <= 10^4",
+      "0 <= strs[i].length <= 100",
+      "strs[i] consists of lowercase English letters."
+    ],
+    "examples": [
+      {
+        "input": "6\neat tea tan ate nat bat",
+        "output": "bat\nate eat tea\nnat tan",
+        "explanation": "Groups sorted alphabetically."
+      },
+      {
+        "input": "1\na",
+        "output": "a",
+        "explanation": "Single string group."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <string>\n#include <unordered_map>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<string>> groupAnagrams(vector<string>& strs) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<String>> groupAnagrams(String[] strs) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function groupAnagrams(strs) {\n  return [];\n}",
+      "typescript": "function groupAnagrams(strs: string[]): string[][] {\n  return [];\n}",
+      "c": "// Group anagrams helper",
+      "go": "package main\n\nfunc groupAnagrams(strs []string) [][]string {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ga-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\neat tea tan ate nat bat",
+        "expectedOutput": "bat\nate eat tea\nnat tan",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\na",
+        "expectedOutput": "a",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\nab ba",
+        "expectedOutput": "ab ba",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-hid-1",
+        "visibility": "HIDDEN",
+        "input": "3\na b c",
+        "expectedOutput": "a\nb\nc",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\nstop tops pots spot",
+        "expectedOutput": "pots spot stop tops",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4\nlisten silent enlist stone",
+        "expectedOutput": "enlist listen silent\nstone",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\naaa aaa aaa",
+        "expectedOutput": "aaa aaa aaa",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ga-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\ncat act rat tar",
+        "expectedOutput": "act cat\nrat tar",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "binary-search",
+    "title": "Binary Search",
+    "difficulty": "EASY",
+    "category": "Searching / Sorting",
+    "categoryLabel": "Searching & Sorting",
+    "tags": [
+      "binary-search",
+      "array"
+    ],
+    "company": "Apple, Google, Microsoft",
+    "acceptance": "92%",
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1. You must write an algorithm with O(log n) runtime complexity.",
+    "inputFormat": "First line contains n, number of elements. Second line contains n space-separated sorted integers. Third line contains target.",
+    "outputFormat": "The 0-based index of target, or -1 if not found.",
+    "constraints": [
+      "1 <= nums.length <= 10^4",
+      "-10^4 < nums[i], target < 10^4",
+      "All the integers in nums are unique.",
+      "nums is sorted in ascending order."
+    ],
+    "examples": [
+      {
+        "input": "6\n-1 0 3 5 9 12\n9",
+        "output": "4",
+        "explanation": "9 exists in nums and its index is 4."
+      },
+      {
+        "input": "6\n-1 0 3 5 9 12\n2",
+        "output": "-1",
+        "explanation": "2 does not exist in nums so return -1."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        return -1;\n    }\n};",
+      "python": "class Solution:\n    def search(self, nums: list[int], target: int) -> int:\n        return -1",
+      "java": "public class Solution {\n    public int search(int[] nums, int target) {\n        return -1;\n    }\n}",
+      "javascript": "function search(nums, target) {\n  return -1;\n}",
+      "typescript": "function search(nums: number[], target: number): number {\n  return -1;\n}",
+      "c": "int search(int* nums, int numsSize, int target) {\n    return -1;\n}",
+      "go": "package main\n\nfunc search(nums []int, target int) int {\n    return -1\n}",
+      "rust": "impl Solution {\n    pub fn search(nums: Vec<i32>, target: i32) -> i32 {\n        -1\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "bs-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\n-1 0 3 5 9 12\n9",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-pub-2",
+        "visibility": "PUBLIC",
+        "input": "6\n-1 0 3 5 9 12\n2",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n5\n5",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n5\n-5",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n2 5\n5",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n1 2 3 4 5\n1",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5\n1 2 3 4 5\n5",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bs-hid-5",
+        "visibility": "HIDDEN",
+        "input": "7\n10 20 30 40 50 60 70\n35",
+        "expectedOutput": "-1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "search-in-rotated-sorted-array",
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "MEDIUM",
+    "category": "Searching / Sorting",
+    "categoryLabel": "Searching & Binary Search",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "company": "Microsoft, Amazon, LinkedIn",
+    "acceptance": "80%",
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(1)",
+    "description": "There is an integer array nums sorted in ascending order (with distinct values). Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k. Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers. Third line contains target.",
+    "outputFormat": "0-based index of target, or -1.",
+    "constraints": [
+      "1 <= nums.length <= 5000",
+      "-10^4 <= nums[i], target <= 10^4",
+      "All values of nums are unique."
+    ],
+    "examples": [
+      {
+        "input": "7\n4 5 6 7 0 1 2\n0",
+        "output": "4",
+        "explanation": "0 is at index 4."
+      },
+      {
+        "input": "7\n4 5 6 7 0 1 2\n3",
+        "output": "-1",
+        "explanation": "3 is not in the array."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int search(vector<int>& nums, int target) {\n        return -1;\n    }\n};",
+      "python": "class Solution:\n    def search(self, nums: list[int], target: int) -> int:\n        return -1",
+      "java": "public class Solution {\n    public int search(int[] nums, int target) {\n        return -1;\n    }\n}",
+      "javascript": "function search(nums, target) {\n  return -1;\n}",
+      "typescript": "function search(nums: number[], target: number): number {\n  return -1;\n}",
+      "c": "int search(int* nums, int numsSize, int target) {\n    return -1;\n}",
+      "go": "package main\n\nfunc search(nums []int, target int) int {\n    return -1\n}",
+      "rust": "impl Solution {\n    pub fn search(nums: Vec<i32>, target: i32) -> i32 {\n        -1\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "srsa-pub-1",
+        "visibility": "PUBLIC",
+        "input": "7\n4 5 6 7 0 1 2\n0",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-pub-2",
+        "visibility": "PUBLIC",
+        "input": "7\n4 5 6 7 0 1 2\n3",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n1\n0",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n1\n1",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n3 1 2\n1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n5 1 2 3 4\n5",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n3 4 5 6 1 2\n2",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "srsa-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n4 5 6 7 1\n2",
+        "expectedOutput": "-1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "merge-intervals",
+    "title": "Merge Intervals",
+    "difficulty": "MEDIUM",
+    "category": "Searching / Sorting",
+    "categoryLabel": "Sorting & Intervals",
+    "tags": [
+      "array",
+      "sorting"
+    ],
+    "company": "Bloomberg, Amazon, Uber",
+    "acceptance": "84%",
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input, sorted by start time.",
+    "inputFormat": "First line contains n, number of intervals. Following n lines each contain two space-separated integers representing start and end.",
+    "outputFormat": "Each merged interval on a new line with start and end space-separated.",
+    "constraints": [
+      "1 <= intervals.length <= 10^4",
+      "intervals[i].length == 2",
+      "0 <= starti <= endi <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "4\n1 3\n2 6\n8 10\n15 18",
+        "output": "1 6\n8 10\n15 18",
+        "explanation": "Intervals [1,3] and [2,6] overlap, merging into [1,6]."
+      },
+      {
+        "input": "2\n1 4\n4 5",
+        "output": "1 5",
+        "explanation": "Intervals [1,4] and [4,5] are considered overlapping."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> merge(vector<vector<int>>& intervals) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def merge(self, intervals: list[list[int]]) -> list[list[int]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public int[][] merge(int[][] intervals) {\n        return new int[0][0];\n    }\n}",
+      "javascript": "function merge(intervals) {\n  return [];\n}",
+      "typescript": "function merge(intervals: number[][]): number[][] {\n  return [];\n}",
+      "c": "// Interval merge helper",
+      "go": "package main\n\nfunc merge(intervals [][]int) [][]int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn merge(intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "mi-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n1 3\n2 6\n8 10\n15 18",
+        "expectedOutput": "1 6\n8 10\n15 18",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2\n1 4\n4 5",
+        "expectedOutput": "1 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n1 4",
+        "expectedOutput": "1 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n1 4\n2 3",
+        "expectedOutput": "1 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n1 4\n0 4\n3 5",
+        "expectedOutput": "0 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n2 3\n4 5\n6 7",
+        "expectedOutput": "2 3\n4 5\n6 7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n1 10\n2 3\n4 5",
+        "expectedOutput": "1 10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mi-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n2 3\n1 5\n4 6\n8 9",
+        "expectedOutput": "1 6\n8 9",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "find-minimum-in-rotated-sorted-array",
+    "title": "Find Minimum in Rotated Sorted Array",
+    "difficulty": "MEDIUM",
+    "category": "Searching / Sorting",
+    "categoryLabel": "Searching & Binary Search",
+    "tags": [
+      "array",
+      "binary-search"
+    ],
+    "company": "Facebook, Amazon, Goldman Sachs",
+    "acceptance": "85%",
+    "timeComplexity": "O(log N)",
+    "spaceComplexity": "O(1)",
+    "description": "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. Given the sorted rotated array nums of unique elements, return the minimum element of this array. Must write an algorithm that runs in O(log n) time.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers.",
+    "outputFormat": "Single integer representing the minimum element.",
+    "constraints": [
+      "1 <= nums.length <= 5000",
+      "-5000 <= nums[i] <= 5000",
+      "All the integers of nums are unique."
+    ],
+    "examples": [
+      {
+        "input": "5\n3 4 5 1 2",
+        "output": "1",
+        "explanation": "The original array was [1,2,3,4,5] rotated 3 times."
+      },
+      {
+        "input": "7\n4 5 6 7 0 1 2",
+        "output": "0",
+        "explanation": "The minimum element is 0."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findMin(vector<int>& nums) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def findMin(self, nums: list[int]) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int findMin(int[] nums) {\n        return 0;\n    }\n}",
+      "javascript": "function findMin(nums) {\n  return 0;\n}",
+      "typescript": "function findMin(nums: number[]): number {\n  return 0;\n}",
+      "c": "int findMin(int* nums, int numsSize) {\n    return 0;\n}",
+      "go": "package main\n\nfunc findMin(nums []int) int {\n    return 0\n}",
+      "rust": "impl Solution {\n    pub fn find_min(nums: Vec<i32>) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "fm-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\n3 4 5 1 2",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-pub-2",
+        "visibility": "PUBLIC",
+        "input": "7\n4 5 6 7 0 1 2",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-pub-3",
+        "visibility": "PUBLIC",
+        "input": "4\n11 13 15 17",
+        "expectedOutput": "11",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n42",
+        "expectedOutput": "42",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n2 1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-hid-3",
+        "visibility": "HIDDEN",
+        "input": "2\n1 2",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n2 3 4 5 6 1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "fm-hid-5",
+        "visibility": "HIDDEN",
+        "input": "6\n5 6 1 2 3 4",
+        "expectedOutput": "1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "contains-duplicate",
+    "title": "Contains Duplicate",
+    "difficulty": "EASY",
+    "category": "Hashing",
+    "categoryLabel": "Hashing & Sets",
+    "tags": [
+      "array",
+      "hash-table",
+      "sorting"
+    ],
+    "company": "Apple, Amazon, Google",
+    "acceptance": "93%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers.",
+    "outputFormat": "true or false",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^9 <= nums[i] <= 10^9"
+    ],
+    "examples": [
+      {
+        "input": "4\n1 2 3 1",
+        "output": "true",
+        "explanation": "1 appears twice."
+      },
+      {
+        "input": "4\n1 2 3 4",
+        "output": "false",
+        "explanation": "All elements are distinct."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <unordered_set>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool containsDuplicate(vector<int>& nums) {\n        return false;\n    }\n};",
+      "python": "class Solution:\n    def containsDuplicate(self, nums: list[int]) -> bool:\n        return False",
+      "java": "import java.util.HashSet;\n\npublic class Solution {\n    public boolean containsDuplicate(int[] nums) {\n        return false;\n    }\n}",
+      "javascript": "function containsDuplicate(nums) {\n  return false;\n}",
+      "typescript": "function containsDuplicate(nums: number[]): boolean {\n  return false;\n}",
+      "c": "bool containsDuplicate(int* nums, int numsSize) {\n    return false;\n}",
+      "go": "package main\n\nfunc containsDuplicate(nums []int) bool {\n    return false\n}",
+      "rust": "impl Solution {\n    pub fn contains_duplicate(nums: Vec<i32>) -> bool {\n        false\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "cd-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n1 2 3 1",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-pub-2",
+        "visibility": "PUBLIC",
+        "input": "4\n1 2 3 4",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-pub-3",
+        "visibility": "PUBLIC",
+        "input": "10\n1 1 1 3 3 4 3 2 4 2",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n99",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n0 0",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n-1 -2 -3 -4 -1",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5\n-1 -2 -3 -4 -5",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cd-hid-5",
+        "visibility": "HIDDEN",
+        "input": "6\n100 200 300 400 500 100",
+        "expectedOutput": "true",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "title": "Top K Frequent Elements",
+    "difficulty": "MEDIUM",
+    "category": "Hashing",
+    "categoryLabel": "Hashing & Bucket Sort",
+    "tags": [
+      "array",
+      "hash-table",
+      "sorting",
+      "heap"
+    ],
+    "company": "Amazon, Meta, Yelp",
+    "acceptance": "84%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements. Output the result in descending order of frequency (or ascending numeric if frequency tied).",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers. Third line contains k.",
+    "outputFormat": "k space-separated integers sorted by frequency descending.",
+    "constraints": [
+      "1 <= nums.length <= 10^5",
+      "-10^4 <= nums[i] <= 10^4",
+      "k is in the range [1, the number of unique elements in the array]."
+    ],
+    "examples": [
+      {
+        "input": "6\n1 1 1 2 2 3\n2",
+        "output": "1 2",
+        "explanation": "1 appears 3 times, 2 appears 2 times."
+      },
+      {
+        "input": "1\n1\n1",
+        "output": "1",
+        "explanation": "Single element."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <unordered_map>\n#include <queue>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> topKFrequent(vector<int>& nums, int k) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def topKFrequent(self, nums: list[int], k: int) -> list[int]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public int[] topKFrequent(int[] nums, int k) {\n        return new int[0];\n    }\n}",
+      "javascript": "function topKFrequent(nums, k) {\n  return [];\n}",
+      "typescript": "function topKFrequent(nums: number[], k: number): number[] {\n  return [];\n}",
+      "c": "// Top K frequent helper",
+      "go": "package main\n\nfunc topKFrequent(nums []int, k int) []int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "tkf-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\n1 1 1 2 2 3\n2",
+        "expectedOutput": "1 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n1\n1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-pub-3",
+        "visibility": "PUBLIC",
+        "input": "4\n4 4 4 4\n1",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-hid-1",
+        "visibility": "HIDDEN",
+        "input": "7\n5 5 5 2 2 3 1\n3",
+        "expectedOutput": "5 2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n-1 -1 2 2 3\n2",
+        "expectedOutput": "-1 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n1 2 3 4 5 6\n2",
+        "expectedOutput": "1 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-hid-4",
+        "visibility": "HIDDEN",
+        "input": "8\n3 0 1 0 3 0 2 3\n2",
+        "expectedOutput": "0 3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tkf-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n7 8 7 8\n2",
+        "expectedOutput": "7 8",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "longest-consecutive-sequence",
+    "title": "Longest Consecutive Sequence",
+    "difficulty": "MEDIUM",
+    "category": "Hashing",
+    "categoryLabel": "Hashing & Hash Set",
+    "tags": [
+      "array",
+      "hash-table",
+      "union-find"
+    ],
+    "company": "Google, Amazon, Microsoft",
+    "acceptance": "83%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence. You must write an algorithm that runs in O(n) time.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers.",
+    "outputFormat": "Single integer representing the length of the longest consecutive sequence.",
+    "constraints": [
+      "0 <= nums.length <= 10^5",
+      "-10^9 <= nums[i] <= 10^9"
+    ],
+    "examples": [
+      {
+        "input": "6\n100 4 200 1 3 2",
+        "output": "4",
+        "explanation": "The longest consecutive elements sequence is [1, 2, 3, 4]. Its length is 4."
+      },
+      {
+        "input": "10\n0 3 7 2 5 8 4 6 0 1",
+        "output": "9",
+        "explanation": "Sequence is 0,1,2,3,4,5,6,7,8 (length 9)."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <unordered_set>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int longestConsecutive(vector<int>& nums) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def longestConsecutive(self, nums: list[int]) -> int:\n        return 0",
+      "java": "import java.util.HashSet;\n\npublic class Solution {\n    public int longestConsecutive(int[] nums) {\n        return 0;\n    }\n}",
+      "javascript": "function longestConsecutive(nums) {\n  return 0;\n}",
+      "typescript": "function longestConsecutive(nums: number[]): number {\n  return 0;\n}",
+      "c": "int longestConsecutive(int* nums, int numsSize) {\n    return 0;\n}",
+      "go": "package main\n\nfunc longestConsecutive(nums []int) int {\n    return 0\n}",
+      "rust": "impl Solution {\n    pub fn longest_consecutive(nums: Vec<i32>) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "lcs-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6\n100 4 200 1 3 2",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-pub-2",
+        "visibility": "PUBLIC",
+        "input": "10\n0 3 7 2 5 8 4 6 0 1",
+        "expectedOutput": "9",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-pub-3",
+        "visibility": "PUBLIC",
+        "input": "0\n",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n10",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n1 2 0 1 2",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4\n9 1 4 7",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n-5 -4 -3 -2 -1 0",
+        "expectedOutput": "6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lcs-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n10 5 12 11 13",
+        "expectedOutput": "4",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "valid-parentheses",
+    "title": "Valid Parentheses",
+    "difficulty": "EASY",
+    "category": "Stack / Queue",
+    "categoryLabel": "Stack & Syntax Parsing",
+    "tags": [
+      "string",
+      "stack"
+    ],
+    "company": "Amazon, Meta, Google",
+    "acceptance": "91%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given a string s containing just the characters \"(\", \")\", \"{\", \"}\", \"[\" and \"]\", determine if the input string is valid. An input string is valid if: Open brackets must be closed by the same type of brackets, and open brackets must be closed in the correct order, and every close bracket has a corresponding open bracket of the same type.",
+    "inputFormat": "A single line containing the string s.",
+    "outputFormat": "true or false",
+    "constraints": [
+      "1 <= s.length <= 10^4",
+      "s consists of parentheses only: \"()[]{}\""
+    ],
+    "examples": [
+      {
+        "input": "()",
+        "output": "true",
+        "explanation": "Matching simple parentheses."
+      },
+      {
+        "input": "()[]{}",
+        "output": "true",
+        "explanation": "All three pairs are properly matched."
+      },
+      {
+        "input": "(]",
+        "output": "false",
+        "explanation": "Mismatched types."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <string>\n#include <stack>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool isValid(string s) {\n        return false;\n    }\n};",
+      "python": "class Solution:\n    def isValid(self, s: str) -> bool:\n        return False",
+      "java": "import java.util.Stack;\n\npublic class Solution {\n    public boolean isValid(String s) {\n        return false;\n    }\n}",
+      "javascript": "function isValid(s) {\n  return false;\n}",
+      "typescript": "function isValid(s: string): boolean {\n  return false;\n}",
+      "c": "bool isValid(char* s) {\n    return false;\n}",
+      "go": "package main\n\nfunc isValid(s string) bool {\n    return false\n}",
+      "rust": "impl Solution {\n    pub fn is_valid(s: String) -> bool {\n        false\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "vp-pub-1",
+        "visibility": "PUBLIC",
+        "input": "()",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-pub-2",
+        "visibility": "PUBLIC",
+        "input": "()[]{}",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-pub-3",
+        "visibility": "PUBLIC",
+        "input": "(]",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-1",
+        "visibility": "HIDDEN",
+        "input": "([{}])",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-2",
+        "visibility": "HIDDEN",
+        "input": "([)]",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-3",
+        "visibility": "HIDDEN",
+        "input": "(((",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-4",
+        "visibility": "HIDDEN",
+        "input": ")))",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "vp-hid-5",
+        "visibility": "HIDDEN",
+        "input": "{[()]}()",
+        "expectedOutput": "true",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "next-greater-element",
+    "title": "Next Greater Element I",
+    "difficulty": "MEDIUM",
+    "category": "Stack / Queue",
+    "categoryLabel": "Monotonic Stack",
+    "tags": [
+      "array",
+      "hash-table",
+      "stack",
+      "monotonic-stack"
+    ],
+    "company": "Amazon, Microsoft, Bloomberg",
+    "acceptance": "85%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "The next greater element of some element x in an array is the first greater element that is to the right of x in the same array. You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2. For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1. Return an array of length nums1.length such that ans[i] is the next greater element as described above.",
+    "inputFormat": "First line: n1. Second line: n1 space-separated integers (nums1). Third line: n2. Fourth line: n2 space-separated integers (nums2).",
+    "outputFormat": "Space-separated integers representing next greater elements for each query.",
+    "constraints": [
+      "1 <= nums1.length <= nums2.length <= 1000",
+      "0 <= nums1[i], nums2[i] <= 10^4",
+      "All integers in nums1 and nums2 are unique.",
+      "All letters in nums1 appear in nums2."
+    ],
+    "examples": [
+      {
+        "input": "3\n4 1 2\n4\n1 3 4 2",
+        "output": "-1 3 -1",
+        "explanation": "For 4: no greater. For 1: next greater is 3. For 2: no greater."
+      },
+      {
+        "input": "2\n2 4\n4\n1 2 3 4",
+        "output": "3 -1",
+        "explanation": "For 2: next greater is 3. For 4: none."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <unordered_map>\n#include <stack>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def nextGreaterElement(self, nums1: list[int], nums2: list[int]) -> list[int]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public int[] nextGreaterElement(int[] nums1, int[] nums2) {\n        return new int[0];\n    }\n}",
+      "javascript": "function nextGreaterElement(nums1, nums2) {\n  return [];\n}",
+      "typescript": "function nextGreaterElement(nums1: number[], nums2: number[]): number[] {\n  return [];\n}",
+      "c": "int* nextGreaterElement(int* nums1, int nums1Size, int* nums2, int nums2Size, int* returnSize) {\n    *returnSize = nums1Size;\n    return NULL;\n}",
+      "go": "package main\n\nfunc nextGreaterElement(nums1 []int, nums2 []int) []int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn next_greater_element(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "nge-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3\n4 1 2\n4\n1 3 4 2",
+        "expectedOutput": "-1 3 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2\n2 4\n4\n1 2 3 4",
+        "expectedOutput": "3 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n5\n1\n5",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n1 3\n4\n4 3 2 1",
+        "expectedOutput": "-1 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n1 2 3\n4\n1 2 3 4",
+        "expectedOutput": "2 3 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n6 4 2\n6\n6 5 4 3 2 7",
+        "expectedOutput": "7 7 7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-hid-4",
+        "visibility": "HIDDEN",
+        "input": "2\n10 20\n3\n20 10 30",
+        "expectedOutput": "30 30",
+        "isActive": true
+      },
+      {
+        "testCaseId": "nge-hid-5",
+        "visibility": "HIDDEN",
+        "input": "1\n1\n3\n3 2 1",
+        "expectedOutput": "-1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "min-stack",
+    "title": "Min Stack Design",
+    "difficulty": "MEDIUM",
+    "category": "Stack / Queue",
+    "categoryLabel": "Stack & Design",
+    "tags": [
+      "stack",
+      "design"
+    ],
+    "company": "Bloomberg, Amazon, Microsoft",
+    "acceptance": "86%",
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(N)",
+    "description": "Design a stack that supports push, pop, top, and retrieving the minimum element in constant O(1) time. Given a series of operations, execute them and print the returned values for top and getMin calls.",
+    "inputFormat": "First line contains number of operations n. Next n lines contain an operation: \"push X\", \"pop\", \"top\", or \"getMin\".",
+    "outputFormat": "Values printed for each \"top\" and \"getMin\" operation on separate lines.",
+    "constraints": [
+      "Methods pop, top and getMin operations will always be called on non-empty stacks.",
+      "At most 3 * 10^4 calls will be made to push, pop, top, and getMin."
+    ],
+    "examples": [
+      {
+        "input": "7\npush -2\npush 0\npush -3\ngetMin\npop\ntop\ngetMin",
+        "output": "-3\n0\n-2",
+        "explanation": "Min stack preserves min element in O(1)."
+      },
+      {
+        "input": "4\npush 1\npush 2\ntop\ngetMin",
+        "output": "2\n1",
+        "explanation": "Top is 2, min is 1."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <stack>\nusing namespace std;\n\nclass MinStack {\npublic:\n    MinStack() {}\n    void push(int val) {}\n    void pop() {}\n    int top() { return 0; }\n    int getMin() { return 0; }\n};",
+      "python": "class MinStack:\n    def __init__(self):\n        pass\n    def push(self, val: int) -> None:\n        pass\n    def pop(self) -> None:\n        pass\n    def top(self) -> int:\n        return 0\n    def getMin(self) -> int:\n        return 0",
+      "java": "import java.util.Stack;\n\npublic class MinStack {\n    public MinStack() {}\n    public void push(int val) {}\n    public void pop() {}\n    public int top() { return 0; }\n    public int getMin() { return 0; }\n}",
+      "javascript": "class MinStack {\n  constructor() {}\n  push(val) {}\n  pop() {}\n  top() { return 0; }\n  getMin() { return 0; }\n}",
+      "typescript": "class MinStack {\n  constructor() {}\n  push(val: number): void {}\n  pop(): void {}\n  top(): number { return 0; }\n  getMin(): number { return 0; }\n}",
+      "c": "// MinStack C implementation",
+      "go": "package main\ntype MinStack struct {}",
+      "rust": "pub struct MinStack {}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ms-pub-1",
+        "visibility": "PUBLIC",
+        "input": "7\npush -2\npush 0\npush -3\ngetMin\npop\ntop\ngetMin",
+        "expectedOutput": "-3\n0\n-2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-pub-2",
+        "visibility": "PUBLIC",
+        "input": "4\npush 1\npush 2\ntop\ngetMin",
+        "expectedOutput": "2\n1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-pub-3",
+        "visibility": "PUBLIC",
+        "input": "3\npush 5\ntop\ngetMin",
+        "expectedOutput": "5\n5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-1",
+        "visibility": "HIDDEN",
+        "input": "5\npush 2\npush 0\npush 3\npush 0\ngetMin",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-2",
+        "visibility": "HIDDEN",
+        "input": "8\npush 10\npush 20\npush 5\ngetMin\npop\ngetMin\ntop\ngetMin",
+        "expectedOutput": "5\n10\n20\n10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\npush -1\npush -2\npush -3\ngetMin\npop\ngetMin",
+        "expectedOutput": "-3\n-2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-4",
+        "visibility": "HIDDEN",
+        "input": "4\npush 100\npush 100\npop\ngetMin",
+        "expectedOutput": "100",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ms-hid-5",
+        "visibility": "HIDDEN",
+        "input": "7\npush 4\npush 3\npush 2\npush 1\ngetMin\npop\ngetMin",
+        "expectedOutput": "1\n2",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "daily-temperatures",
+    "title": "Daily Temperatures",
+    "difficulty": "MEDIUM",
+    "category": "Stack / Queue",
+    "categoryLabel": "Monotonic Stack",
+    "tags": [
+      "array",
+      "stack",
+      "monotonic-stack"
+    ],
+    "company": "Meta, Amazon, Google",
+    "acceptance": "87%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an array of integers temperatures representing the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the i-th day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.",
+    "inputFormat": "First line contains n. Second line contains n space-separated temperatures.",
+    "outputFormat": "n space-separated integers representing the days to wait for a warmer day.",
+    "constraints": [
+      "1 <= temperatures.length <= 10^5",
+      "30 <= temperatures[i] <= 100"
+    ],
+    "examples": [
+      {
+        "input": "8\n73 74 75 71 69 72 76 73",
+        "output": "1 1 4 2 1 1 0 0",
+        "explanation": "Days waited until warmer day."
+      },
+      {
+        "input": "4\n30 40 50 60",
+        "output": "1 1 1 0",
+        "explanation": "Monotonically strictly increasing."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <stack>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> dailyTemperatures(vector<int>& temperatures) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def dailyTemperatures(self, temperatures: list[int]) -> list[int]:\n        return []",
+      "java": "import java.util.Stack;\n\npublic class Solution {\n    public int[] dailyTemperatures(int[] temperatures) {\n        return new int[0];\n    }\n}",
+      "javascript": "function dailyTemperatures(temperatures) {\n  return [];\n}",
+      "typescript": "function dailyTemperatures(temperatures: number[]): number[] {\n  return [];\n}",
+      "c": "int* dailyTemperatures(int* temperatures, int temperaturesSize, int* returnSize) {\n    *returnSize = temperaturesSize;\n    return NULL;\n}",
+      "go": "package main\n\nfunc dailyTemperatures(temperatures []int) []int {\n    return nil\n}",
+      "rust": "impl Solution {\n    pub fn daily_temperatures(temperatures: Vec<i32>) -> Vec<i32> {\n        vec![]\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "dt-pub-1",
+        "visibility": "PUBLIC",
+        "input": "8\n73 74 75 71 69 72 76 73",
+        "expectedOutput": "1 1 4 2 1 1 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-pub-2",
+        "visibility": "PUBLIC",
+        "input": "4\n30 40 50 60",
+        "expectedOutput": "1 1 1 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-pub-3",
+        "visibility": "PUBLIC",
+        "input": "3\n30 60 90",
+        "expectedOutput": "1 1 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-hid-1",
+        "visibility": "HIDDEN",
+        "input": "3\n90 60 30",
+        "expectedOutput": "0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n50 50 50 50 50",
+        "expectedOutput": "0 0 0 0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n70 65 60 75 80",
+        "expectedOutput": "3 2 1 1 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-hid-4",
+        "visibility": "HIDDEN",
+        "input": "1\n45",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dt-hid-5",
+        "visibility": "HIDDEN",
+        "input": "6\n89 62 70 58 47 90",
+        "expectedOutput": "5 1 3 2 1 0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "reverse-linked-list",
+    "title": "Reverse Linked List",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "categoryLabel": "Linked List & Pointers",
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
+    "company": "Amazon, Microsoft, Apple",
+    "acceptance": "93%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+    "inputFormat": "First line contains n, number of nodes. Second line contains n space-separated node values. If n=0, second line is empty.",
+    "outputFormat": "Space-separated values of reversed linked list. If empty, output EMPTY.",
+    "constraints": [
+      "0 <= n <= 5000",
+      "-5000 <= Node.val <= 5000"
+    ],
+    "examples": [
+      {
+        "input": "5\n1 2 3 4 5",
+        "output": "5 4 3 2 1",
+        "explanation": "List reversed."
+      },
+      {
+        "input": "2\n1 2",
+        "output": "2 1",
+        "explanation": "Two nodes swapped direction."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct ListNode {\n    int val;\n    ListNode *next;\n    ListNode(int x) : val(x), next(nullptr) {}\n};\n\nclass Solution {\npublic:\n    ListNode* reverseList(ListNode* head) {\n        return nullptr;\n    }\n};",
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\nclass Solution:\n    def reverseList(self, head: ListNode) -> ListNode:\n        return None",
+      "java": "public class ListNode {\n    int val;\n    ListNode next;\n    ListNode(int x) { val = x; }\n}\n\nclass Solution {\n    public ListNode reverseList(ListNode head) {\n        return null;\n    }\n}",
+      "javascript": "function reverseList(head) {\n  return null;\n}",
+      "typescript": "function reverseList(head: any): any {\n  return null;\n}",
+      "c": "struct ListNode* reverseList(struct ListNode* head) {\n    return NULL;\n}",
+      "go": "package main\ntype ListNode struct { Val int; Next *ListNode }\nfunc reverseList(head *ListNode) *ListNode { return nil }",
+      "rust": "// Rust list reversal"
+    },
+    "testCases": [
+      {
+        "testCaseId": "rll-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\n1 2 3 4 5",
+        "expectedOutput": "5 4 3 2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2\n1 2",
+        "expectedOutput": "2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-pub-3",
+        "visibility": "PUBLIC",
+        "input": "0\n",
+        "expectedOutput": "EMPTY",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n42",
+        "expectedOutput": "42",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\n-1 -2 -3 -4",
+        "expectedOutput": "-4 -3 -2 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n10 20 30",
+        "expectedOutput": "30 20 10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n1 1 1 2 2 2",
+        "expectedOutput": "2 2 2 1 1 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rll-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n0 0 0 0 1",
+        "expectedOutput": "1 0 0 0 0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "detect-cycle-in-linked-list",
+    "title": "Linked List Cycle Detection (Floyd Cycle Finding)",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "categoryLabel": "Linked List & Fast/Slow Pointers",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ],
+    "company": "Amazon, Spotify, Microsoft",
+    "acceptance": "89%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Return true if there is a cycle, otherwise false.",
+    "inputFormat": "First line contains n, number of nodes. Second line contains n space-separated values. Third line contains pos (0-indexed position where tail connects to, or -1 if no cycle).",
+    "outputFormat": "true or false",
+    "constraints": [
+      "0 <= n <= 10^4",
+      "-10^5 <= Node.val <= 10^5",
+      "pos is -1 or a valid index in the linked-list."
+    ],
+    "examples": [
+      {
+        "input": "4\n3 2 0 -4\n1",
+        "output": "true",
+        "explanation": "Tail connects to node at index 1."
+      },
+      {
+        "input": "2\n1 2\n0",
+        "output": "true",
+        "explanation": "Tail connects to node 0."
+      },
+      {
+        "input": "1\n1\n-1",
+        "output": "false",
+        "explanation": "No cycle."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct ListNode {\n    int val;\n    ListNode *next;\n    ListNode(int x) : val(x), next(nullptr) {}\n};\n\nclass Solution {\npublic:\n    bool hasCycle(ListNode *head) {\n        return false;\n    }\n};",
+      "python": "class ListNode:\n    def __init__(self, x):\n        self.val = x\n        self.next = None\n\nclass Solution:\n    def hasCycle(self, head: ListNode) -> bool:\n        return False",
+      "java": "public class ListNode {\n    int val;\n    ListNode next;\n    ListNode(int x) { val = x; }\n}\n\npublic class Solution {\n    public boolean hasCycle(ListNode head) {\n        return false;\n    }\n}",
+      "javascript": "function hasCycle(head) {\n  return false;\n}",
+      "typescript": "function hasCycle(head: any): boolean {\n  return false;\n}",
+      "c": "bool hasCycle(struct ListNode *head) {\n    return false;\n}",
+      "go": "package main\ntype ListNode struct { Val int; Next *ListNode }\nfunc hasCycle(head *ListNode) bool { return false }",
+      "rust": "// Rust cycle detection"
+    },
+    "testCases": [
+      {
+        "testCaseId": "dc-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n3 2 0 -4\n1",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2\n1 2\n0",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n1\n-1",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-hid-1",
+        "visibility": "HIDDEN",
+        "input": "0\n\n-1",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n1 2 3\n-1",
+        "expectedOutput": "false",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n1 2 3\n2",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5\n10 20 30 40 50\n3",
+        "expectedOutput": "true",
+        "isActive": true
+      },
+      {
+        "testCaseId": "dc-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n10 20 30 40 50\n-1",
+        "expectedOutput": "false",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "merge-two-sorted-lists",
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "EASY",
+    "category": "Linked List",
+    "categoryLabel": "Linked List & Sorting",
+    "tags": [
+      "linked-list",
+      "recursion"
+    ],
+    "company": "Amazon, Apple, Microsoft",
+    "acceptance": "90%",
+    "timeComplexity": "O(N + M)",
+    "spaceComplexity": "O(1)",
+    "description": "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists. Return the head of the merged linked list.",
+    "inputFormat": "First line: n1. Second line: n1 space-separated numbers (list1). Third line: n2. Fourth line: n2 space-separated numbers (list2).",
+    "outputFormat": "Space-separated merged sorted numbers. If both empty, output EMPTY.",
+    "constraints": [
+      "0 <= n1, n2 <= 50",
+      "-100 <= Node.val <= 100",
+      "Both list1 and list2 are sorted in non-decreasing order."
+    ],
+    "examples": [
+      {
+        "input": "3\n1 2 4\n3\n1 3 4",
+        "output": "1 1 2 3 4 4",
+        "explanation": "Merged sorted list."
+      },
+      {
+        "input": "0\n\n0\n",
+        "output": "EMPTY",
+        "explanation": "Both empty."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct ListNode {\n    int val;\n    ListNode *next;\n    ListNode(int x) : val(x), next(nullptr) {}\n};\n\nclass Solution {\npublic:\n    ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {\n        return nullptr;\n    }\n};",
+      "python": "class ListNode:\n    def __init__(self, val=0, next=None):\n        self.val = val\n        self.next = next\n\nclass Solution:\n    def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:\n        return None",
+      "java": "public class Solution {\n    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {\n        return null;\n    }\n}",
+      "javascript": "function mergeTwoLists(list1, list2) {\n  return null;\n}",
+      "typescript": "function mergeTwoLists(list1: any, list2: any): any {\n  return null;\n}",
+      "c": "struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {\n    return NULL;\n}",
+      "go": "package main\nfunc mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode { return nil }",
+      "rust": "// Rust merge sorted lists"
+    },
+    "testCases": [
+      {
+        "testCaseId": "mtl-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3\n1 2 4\n3\n1 3 4",
+        "expectedOutput": "1 1 2 3 4 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-pub-2",
+        "visibility": "PUBLIC",
+        "input": "0\n\n0\n",
+        "expectedOutput": "EMPTY",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-pub-3",
+        "visibility": "PUBLIC",
+        "input": "0\n\n1\n0",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n2 5\n2\n1 3",
+        "expectedOutput": "1 2 3 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n-5 -2 0\n2\n-3 4",
+        "expectedOutput": "-5 -3 -2 0 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-hid-3",
+        "visibility": "HIDDEN",
+        "input": "1\n10\n1\n5",
+        "expectedOutput": "5 10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n1 1 1\n3\n1 1 1",
+        "expectedOutput": "1 1 1 1 1 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "mtl-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n1 3 5 7\n4\n2 4 6 8",
+        "expectedOutput": "1 2 3 4 5 6 7 8",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "remove-nth-node-from-end-of-list",
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "MEDIUM",
+    "category": "Linked List",
+    "categoryLabel": "Linked List & Two Pointers",
+    "tags": [
+      "linked-list",
+      "two-pointers"
+    ],
+    "company": "Facebook, Amazon, Google",
+    "acceptance": "84%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given the head of a linked list, remove the n-th node from the end of the list and return its head.",
+    "inputFormat": "First line contains total nodes count. Second line contains node values space-separated. Third line contains n.",
+    "outputFormat": "Space-separated values of resulting list. If resulting list is empty, output EMPTY.",
+    "constraints": [
+      "1 <= total nodes <= 30",
+      "0 <= Node.val <= 100",
+      "1 <= n <= total nodes"
+    ],
+    "examples": [
+      {
+        "input": "5\n1 2 3 4 5\n2",
+        "output": "1 2 3 5",
+        "explanation": "2nd node from end (4) removed."
+      },
+      {
+        "input": "1\n1\n1",
+        "output": "EMPTY",
+        "explanation": "Only node removed, list is empty."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct ListNode {\n    int val;\n    ListNode *next;\n    ListNode(int x) : val(x), next(nullptr) {}\n};\n\nclass Solution {\npublic:\n    ListNode* removeNthFromEnd(ListNode* head, int n) {\n        return nullptr;\n    }\n};",
+      "python": "class Solution:\n    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:\n        return None",
+      "java": "public class Solution {\n    public ListNode removeNthFromEnd(ListNode head, int n) {\n        return null;\n    }\n}",
+      "javascript": "function removeNthFromEnd(head, n) {\n  return null;\n}",
+      "typescript": "function removeNthFromEnd(head: any, n: number): any {\n  return null;\n}",
+      "c": "struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {\n    return NULL;\n}",
+      "go": "package main\nfunc removeNthFromEnd(head *ListNode, n int) *ListNode { return nil }",
+      "rust": "// Rust remove nth node"
+    },
+    "testCases": [
+      {
+        "testCaseId": "rnn-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\n1 2 3 4 5\n2",
+        "expectedOutput": "1 2 3 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n1\n1",
+        "expectedOutput": "EMPTY",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n1 2\n1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n1 2\n2",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n10 20 30\n3",
+        "expectedOutput": "20 30",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4\n1 2 3 4\n4",
+        "expectedOutput": "2 3 4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n1 2 3 4 5 6\n3",
+        "expectedOutput": "1 2 3 5 6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "rnn-hid-5",
+        "visibility": "HIDDEN",
+        "input": "3\n5 10 15\n2",
+        "expectedOutput": "5 15",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "categoryLabel": "Trees & DFS/BFS",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
+    ],
+    "company": "Amazon, Microsoft, Google",
+    "acceptance": "92%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(Height)",
+    "description": "Given the root of a binary tree, return its maximum depth. A binary tree maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+    "inputFormat": "A single line containing the level-order traversal of the tree, with null representing absent nodes. E.g., \"3 9 20 null null 15 7\". If empty, string is \"empty\".",
+    "outputFormat": "A single integer representing the maximum depth.",
+    "constraints": [
+      "The number of nodes in the tree is in the range [0, 10^4].",
+      "-100 <= Node.val <= 100"
+    ],
+    "examples": [
+      {
+        "input": "3 9 20 null null 15 7",
+        "output": "3",
+        "explanation": "Longest path is 3 -> 20 -> 15 (depth 3)."
+      },
+      {
+        "input": "1 null 2",
+        "output": "2",
+        "explanation": "Depth 2."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct TreeNode {\n    int val;\n    TreeNode *left;\n    TreeNode *right;\n    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n};\n\nclass Solution {\npublic:\n    int maxDepth(TreeNode* root) {\n        return 0;\n    }\n};",
+      "python": "class TreeNode:\n    def __init__(self, val=0, left=None, right=None):\n        self.val = val\n        self.left = left\n        self.right = right\n\nclass Solution:\n    def maxDepth(self, root: TreeNode) -> int:\n        return 0",
+      "java": "public class TreeNode {\n    int val;\n    TreeNode left, right;\n    TreeNode(int x) { val = x; }\n}\n\nclass Solution {\n    public int maxDepth(TreeNode root) {\n        return 0;\n    }\n}",
+      "javascript": "function maxDepth(root) {\n  return 0;\n}",
+      "typescript": "function maxDepth(root: any): number {\n  return 0;\n}",
+      "c": "int maxDepth(struct TreeNode* root) {\n    return 0;\n}",
+      "go": "package main\ntype TreeNode struct { Val int; Left, Right *TreeNode }\nfunc maxDepth(root *TreeNode) int { return 0 }",
+      "rust": "// Rust max depth"
+    },
+    "testCases": [
+      {
+        "testCaseId": "md-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3 9 20 null null 15 7",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1 null 2",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-pub-3",
+        "visibility": "PUBLIC",
+        "input": "empty",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-hid-2",
+        "visibility": "HIDDEN",
+        "input": "1 2 3 4 5",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-hid-3",
+        "visibility": "HIDDEN",
+        "input": "1 2 null 3 null 4",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-hid-4",
+        "visibility": "HIDDEN",
+        "input": "1 2 3 4 null null 5 null 6",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "md-hid-5",
+        "visibility": "HIDDEN",
+        "input": "10 5 15 null null 12 20",
+        "expectedOutput": "3",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "invert-binary-tree",
+    "title": "Invert Binary Tree",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "categoryLabel": "Trees & Recursion",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "breadth-first-search",
+      "binary-tree"
+    ],
+    "company": "Google, Apple, Microsoft",
+    "acceptance": "91%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(Height)",
+    "description": "Given the root of a binary tree, invert the tree (mirror left and right subtrees), and return its root.",
+    "inputFormat": "Level-order traversal values space-separated. If empty, input is \"empty\".",
+    "outputFormat": "Level-order traversal of inverted tree. If empty, output \"empty\".",
+    "constraints": [
+      "The number of nodes in the tree is in the range [0, 100].",
+      "-100 <= Node.val <= 100"
+    ],
+    "examples": [
+      {
+        "input": "4 2 7 1 3 6 9",
+        "output": "4 7 2 9 6 3 1",
+        "explanation": "Tree inverted."
+      },
+      {
+        "input": "2 1 3",
+        "output": "2 3 1",
+        "explanation": "Left and right swapped."
+      }
+    ],
+    "starterCode": {
+      "cpp": "struct TreeNode {\n    int val;\n    TreeNode *left;\n    TreeNode *right;\n    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}\n};\n\nclass Solution {\npublic:\n    TreeNode* invertTree(TreeNode* root) {\n        return nullptr;\n    }\n};",
+      "python": "class Solution:\n    def invertTree(self, root: TreeNode) -> TreeNode:\n        return None",
+      "java": "public class Solution {\n    public TreeNode invertTree(TreeNode root) {\n        return null;\n    }\n}",
+      "javascript": "function invertTree(root) {\n  return null;\n}",
+      "typescript": "function invertTree(root: any): any {\n  return null;\n}",
+      "c": "struct TreeNode* invertTree(struct TreeNode* root) {\n    return NULL;\n}",
+      "go": "package main\nfunc invertTree(root *TreeNode) *TreeNode { return nil }",
+      "rust": "// Rust invert tree"
+    },
+    "testCases": [
+      {
+        "testCaseId": "it-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4 2 7 1 3 6 9",
+        "expectedOutput": "4 7 2 9 6 3 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2 1 3",
+        "expectedOutput": "2 3 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-pub-3",
+        "visibility": "PUBLIC",
+        "input": "empty",
+        "expectedOutput": "empty",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-hid-2",
+        "visibility": "HIDDEN",
+        "input": "1 2 null",
+        "expectedOutput": "1 null 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5 3 8 2 4 7 9",
+        "expectedOutput": "5 8 3 9 7 4 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-hid-4",
+        "visibility": "HIDDEN",
+        "input": "1 2 3",
+        "expectedOutput": "1 3 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "it-hid-5",
+        "visibility": "HIDDEN",
+        "input": "10 5 null",
+        "expectedOutput": "10 null 5",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "binary-tree-inorder-traversal",
+    "title": "Binary Tree Inorder Traversal",
+    "difficulty": "EASY",
+    "category": "Trees",
+    "categoryLabel": "Trees & Traversal",
+    "tags": [
+      "stack",
+      "tree",
+      "depth-first-search",
+      "binary-tree"
+    ],
+    "company": "Amazon, Adobe, Uber",
+    "acceptance": "90%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given the root of a binary tree, return the inorder traversal of its nodes values (Left, Root, Right).",
+    "inputFormat": "Level-order traversal values space-separated. E.g. \"1 null 2 3\" or \"empty\".",
+    "outputFormat": "Space-separated node values in inorder sequence, or \"EMPTY\".",
+    "constraints": [
+      "The number of nodes in the tree is in the range [0, 100].",
+      "-100 <= Node.val <= 100"
+    ],
+    "examples": [
+      {
+        "input": "1 null 2 3",
+        "output": "1 3 2",
+        "explanation": "Inorder order."
+      },
+      {
+        "input": "empty",
+        "output": "EMPTY",
+        "explanation": "Empty tree."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> inorderTraversal(TreeNode* root) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def inorderTraversal(self, root: TreeNode) -> list[int]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<Integer> inorderTraversal(TreeNode root) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function inorderTraversal(root) {\n  return [];\n}",
+      "typescript": "function inorderTraversal(root: any): number[] {\n  return [];\n}",
+      "c": "int* inorderTraversal(struct TreeNode* root, int* returnSize) {\n    *returnSize = 0;\n    return NULL;\n}",
+      "go": "package main\nfunc inorderTraversal(root *TreeNode) []int { return nil }",
+      "rust": "// Rust inorder traversal"
+    },
+    "testCases": [
+      {
+        "testCaseId": "btit-pub-1",
+        "visibility": "PUBLIC",
+        "input": "1 null 2 3",
+        "expectedOutput": "1 3 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-pub-2",
+        "visibility": "PUBLIC",
+        "input": "empty",
+        "expectedOutput": "EMPTY",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1 2 3 4 5",
+        "expectedOutput": "4 2 5 1 3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3 1 2",
+        "expectedOutput": "1 3 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4 2 6 1 3 5 7",
+        "expectedOutput": "1 2 3 4 5 6 7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5 4 null 3 null 2 null 1",
+        "expectedOutput": "1 2 3 4 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "btit-hid-5",
+        "visibility": "HIDDEN",
+        "input": "2 null 3 null 4",
+        "expectedOutput": "2 3 4",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "lowest-common-ancestor-of-bst",
+    "title": "Lowest Common Ancestor of a Binary Search Tree",
+    "difficulty": "MEDIUM",
+    "category": "Trees",
+    "categoryLabel": "Trees & BST Properties",
+    "tags": [
+      "tree",
+      "depth-first-search",
+      "binary-search-tree",
+      "binary-tree"
+    ],
+    "company": "Amazon, Microsoft, Meta",
+    "acceptance": "86%",
+    "timeComplexity": "O(Height)",
+    "spaceComplexity": "O(1)",
+    "description": "Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST. According to the definition of LCA on Wikipedia: The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).",
+    "inputFormat": "First line: Level-order BST values space-separated. Second line: value of p. Third line: value of q.",
+    "outputFormat": "Single integer representing the value of the LCA node.",
+    "constraints": [
+      "The number of nodes in the tree is in the range [2, 10^5].",
+      "-10^9 <= Node.val <= 10^9",
+      "All Node.val are unique.",
+      "p != q and p and q will exist in the BST."
+    ],
+    "examples": [
+      {
+        "input": "6 2 8 0 4 7 9 null null 3 5\n2\n8",
+        "output": "6",
+        "explanation": "The LCA of nodes 2 and 8 is 6."
+      },
+      {
+        "input": "6 2 8 0 4 7 9 null null 3 5\n2\n4",
+        "output": "2",
+        "explanation": "The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself."
+      }
+    ],
+    "starterCode": {
+      "cpp": "class Solution {\npublic:\n    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {\n        return nullptr;\n    }\n};",
+      "python": "class Solution:\n    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':\n        return None",
+      "java": "public class Solution {\n    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {\n        return null;\n    }\n}",
+      "javascript": "function lowestCommonAncestor(root, p, q) {\n  return null;\n}",
+      "typescript": "function lowestCommonAncestor(root: any, p: any, q: any): any {\n  return null;\n}",
+      "c": "struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {\n    return NULL;\n}",
+      "go": "package main\nfunc lowestCommonAncestor(root, p, q *TreeNode) *TreeNode { return nil }",
+      "rust": "// Rust LCA BST"
+    },
+    "testCases": [
+      {
+        "testCaseId": "lca-pub-1",
+        "visibility": "PUBLIC",
+        "input": "6 2 8 0 4 7 9 null null 3 5\n2\n8",
+        "expectedOutput": "6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-pub-2",
+        "visibility": "PUBLIC",
+        "input": "6 2 8 0 4 7 9 null null 3 5\n2\n4",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2 1\n2\n1",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-hid-1",
+        "visibility": "HIDDEN",
+        "input": "6 2 8 0 4 7 9 null null 3 5\n3\n5",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-hid-2",
+        "visibility": "HIDDEN",
+        "input": "6 2 8 0 4 7 9 null null 3 5\n7\n9",
+        "expectedOutput": "8",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6 2 8 0 4 7 9 null null 3 5\n0\n5",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5 3 6 2 4 null null 1\n1\n4",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lca-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5 3 6 2 4 null null 1\n1\n6",
+        "expectedOutput": "5",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "subsets",
+    "title": "Subsets (Power Set)",
+    "difficulty": "MEDIUM",
+    "category": "Recursion / Backtracking",
+    "categoryLabel": "Backtracking & Power Set",
+    "tags": [
+      "array",
+      "backtracking",
+      "bit-manipulation"
+    ],
+    "company": "Meta, Amazon, Bloomberg",
+    "acceptance": "85%",
+    "timeComplexity": "O(2^N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an integer array nums of unique elements, return all possible subsets (the power set). The solution set must not contain duplicate subsets. Subsets should be returned in lexicographical order, with elements inside each subset sorted ascending.",
+    "inputFormat": "First line contains n. Second line contains n space-separated unique integers.",
+    "outputFormat": "Each subset on a new line with space-separated integers. Empty subset represented by [].",
+    "constraints": [
+      "1 <= nums.length <= 10",
+      "-10 <= nums[i] <= 10",
+      "All the numbers of nums are unique."
+    ],
+    "examples": [
+      {
+        "input": "3\n1 2 3",
+        "output": "[]\n1\n1 2\n1 2 3\n1 3\n2\n2 3\n3",
+        "explanation": "All 2^3 = 8 subsets."
+      },
+      {
+        "input": "1\n0",
+        "output": "[]\n0",
+        "explanation": "2^1 = 2 subsets."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> subsets(vector<int>& nums) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def subsets(self, nums: list[int]) -> list[list[int]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<Integer>> subsets(int[] nums) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function subsets(nums) {\n  return [];\n}",
+      "typescript": "function subsets(nums: number[]): number[][] {\n  return [];\n}",
+      "c": "// Subsets backtracking helper",
+      "go": "package main\nfunc subsets(nums []int) [][]int { return nil }",
+      "rust": "// Rust subsets"
+    },
+    "testCases": [
+      {
+        "testCaseId": "sub-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3\n1 2 3",
+        "expectedOutput": "[]\n1\n1 2\n1 2 3\n1 3\n2\n2 3\n3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n0",
+        "expectedOutput": "[]\n0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n1 2",
+        "expectedOutput": "[]\n1\n1 2\n2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n9",
+        "expectedOutput": "[]\n9",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n3 4",
+        "expectedOutput": "[]\n3\n3 4\n4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n4 5 6",
+        "expectedOutput": "[]\n4\n4 5\n4 5 6\n4 6\n5\n5 6\n6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-hid-4",
+        "visibility": "HIDDEN",
+        "input": "2\n-1 1",
+        "expectedOutput": "[]\n-1\n-1 1\n1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "sub-hid-5",
+        "visibility": "HIDDEN",
+        "input": "3\n0 1 2",
+        "expectedOutput": "[]\n0\n0 1\n0 1 2\n0 2\n1\n1 2\n2",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "combination-sum",
+    "title": "Combination Sum",
+    "difficulty": "MEDIUM",
+    "category": "Recursion / Backtracking",
+    "categoryLabel": "Backtracking & Pruning",
+    "tags": [
+      "array",
+      "backtracking"
+    ],
+    "company": "Amazon, Meta, Google",
+    "acceptance": "82%",
+    "timeComplexity": "O(2^Target)",
+    "spaceComplexity": "O(Target)",
+    "description": "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order. The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.",
+    "inputFormat": "First line contains n. Second line contains n space-separated candidates. Third line contains target.",
+    "outputFormat": "Each combination on a new line with space-separated numbers sorted ascending. If no combination, output NONE.",
+    "constraints": [
+      "1 <= candidates.length <= 30",
+      "2 <= candidates[i] <= 40",
+      "All elements of candidates are distinct.",
+      "1 <= target <= 40"
+    ],
+    "examples": [
+      {
+        "input": "4\n2 3 6 7\n7",
+        "output": "2 2 3\n7",
+        "explanation": "2 and 3 sum to 7, and 7 is an exact match."
+      },
+      {
+        "input": "3\n2 3 5\n8",
+        "output": "2 2 2 2\n2 3 3\n3 5",
+        "explanation": "Three distinct combinations sum to 8."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def combinationSum(self, candidates: list[int], target: int) -> list[list[int]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<Integer>> combinationSum(int[] candidates, int target) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function combinationSum(candidates, target) {\n  return [];\n}",
+      "typescript": "function combinationSum(candidates: number[], target: number): number[][] {\n  return [];\n}",
+      "c": "// Combination sum helper",
+      "go": "package main\nfunc combinationSum(candidates []int, target int) [][]int { return nil }",
+      "rust": "// Rust combination sum"
+    },
+    "testCases": [
+      {
+        "testCaseId": "cs-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n2 3 6 7\n7",
+        "expectedOutput": "2 2 3\n7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3\n2 3 5\n8",
+        "expectedOutput": "2 2 2 2\n2 3 3\n3 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n2\n1",
+        "expectedOutput": "NONE",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n3 5\n8",
+        "expectedOutput": "3 5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n2 4 6\n6",
+        "expectedOutput": "2 2 2\n2 4\n6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-3",
+        "visibility": "HIDDEN",
+        "input": "2\n3 5\n4",
+        "expectedOutput": "NONE",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n2 3 5\n5",
+        "expectedOutput": "2 3\n5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-5",
+        "visibility": "HIDDEN",
+        "input": "4\n2 3 7 9\n9",
+        "expectedOutput": "2 2 2 3\n3 3 3\n2 7\n9",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "permutations",
+    "title": "Permutations of an Array",
+    "difficulty": "MEDIUM",
+    "category": "Recursion / Backtracking",
+    "categoryLabel": "Backtracking & Permutations",
+    "tags": [
+      "array",
+      "backtracking"
+    ],
+    "company": "Microsoft, Amazon, Meta",
+    "acceptance": "87%",
+    "timeComplexity": "O(N! * N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an array nums of distinct integers, return all the possible permutations in lexicographical order.",
+    "inputFormat": "First line contains n. Second line contains n space-separated distinct integers.",
+    "outputFormat": "Each permutation on a new line with space-separated numbers.",
+    "constraints": [
+      "1 <= nums.length <= 6",
+      "-10 <= nums[i] <= 10",
+      "All the integers of nums are unique."
+    ],
+    "examples": [
+      {
+        "input": "3\n1 2 3",
+        "output": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1",
+        "explanation": "3! = 6 permutations."
+      },
+      {
+        "input": "1\n1",
+        "output": "1",
+        "explanation": "1! = 1 permutation."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> permute(vector<int>& nums) {\n        return {};\n    }\n};",
+      "python": "class Solution:\n    def permute(self, nums: list[int]) -> list[list[int]]:\n        return []",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<Integer>> permute(int[] nums) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function permute(nums) {\n  return [];\n}",
+      "typescript": "function permute(nums: number[]): number[][] {\n  return [];\n}",
+      "c": "// Permutations helper",
+      "go": "package main\nfunc permute(nums []int) [][]int { return nil }",
+      "rust": "// Rust permutations"
+    },
+    "testCases": [
+      {
+        "testCaseId": "perm-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3\n1 2 3",
+        "expectedOutput": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n0 1",
+        "expectedOutput": "0 1\n1 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n2 3",
+        "expectedOutput": "2 3\n3 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-hid-2",
+        "visibility": "HIDDEN",
+        "input": "1\n42",
+        "expectedOutput": "42",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-hid-3",
+        "visibility": "HIDDEN",
+        "input": "2\n-1 1",
+        "expectedOutput": "-1 1\n1 -1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n1 3 2",
+        "expectedOutput": "1 2 3\n1 3 2\n2 1 3\n2 3 1\n3 1 2\n3 2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "perm-hid-5",
+        "visibility": "HIDDEN",
+        "input": "3\n0 5 9",
+        "expectedOutput": "0 5 9\n0 9 5\n5 0 9\n5 9 0\n9 0 5\n9 5 0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "climbing-stairs",
+    "title": "Climbing Stairs",
+    "difficulty": "EASY",
+    "category": "Dynamic Programming",
+    "categoryLabel": "Dynamic Programming & Fibonacci",
+    "tags": [
+      "math",
+      "dynamic-programming",
+      "memoization"
+    ],
+    "company": "Amazon, Apple, Adobe",
+    "acceptance": "92%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+    "inputFormat": "A single integer n.",
+    "outputFormat": "A single integer representing the number of distinct ways.",
+    "constraints": [
+      "1 <= n <= 45"
+    ],
+    "examples": [
+      {
+        "input": "2",
+        "output": "2",
+        "explanation": "There are two ways: 1 step + 1 step, or 2 steps."
+      },
+      {
+        "input": "3",
+        "output": "3",
+        "explanation": "There are three ways: 1+1+1, 1+2, 2+1."
+      }
+    ],
+    "starterCode": {
+      "cpp": "class Solution {\npublic:\n    int climbStairs(int n) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def climbStairs(self, n: int) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int climbStairs(int n) {\n        return 0;\n    }\n}",
+      "javascript": "function climbStairs(n) {\n  return 0;\n}",
+      "typescript": "function climbStairs(n: number): number {\n  return 0;\n}",
+      "c": "int climbStairs(int n) {\n    return 0;\n}",
+      "go": "package main\nfunc climbStairs(n int) int { return 0 }",
+      "rust": "impl Solution {\n    pub fn climb_stairs(n: i32) -> i32 {\n        0\n    }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "cs-pub-1",
+        "visibility": "PUBLIC",
+        "input": "2",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-1",
+        "visibility": "HIDDEN",
+        "input": "4",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5",
+        "expectedOutput": "8",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-3",
+        "visibility": "HIDDEN",
+        "input": "10",
+        "expectedOutput": "89",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-4",
+        "visibility": "HIDDEN",
+        "input": "20",
+        "expectedOutput": "10946",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cs-hid-5",
+        "visibility": "HIDDEN",
+        "input": "35",
+        "expectedOutput": "14930352",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "house-robber",
+    "title": "House Robber",
+    "difficulty": "MEDIUM",
+    "category": "Dynamic Programming",
+    "categoryLabel": "Dynamic Programming & Memoization",
+    "tags": [
+      "array",
+      "dynamic-programming"
+    ],
+    "company": "Google, Amazon, Cisco",
+    "acceptance": "86%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers.",
+    "outputFormat": "Single integer representing maximum money robbed.",
+    "constraints": [
+      "1 <= nums.length <= 100",
+      "0 <= nums[i] <= 400"
+    ],
+    "examples": [
+      {
+        "input": "4\n1 2 3 1",
+        "output": "4",
+        "explanation": "Rob house 1 (money = 1) and rob house 3 (money = 3). Total = 4."
+      },
+      {
+        "input": "5\n2 7 9 3 1",
+        "output": "12",
+        "explanation": "Rob house 1 (money = 2), house 3 (money = 9) and house 5 (money = 1). Total = 12."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int rob(vector<int>& nums) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def rob(self, nums: list[int]) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int rob(int[] nums) {\n        return 0;\n    }\n}",
+      "javascript": "function rob(nums) {\n  return 0;\n}",
+      "typescript": "function rob(nums: number[]): number {\n  return 0;\n}",
+      "c": "int rob(int* nums, int numsSize) {\n    return 0;\n}",
+      "go": "package main\nfunc rob(nums []int) int { return 0 }",
+      "rust": "impl Solution {\n    pub fn rob(nums: Vec<i32>) -> i32 { 0 }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "hr-pub-1",
+        "visibility": "PUBLIC",
+        "input": "4\n1 2 3 1",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-pub-2",
+        "visibility": "PUBLIC",
+        "input": "5\n2 7 9 3 1",
+        "expectedOutput": "12",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n10",
+        "expectedOutput": "10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n2 1",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n1 2",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-hid-3",
+        "visibility": "HIDDEN",
+        "input": "6\n5 1 2 10 6 2",
+        "expectedOutput": "17",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-hid-4",
+        "visibility": "HIDDEN",
+        "input": "4\n2 1 1 2",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "hr-hid-5",
+        "visibility": "HIDDEN",
+        "input": "7\n4 1 2 7 5 3 1",
+        "expectedOutput": "14",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "coin-change",
+    "title": "Coin Change",
+    "difficulty": "MEDIUM",
+    "category": "Dynamic Programming",
+    "categoryLabel": "Dynamic Programming & Knapsack",
+    "tags": [
+      "array",
+      "dynamic-programming",
+      "breadth-first-search"
+    ],
+    "company": "Amazon, Meta, Bloomberg",
+    "acceptance": "82%",
+    "timeComplexity": "O(Coins * Amount)",
+    "spaceComplexity": "O(Amount)",
+    "description": "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1. You may assume that you have an infinite number of each kind of coin.",
+    "inputFormat": "First line contains n, number of coin types. Second line contains n space-separated coin denominations. Third line contains amount.",
+    "outputFormat": "Single integer representing minimum coins or -1.",
+    "constraints": [
+      "1 <= coins.length <= 12",
+      "1 <= coins[i] <= 2^31 - 1",
+      "0 <= amount <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "3\n1 2 5\n11",
+        "output": "3",
+        "explanation": "11 = 5 + 5 + 1 (3 coins)."
+      },
+      {
+        "input": "1\n2\n3",
+        "output": "-1",
+        "explanation": "Cannot make 3 using only 2."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int coinChange(vector<int>& coins, int amount) {\n        return -1;\n    }\n};",
+      "python": "class Solution:\n    def coinChange(self, coins: list[int], amount: int) -> int:\n        return -1",
+      "java": "public class Solution {\n    public int coinChange(int[] coins, int amount) {\n        return -1;\n    }\n}",
+      "javascript": "function coinChange(coins, amount) {\n  return -1;\n}",
+      "typescript": "function coinChange(coins: number[], amount: number): number {\n  return -1;\n}",
+      "c": "int coinChange(int* coins, int coinsSize, int amount) {\n    return -1;\n}",
+      "go": "package main\nfunc coinChange(coins []int, amount int) int { return -1 }",
+      "rust": "impl Solution {\n    pub fn coin_change(coins: Vec<i32>, amount: i32) -> i32 { -1 }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "cc-pub-1",
+        "visibility": "PUBLIC",
+        "input": "3\n1 2 5\n11",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n2\n3",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n1\n0",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-hid-1",
+        "visibility": "HIDDEN",
+        "input": "3\n2 5 10\n15",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n2 4\n7",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-hid-3",
+        "visibility": "HIDDEN",
+        "input": "4\n1 5 6 9\n11",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-hid-4",
+        "visibility": "HIDDEN",
+        "input": "3\n186 419 83\n6249",
+        "expectedOutput": "20",
+        "isActive": true
+      },
+      {
+        "testCaseId": "cc-hid-5",
+        "visibility": "HIDDEN",
+        "input": "3\n3 7 10\n14",
+        "expectedOutput": "2",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "longest-increasing-subsequence",
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "MEDIUM",
+    "category": "Dynamic Programming",
+    "categoryLabel": "Dynamic Programming & Binary Search",
+    "tags": [
+      "array",
+      "binary-search",
+      "dynamic-programming"
+    ],
+    "company": "Google, Microsoft, Amazon",
+    "acceptance": "83%",
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "inputFormat": "First line contains n. Second line contains n space-separated integers.",
+    "outputFormat": "Single integer representing the length of the LIS.",
+    "constraints": [
+      "1 <= nums.length <= 2500",
+      "-10^4 <= nums[i] <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "8\n10 9 2 5 3 7 101 18",
+        "output": "4",
+        "explanation": "The longest increasing subsequence is [2, 3, 7, 101], therefore the length is 4."
+      },
+      {
+        "input": "6\n0 1 0 3 2 3",
+        "output": "4",
+        "explanation": "LIS is [0, 1, 2, 3]."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLIS(vector<int>& nums) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def lengthOfLIS(self, nums: list[int]) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int lengthOfLIS(int[] nums) {\n        return 0;\n    }\n}",
+      "javascript": "function lengthOfLIS(nums) {\n  return 0;\n}",
+      "typescript": "function lengthOfLIS(nums: number[]): number {\n  return 0;\n}",
+      "c": "int lengthOfLIS(int* nums, int numsSize) {\n    return 0;\n}",
+      "go": "package main\nfunc lengthOfLIS(nums []int) int { return 0 }",
+      "rust": "impl Solution {\n    pub fn length_of_lis(nums: Vec<i32>) -> i32 { 0 }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "lis-pub-1",
+        "visibility": "PUBLIC",
+        "input": "8\n10 9 2 5 3 7 101 18",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-pub-2",
+        "visibility": "PUBLIC",
+        "input": "6\n0 1 0 3 2 3",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-pub-3",
+        "visibility": "PUBLIC",
+        "input": "7\n7 7 7 7 7 7 7",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n10",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\n4 3 2 1",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n1 3 6 7 9",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n1 2 4 3 5 4",
+        "expectedOutput": "4",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lis-hid-5",
+        "visibility": "HIDDEN",
+        "input": "7\n3 5 6 2 5 4 19",
+        "expectedOutput": "4",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "slug": "edit-distance",
+    "title": "Edit Distance",
+    "difficulty": "HARD",
+    "category": "Dynamic Programming",
+    "categoryLabel": "2D Dynamic Programming",
+    "tags": [
+      "string",
+      "dynamic-programming"
+    ],
+    "company": "Google, Microsoft, Amazon",
+    "acceptance": "76%",
+    "timeComplexity": "O(M * N)",
+    "spaceComplexity": "O(M * N)",
+    "description": "Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2. You have the following three operations permitted on a word: Insert a character, Delete a character, Replace a character.",
+    "inputFormat": "First line contains word1 (or \"EMPTY\" if empty). Second line contains word2 (or \"EMPTY\" if empty).",
+    "outputFormat": "Single integer representing minimum edit distance.",
+    "constraints": [
+      "0 <= word1.length, word2.length <= 500",
+      "word1 and word2 consist of lowercase English letters."
+    ],
+    "examples": [
+      {
+        "input": "horse\nros",
+        "output": "3",
+        "explanation": "horse -> rorse (replace h with r) -> rose (remove r) -> ros (remove e)."
+      },
+      {
+        "input": "intention\nexecution",
+        "output": "5",
+        "explanation": "intention -> inention -> enention -> exention -> exection -> execution."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <string>\n#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int minDistance(string word1, string word2) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def minDistance(self, word1: str, word2: str) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int minDistance(String word1, String word2) {\n        return 0;\n    }\n}",
+      "javascript": "function minDistance(word1, word2) {\n  return 0;\n}",
+      "typescript": "function minDistance(word1: string, word2: string): number {\n  return 0;\n}",
+      "c": "int minDistance(char* word1, char* word2) {\n    return 0;\n}",
+      "go": "package main\nfunc minDistance(word1 string, word2 string) int { return 0 }",
+      "rust": "impl Solution {\n    pub fn min_distance(word1: String, word2: String) -> i32 { 0 }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ed-pub-1",
+        "visibility": "PUBLIC",
+        "input": "horse\nros",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-pub-2",
+        "visibility": "PUBLIC",
+        "input": "intention\nexecution",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-pub-3",
+        "visibility": "PUBLIC",
+        "input": "a\na",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-hid-1",
+        "visibility": "HIDDEN",
+        "input": "EMPTY\na",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-hid-2",
+        "visibility": "HIDDEN",
+        "input": "abc\nEMPTY",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-hid-3",
+        "visibility": "HIDDEN",
+        "input": "kitten\nsitting",
+        "expectedOutput": "3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-hid-4",
+        "visibility": "HIDDEN",
+        "input": "flaw\nlawn",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ed-hid-5",
+        "visibility": "HIDDEN",
+        "input": "algorithm\nalturistic",
+        "expectedOutput": "6",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 1,
+    "slug": "lru-cache-implementation",
+    "title": "LRU Cache Implementation",
+    "difficulty": "HARD",
+    "category": "Stack / Queue",
+    "categoryLabel": "Design & Data Structures",
+    "tags": [
+      "hash-table",
+      "linked-list",
+      "design",
+      "doubly-linked-list"
+    ],
+    "company": "Amazon, Google, Microsoft",
+    "acceptance": "78%",
+    "timeComplexity": "O(1) per op",
+    "spaceComplexity": "O(Capacity)",
+    "description": "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache. Implement LRUCache with capacity, get(key), and put(key, value) operations in O(1) average time complexity.",
+    "inputFormat": "First line: capacity. Second line: number of operations. Next n lines: \"put key value\" or \"get key\".",
+    "outputFormat": "Return value of each \"get\" call printed on separate lines.",
+    "constraints": [
+      "1 <= capacity <= 3000",
+      "0 <= key <= 10^4",
+      "0 <= value <= 10^5",
+      "At most 2 * 10^5 calls."
+    ],
+    "examples": [
+      {
+        "input": "2\n6\nput 1 1\nput 2 2\nget 1\nput 3 3\nget 2\nget 3",
+        "output": "1\n-1\n3",
+        "explanation": "Cache capacity 2. Key 2 evicted when 3 added."
+      },
+      {
+        "input": "1\n3\nput 2 1\nget 2\nput 3 2",
+        "output": "1",
+        "explanation": "Single element cache."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <unordered_map>\n#include <list>\nusing namespace std;\n\nclass LRUCache {\npublic:\n    LRUCache(int capacity) {}\n    int get(int key) { return -1; }\n    void put(int key, int value) {}\n};",
+      "python": "class LRUCache:\n    def __init__(self, capacity: int):\n        pass\n    def get(self, key: int) -> int:\n        return -1\n    def put(self, key: int, value: int) -> None:\n        pass",
+      "java": "public class LRUCache {\n    public LRUCache(int capacity) {}\n    public int get(int key) { return -1; }\n    public void put(int key, int value) {}\n}",
+      "javascript": "class LRUCache {\n  constructor(capacity) {}\n  get(key) { return -1; }\n  put(key, value) {}\n}",
+      "typescript": "class LRUCache {\n  constructor(capacity: number) {}\n  get(key: number): number { return -1; }\n  put(key: number, value: number): void {}\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "lru-pub-1",
+        "visibility": "PUBLIC",
+        "input": "2\n6\nput 1 1\nput 2 2\nget 1\nput 3 3\nget 2\nget 3",
+        "expectedOutput": "1\n-1\n3",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-pub-2",
+        "visibility": "PUBLIC",
+        "input": "1\n3\nput 2 1\nget 2\nput 3 2",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-pub-3",
+        "visibility": "PUBLIC",
+        "input": "2\n4\nput 1 10\nget 1\nget 2\nput 2 20",
+        "expectedOutput": "10\n-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n5\nput 2 1\nput 1 1\nput 2 3\nput 4 1\nget 1",
+        "expectedOutput": "-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-hid-2",
+        "visibility": "HIDDEN",
+        "input": "3\n6\nput 1 1\nput 2 2\nput 3 3\nget 1\nput 4 4\nget 2",
+        "expectedOutput": "1\n-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-hid-3",
+        "visibility": "HIDDEN",
+        "input": "2\n6\nget 2\nput 2 6\nget 1\nput 1 5\nput 1 2\nget 1",
+        "expectedOutput": "-1\n-1\n2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-hid-4",
+        "visibility": "HIDDEN",
+        "input": "1\n4\nput 1 1\nget 1\nput 2 2\nget 1",
+        "expectedOutput": "1\n-1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "lru-hid-5",
+        "visibility": "HIDDEN",
+        "input": "2\n6\nput 1 1\nput 2 2\nget 1\nget 2\nput 3 3\nget 1",
+        "expectedOutput": "1\n2\n-1",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 2,
+    "slug": "trapping-rain-water",
+    "title": "Trapping Rain Water",
+    "difficulty": "HARD",
+    "category": "Arrays",
+    "categoryLabel": "Two Pointers & Dynamic Programming",
+    "tags": [
+      "array",
+      "two-pointers",
+      "dynamic-programming",
+      "stack"
+    ],
+    "company": "Amazon, Apple, Goldman Sachs",
+    "acceptance": "79%",
+    "timeComplexity": "O(N)",
+    "spaceComplexity": "O(1)",
+    "description": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+    "inputFormat": "First line: n. Second line: n space-separated integers.",
+    "outputFormat": "Single integer representing trapped water units.",
+    "constraints": [
+      "n == height.length",
+      "1 <= n <= 2 * 10^4",
+      "0 <= height[i] <= 10^5"
+    ],
+    "examples": [
+      {
+        "input": "12\n0 1 0 2 1 0 1 3 2 1 2 1",
+        "output": "6",
+        "explanation": "The elevation map traps 6 units of rain water."
+      },
+      {
+        "input": "6\n4 2 0 3 2 5",
+        "output": "9",
+        "explanation": "9 units trapped."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <algorithm>\nusing namespace std;\n\nclass Solution {\npublic:\n    int trap(vector<int>& height) {\n        return 0;\n    }\n};",
+      "python": "class Solution:\n    def trap(self, height: list[int]) -> int:\n        return 0",
+      "java": "public class Solution {\n    public int trap(int[] height) {\n        return 0;\n    }\n}",
+      "javascript": "function trap(height) {\n  return 0;\n}",
+      "typescript": "function trap(height: number[]): number {\n  return 0;\n}",
+      "c": "int trap(int* height, int heightSize) {\n    return 0;\n}",
+      "go": "package main\nfunc trap(height []int) int { return 0 }",
+      "rust": "impl Solution {\n    pub fn trap(height: Vec<i32>) -> i32 { 0 }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "trw-pub-1",
+        "visibility": "PUBLIC",
+        "input": "12\n0 1 0 2 1 0 1 3 2 1 2 1",
+        "expectedOutput": "6",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-pub-2",
+        "visibility": "PUBLIC",
+        "input": "6\n4 2 0 3 2 5",
+        "expectedOutput": "9",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-pub-3",
+        "visibility": "PUBLIC",
+        "input": "3\n2 0 2",
+        "expectedOutput": "2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1\n3",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-hid-2",
+        "visibility": "HIDDEN",
+        "input": "2\n3 2",
+        "expectedOutput": "0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-hid-3",
+        "visibility": "HIDDEN",
+        "input": "5\n5 4 1 2 5",
+        "expectedOutput": "11",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-hid-4",
+        "visibility": "HIDDEN",
+        "input": "6\n3 0 0 2 0 4",
+        "expectedOutput": "10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "trw-hid-5",
+        "visibility": "HIDDEN",
+        "input": "5\n1 2 3 4 5",
+        "expectedOutput": "0",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 3,
+    "slug": "manual-memory-allocation-pointer-swap",
+    "title": "Manual Memory Allocation & Pointer Swap",
+    "difficulty": "HARD",
+    "category": "Searching / Sorting",
+    "categoryLabel": "Systems Programming & Pointer Arithmetic",
+    "tags": [
+      "c++",
+      "pointers",
+      "memory-management"
+    ],
+    "company": "Qualcomm, NVIDIA, Apple",
+    "acceptance": "65%",
+    "timeComplexity": "O(1)",
+    "spaceComplexity": "O(1)",
+    "description": "Given two memory values and an allocation requirement, swap pointer targets without leaking memory, maintaining strict alignment and buffer safety.",
+    "inputFormat": "Two space-separated integers A and B.",
+    "outputFormat": "Two space-separated integers representing swapped values B and A.",
+    "constraints": [
+      "-10^9 <= A, B <= 10^9"
+    ],
+    "examples": [
+      {
+        "input": "10 20",
+        "output": "20 10",
+        "explanation": "Swapped."
+      },
+      {
+        "input": "-5 45",
+        "output": "45 -5",
+        "explanation": "Swapped."
+      }
+    ],
+    "starterCode": {
+      "cpp": "void swapPointers(int* a, int* b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}",
+      "python": "def swapPointers(a: int, b: int) -> tuple[int, int]:\n    return b, a",
+      "java": "public class Solution {\n    public int[] swapPointers(int a, int b) {\n        return new int[]{b, a};\n    }\n}",
+      "javascript": "function swapPointers(a, b) {\n  return [b, a];\n}",
+      "typescript": "function swapPointers(a: number, b: number): [number, number] {\n  return [b, a];\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "ps-pub-1",
+        "visibility": "PUBLIC",
+        "input": "10 20",
+        "expectedOutput": "20 10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-pub-2",
+        "visibility": "PUBLIC",
+        "input": "-5 45",
+        "expectedOutput": "45 -5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-pub-3",
+        "visibility": "PUBLIC",
+        "input": "0 0",
+        "expectedOutput": "0 0",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-hid-1",
+        "visibility": "HIDDEN",
+        "input": "1000000000 -1000000000",
+        "expectedOutput": "-1000000000 1000000000",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-hid-2",
+        "visibility": "HIDDEN",
+        "input": "1 2",
+        "expectedOutput": "2 1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-hid-3",
+        "visibility": "HIDDEN",
+        "input": "-99 -1",
+        "expectedOutput": "-1 -99",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-hid-4",
+        "visibility": "HIDDEN",
+        "input": "42 42",
+        "expectedOutput": "42 42",
+        "isActive": true
+      },
+      {
+        "testCaseId": "ps-hid-5",
+        "visibility": "HIDDEN",
+        "input": "7 0",
+        "expectedOutput": "0 7",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 4,
+    "slug": "thread-safe-bounded-blocking-queue",
+    "title": "Thread-Safe Bounded Blocking Queue",
+    "difficulty": "MEDIUM",
+    "category": "Stack / Queue",
+    "categoryLabel": "Concurrency & Synchronization",
+    "tags": [
+      "concurrency",
+      "multithreading",
+      "queue"
+    ],
+    "company": "Bloomberg, Uber, Goldman Sachs",
+    "acceptance": "82%",
+    "timeComplexity": "O(1) per op",
+    "spaceComplexity": "O(Capacity)",
+    "description": "Design a bounded blocking queue supporting enqueue, dequeue, and size operations safely across concurrent producer and consumer threads.",
+    "inputFormat": "First line: capacity. Second line: ops count. Next ops lines: \"enq X\" or \"deq\".",
+    "outputFormat": "Results of deq operations space-separated.",
+    "constraints": [
+      "1 <= capacity <= 1000",
+      "Total operations <= 10000"
+    ],
+    "examples": [
+      {
+        "input": "2\n4\nenq 1\nenq 2\ndeq\nenq 3",
+        "output": "1",
+        "explanation": "First dequeued item is 1."
+      },
+      {
+        "input": "3\n5\nenq 10\nenq 20\ndeq\ndeq\nenq 30",
+        "output": "10 20",
+        "explanation": "Items dequeued in FIFO order."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <mutex>\n#include <condition_variable>\n#include <queue>\nusing namespace std;\n\nclass BoundedBlockingQueue {\npublic:\n    BoundedBlockingQueue(int capacity) {}\n    void enqueue(int element) {}\n    int dequeue() { return 0; }\n    int size() { return 0; }\n};",
+      "python": "import threading\nfrom collections import deque\n\nclass BoundedBlockingQueue:\n    def __init__(self, capacity: int):\n        pass\n    def enqueue(self, element: int) -> None:\n        pass\n    def dequeue(self) -> int:\n        return 0\n    def size(self) -> int:\n        return 0",
+      "java": "public class BoundedBlockingQueue {\n    public BoundedBlockingQueue(int capacity) {}\n    public void enqueue(int element) throws InterruptedException {}\n    public int dequeue() throws InterruptedException { return 0; }\n    public int size() { return 0; }\n}",
+      "javascript": "class BoundedBlockingQueue {\n  constructor(capacity) {}\n  enqueue(element) {}\n  dequeue() { return 0; }\n  size() { return 0; }\n}",
+      "typescript": "class BoundedBlockingQueue {\n  constructor(capacity: number) {}\n  enqueue(element: number): void {}\n  dequeue(): number { return 0; }\n  size(): number { return 0; }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "bbq-pub-1",
+        "visibility": "PUBLIC",
+        "input": "2\n4\nenq 1\nenq 2\ndeq\nenq 3",
+        "expectedOutput": "1",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3\n5\nenq 10\nenq 20\ndeq\ndeq\nenq 30",
+        "expectedOutput": "10 20",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n2\nenq 5\ndeq",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-hid-1",
+        "visibility": "HIDDEN",
+        "input": "2\n3\nenq 7\nenq 8\ndeq",
+        "expectedOutput": "7",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n6\nenq 1\nenq 2\nenq 3\nenq 4\ndeq\ndeq",
+        "expectedOutput": "1 2",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-hid-3",
+        "visibility": "HIDDEN",
+        "input": "2\n5\nenq 100\ndeq\nenq 200\ndeq\nenq 300",
+        "expectedOutput": "100 200",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-hid-4",
+        "visibility": "HIDDEN",
+        "input": "4\n4\nenq 9\nenq 8\nenq 7\ndeq",
+        "expectedOutput": "9",
+        "isActive": true
+      },
+      {
+        "testCaseId": "bbq-hid-5",
+        "visibility": "HIDDEN",
+        "input": "3\n6\nenq 4\nenq 5\ndeq\nenq 6\ndeq\ndeq",
+        "expectedOutput": "4 5 6",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 7,
+    "slug": "top-three-salaries-per-department",
+    "title": "Top 3 High Salaries per Department",
+    "difficulty": "MEDIUM",
+    "category": "Hashing",
+    "categoryLabel": "Database Internals & Window Functions",
+    "tags": [
+      "database",
+      "hash-table",
+      "sorting"
+    ],
+    "company": "Amazon, Meta, Netflix",
+    "acceptance": "84%",
+    "timeComplexity": "O(N log N)",
+    "spaceComplexity": "O(N)",
+    "description": "Given an employee dataset containing Department, Employee Name, and Salary, find the employees who earn in the top three unique salaries for each department. Output rows sorted by Department ascending, then Salary descending, then Name ascending.",
+    "inputFormat": "First line: n. Following n lines: Department Name Salary.",
+    "outputFormat": "Each qualifying record on a new line: \"Department Name Salary\".",
+    "constraints": [
+      "1 <= n <= 10^4",
+      "Salary >= 0"
+    ],
+    "examples": [
+      {
+        "input": "5\nIT Joe 70000\nIT Jim 90000\nIT Henry 80000\nIT Sam 60000\nSales Max 90000",
+        "output": "IT Jim 90000\nIT Henry 80000\nIT Joe 70000\nSales Max 90000",
+        "explanation": "Top 3 distinct salaries per department."
+      },
+      {
+        "input": "2\nHR Ann 50000\nHR Bob 60000",
+        "output": "HR Bob 60000\nHR Ann 50000",
+        "explanation": "Both qualify."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<string> topThreeSalaries(vector<string>& records) {\n        return {};\n    }\n};",
+      "python": "def topThreeSalaries(records: list[str]) -> list[str]:\n    return []",
+      "java": "import java.util.*;\npublic class Solution {\n    public List<String> topThreeSalaries(List<String> records) {\n        return new ArrayList<>();\n    }\n}",
+      "javascript": "function topThreeSalaries(records) {\n  return [];\n}",
+      "typescript": "function topThreeSalaries(records: string[]): string[] {\n  return [];\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "tts-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\nIT Joe 70000\nIT Jim 90000\nIT Henry 80000\nIT Sam 60000\nSales Max 90000",
+        "expectedOutput": "IT Jim 90000\nIT Henry 80000\nIT Joe 70000\nSales Max 90000",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-pub-2",
+        "visibility": "PUBLIC",
+        "input": "2\nHR Ann 50000\nHR Bob 60000",
+        "expectedOutput": "HR Bob 60000\nHR Ann 50000",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\nEng Alice 100000",
+        "expectedOutput": "Eng Alice 100000",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-hid-1",
+        "visibility": "HIDDEN",
+        "input": "4\nSales A 10\nSales B 20\nSales C 30\nSales D 40",
+        "expectedOutput": "Sales D 40\nSales C 30\nSales B 20",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-hid-2",
+        "visibility": "HIDDEN",
+        "input": "4\nDev X 50\nDev Y 50\nDev Z 40\nDev W 30",
+        "expectedOutput": "Dev X 50\nDev Y 50\nDev Z 40\nDev W 30",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\nA 1 100\nB 2 200\nC 3 300",
+        "expectedOutput": "A 1 100\nB 2 200\nC 3 300",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-hid-4",
+        "visibility": "HIDDEN",
+        "input": "5\nFinance F1 90\nFinance F2 80\nFinance F3 70\nFinance F4 60\nFinance F5 50",
+        "expectedOutput": "Finance F1 90\nFinance F2 80\nFinance F3 70",
+        "isActive": true
+      },
+      {
+        "testCaseId": "tts-hid-5",
+        "visibility": "HIDDEN",
+        "input": "2\nOps O1 100\nOps O2 100",
+        "expectedOutput": "Ops O1 100\nOps O2 100",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "legacyId": 8,
+    "slug": "segment-tree-range-update-lazy-propagation",
+    "title": "Segment Tree Range Update & Lazy Propagation",
+    "difficulty": "HARD",
+    "category": "Trees",
+    "categoryLabel": "Advanced Data Structures & Range Queries",
+    "tags": [
+      "segment-tree",
+      "tree",
+      "binary-indexed-tree"
+    ],
+    "company": "Google, Citadel, Jane Street",
+    "acceptance": "71%",
+    "timeComplexity": "O(log N) per query",
+    "spaceComplexity": "O(N)",
+    "description": "Implement a Segment Tree with Lazy Propagation that supports range additions and range sum queries in O(log n) time per operation.",
+    "inputFormat": "First line: n. Second line: n space-separated array values. Third line: q (number of queries). Next q lines: \"add L R val\" or \"sum L R\" (1-indexed).",
+    "outputFormat": "Results of each \"sum\" query on separate lines.",
+    "constraints": [
+      "1 <= n <= 10^5",
+      "1 <= q <= 10^5",
+      "1 <= L <= R <= n",
+      "-10^4 <= val <= 10^4"
+    ],
+    "examples": [
+      {
+        "input": "5\n1 2 3 4 5\n3\nsum 1 5\nadd 2 4 10\nsum 1 5",
+        "output": "15\n45",
+        "explanation": "Initial sum is 15. After adding 10 to indices 2..4, sum becomes 15 + 30 = 45."
+      },
+      {
+        "input": "3\n0 0 0\n2\nadd 1 3 5\nsum 2 2",
+        "output": "5",
+        "explanation": "Element at 2 has value 5."
+      }
+    ],
+    "starterCode": {
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass SegmentTree {\npublic:\n    SegmentTree(vector<long long>& nums) {}\n    void updateRange(int l, int r, long long val) {}\n    long long queryRange(int l, int r) { return 0; }\n};",
+      "python": "class SegmentTree:\n    def __init__(self, nums: list[int]):\n        pass\n    def updateRange(self, l: int, r: int, val: int) -> None:\n        pass\n    def queryRange(self, l: int, r: int) -> int:\n        return 0",
+      "java": "public class SegmentTree {\n    public SegmentTree(long[] nums) {}\n    public void updateRange(int l, int r, long val) {}\n    public long queryRange(int l, int r) { return 0; }\n}",
+      "javascript": "class SegmentTree {\n  constructor(nums) {}\n  updateRange(l, r, val) {}\n  queryRange(l, r) { return 0; }\n}",
+      "typescript": "class SegmentTree {\n  constructor(nums: number[]) {}\n  updateRange(l: number, r: number, val: number): void {}\n  queryRange(l: number, r: number): number { return 0; }\n}"
+    },
+    "testCases": [
+      {
+        "testCaseId": "st-pub-1",
+        "visibility": "PUBLIC",
+        "input": "5\n1 2 3 4 5\n3\nsum 1 5\nadd 2 4 10\nsum 1 5",
+        "expectedOutput": "15\n45",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-pub-2",
+        "visibility": "PUBLIC",
+        "input": "3\n0 0 0\n2\nadd 1 3 5\nsum 2 2",
+        "expectedOutput": "5",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-pub-3",
+        "visibility": "PUBLIC",
+        "input": "1\n10\n1\nsum 1 1",
+        "expectedOutput": "10",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-hid-1",
+        "visibility": "HIDDEN",
+        "input": "4\n1 1 1 1\n2\nadd 1 4 2\nsum 1 4",
+        "expectedOutput": "12",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-hid-2",
+        "visibility": "HIDDEN",
+        "input": "5\n5 5 5 5 5\n3\nsum 1 3\nadd 3 5 5\nsum 3 5",
+        "expectedOutput": "15\n30",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-hid-3",
+        "visibility": "HIDDEN",
+        "input": "3\n1 2 3\n3\nadd 1 1 10\nadd 3 3 20\nsum 1 3",
+        "expectedOutput": "36",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-hid-4",
+        "visibility": "HIDDEN",
+        "input": "4\n2 4 6 8\n2\nadd 2 3 -2\nsum 1 4",
+        "expectedOutput": "16",
+        "isActive": true
+      },
+      {
+        "testCaseId": "st-hid-5",
+        "visibility": "HIDDEN",
+        "input": "2\n0 0\n3\nadd 1 2 100\nsum 1 1\nsum 1 2",
+        "expectedOutput": "100\n200",
+        "isActive": true
+      }
+    ]
+  }
+]

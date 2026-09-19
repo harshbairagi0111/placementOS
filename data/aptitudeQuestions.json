@@ -1,0 +1,432 @@
+[
+  {
+    "category": "Quantitative",
+    "subtopic": "Percentages",
+    "difficulty": "Easy",
+    "questionTemplate": "A student scored {{score}} marks out of {{totalMarks}} in an examination. What is the percentage of marks scored by the student?",
+    "options": ["68%", "72%", "75%", "80%"],
+    "correctAnswerIndex": 1,
+    "explanation": "Percentage = (Marks Scored / Total Marks) * 100 = (360 / 500) * 100 = 72%.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Percentages",
+    "difficulty": "Medium",
+    "questionTemplate": "If the price of a commodity increases by {{percentIncrease}}%, by what percentage must a household reduce its consumption so that the total expenditure remains unchanged?",
+    "options": ["20%", "25%", "16.67%", "33.33%"],
+    "correctAnswerIndex": 0,
+    "explanation": "Required percentage reduction = [R / (100 + R)] * 100 = [25 / (100 + 25)] * 100 = (25 / 125) * 100 = 20%.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Percentages",
+    "difficulty": "Hard",
+    "questionTemplate": "In an election between two candidates, the winner received {{winPct}}% of the total votes polled and won by a majority of {{voteMargin}} votes. What was the total number of votes polled (assuming no invalid votes)?",
+    "options": ["12,000", "14,500", "15,000", "18,000"],
+    "correctAnswerIndex": 2,
+    "explanation": "Winner received 58% of votes, so the loser received (100 - 58) = 42%. Margin = 58% - 42% = 16% of total votes. Total votes = 2,400 / 0.16 = 15,000.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time & Work",
+    "difficulty": "Easy",
+    "questionTemplate": "A can complete a piece of work in {{daysA}} days and B can complete the same work in {{daysB}} days. In how many days can they complete the work together?",
+    "options": ["6 days", "8 days", "9 days", "10 days"],
+    "correctAnswerIndex": 1,
+    "explanation": "Rate of work per day: A = 1/12, B = 1/24. Combined rate = 1/12 + 1/24 = 3/24 = 1/8. Total days = 8 days.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time & Work",
+    "difficulty": "Medium",
+    "questionTemplate": "A and B together can do a piece of work in 12 days, B and C together in 15 days, and C and A together in 20 days. How many days will A, B, and C take to finish the work working together?",
+    "options": ["8 days", "10 days", "12 days", "15 days"],
+    "correctAnswerIndex": 1,
+    "explanation": "2 * (A + B + C)'s 1-day work = 1/12 + 1/15 + 1/20 = (5 + 4 + 3)/60 = 12/60 = 1/5. Therefore, (A + B + C)'s 1-day work = 1/10. Together they take 10 days.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time & Work",
+    "difficulty": "Hard",
+    "questionTemplate": "A can finish a work in 18 days and B can do the same work in 15 days. B worked for 10 days and left the job. In how many additional days can A alone finish the remaining work?",
+    "options": ["5 days", "6 days", "7.5 days", "8 days"],
+    "correctAnswerIndex": 1,
+    "explanation": "Work done by B in 10 days = 10 * (1/15) = 2/3. Remaining work = 1 - 2/3 = 1/3. Time taken by A for remaining work = (1/3) / (1/18) = 6 days.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Profit & Loss",
+    "difficulty": "Easy",
+    "questionTemplate": "An article was purchased for ${{costPrice}} and sold for ${{sellingPrice}}. What is the profit percentage?",
+    "options": ["20%", "22.5%", "25%", "30%"],
+    "correctAnswerIndex": 2,
+    "explanation": "Profit = $500 - $400 = $100. Profit % = (100 / 400) * 100 = 25%.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Profit & Loss",
+    "difficulty": "Medium",
+    "questionTemplate": "A shopkeeper sells a product at a profit of 15% after allowing a discount of 10% on the marked price. If the cost price is $180, what is the marked price?",
+    "options": ["$210", "$220", "$230", "$245"],
+    "correctAnswerIndex": 2,
+    "explanation": "Selling Price (SP) = CP * (1 + 0.15) = 180 * 1.15 = $207. Since SP = Marked Price (MP) * (1 - 0.10) = 0.90 * MP, MP = 207 / 0.90 = $230.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Profit & Loss",
+    "difficulty": "Hard",
+    "questionTemplate": "A dishonest dealer professes to sell his goods at cost price, but uses a false weight of 950 grams instead of a 1 kilogram weight. What is his gain percentage (rounded to two decimal places)?",
+    "options": ["5.00%", "5.26%", "5.55%", "6.00%"],
+    "correctAnswerIndex": 1,
+    "explanation": "Gain % = [Error / (True Value - Error)] * 100 = [50 / (1000 - 50)] * 100 = (50 / 950) * 100 = 5.263% ≈ 5.26%.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Ratios",
+    "difficulty": "Easy",
+    "questionTemplate": "Two numbers are in the ratio 3 : 5. If their sum is {{sumValue}}, what is the larger number?",
+    "options": ["60", "80", "100", "120"],
+    "correctAnswerIndex": 2,
+    "explanation": "Let the numbers be 3x and 5x. 3x + 5x = 160 => 8x = 160 => x = 20. Larger number = 5 * 20 = 100.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Ratios",
+    "difficulty": "Medium",
+    "questionTemplate": "In a mixture of 60 liters, the ratio of milk to water is 2 : 1. How much water must be added to this mixture to make the ratio of milk to water 1 : 2?",
+    "options": ["30 liters", "40 liters", "50 liters", "60 liters"],
+    "correctAnswerIndex": 3,
+    "explanation": "Initial Milk = (2/3) * 60 = 40L, Initial Water = 20L. Let x liters of water be added: 40 / (20 + x) = 1 / 2 => 20 + x = 80 => x = 60 liters.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Ratios",
+    "difficulty": "Hard",
+    "questionTemplate": "Salaries of A, B, and C are in the ratio 2 : 3 : 5. If increments of 15%, 10%, and 20% are allowed respectively in their salaries, what will be the new ratio of their salaries?",
+    "options": ["21 : 33 : 60", "23 : 33 : 60", "23 : 30 : 50", "25 : 35 : 65"],
+    "correctAnswerIndex": 1,
+    "explanation": "Let original salaries be 20k, 30k, 50k. New salaries: A = 20k * 1.15 = 23k; B = 30k * 1.10 = 33k; C = 50k * 1.20 = 60k. Ratio = 23 : 33 : 60.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time-Speed-Distance",
+    "difficulty": "Easy",
+    "questionTemplate": "A car travels a distance of {{distance}} km in {{hours}} hours. What is its speed in meters per second?",
+    "options": ["15 m/s", "16.67 m/s", "18 m/s", "20 m/s"],
+    "correctAnswerIndex": 1,
+    "explanation": "Speed = 180 km / 3 hours = 60 km/h. Convert to m/s: 60 * (5 / 18) = 50 / 3 ≈ 16.67 m/s.",
+    "isVariable": true
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time-Speed-Distance",
+    "difficulty": "Medium",
+    "questionTemplate": "A train 150 meters long is running at a speed of 54 km/h. How many seconds will it take to pass a telegraph post?",
+    "options": ["8 seconds", "10 seconds", "12 seconds", "15 seconds"],
+    "correctAnswerIndex": 1,
+    "explanation": "Speed = 54 * (5 / 18) = 15 m/s. Time = Distance / Speed = 150 m / 15 m/s = 10 seconds.",
+    "isVariable": false
+  },
+  {
+    "category": "Quantitative",
+    "subtopic": "Time-Speed-Distance",
+    "difficulty": "Hard",
+    "questionTemplate": "A man travels from point A to point B at an average speed of 40 km/h and returns from B to A along the same route at 60 km/h. What is his average speed for the entire round trip?",
+    "options": ["48 km/h", "50 km/h", "52 km/h", "54 km/h"],
+    "correctAnswerIndex": 0,
+    "explanation": "Average Speed for equal distance = (2 * v1 * v2) / (v1 + v2) = (2 * 40 * 60) / (40 + 60) = 4800 / 100 = 48 km/h.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Blood Relations",
+    "difficulty": "Easy",
+    "questionTemplate": "Pointing to a photograph of a boy, Suresh said, 'He is the son of the only son of my mother.' How is Suresh related to that boy?",
+    "options": ["Brother", "Uncle", "Father", "Grandfather"],
+    "correctAnswerIndex": 2,
+    "explanation": "The 'only son of my mother' is Suresh himself. Therefore, the boy is Suresh's son, making Suresh the father of the boy.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Blood Relations",
+    "difficulty": "Medium",
+    "questionTemplate": "If 'A + B' means A is the brother of B; 'A - B' means A is the sister of B; and 'A * B' means A is the father of B. Which of the following expressions indicates that 'P is the aunt of Q'?",
+    "options": ["P - R * Q", "P + R * Q", "P * R - Q", "Q * R - P"],
+    "correctAnswerIndex": 0,
+    "explanation": "In 'P - R * Q', P is the sister of R, and R is the father of Q. Sister of Q's father is Q's aunt (paternal aunt).",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Blood Relations",
+    "difficulty": "Hard",
+    "questionTemplate": "A family consists of six members: P, Q, R, S, T, and U. There are two married couples. Q is a doctor and the mother of T. R is the grandmother of U. S is the father of P and grandfather of T. T is the brother of U. How is P related to T?",
+    "options": ["Uncle", "Father", "Brother", "Grandfather"],
+    "correctAnswerIndex": 1,
+    "explanation": "S (grandfather) is father of P. Q (mother) is married to P. T and U are their children. Hence, P is the father of T.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Seating Arrangement",
+    "difficulty": "Easy",
+    "questionTemplate": "Five friends A, B, C, D, and E are sitting in a row facing North. C is sitting in the middle. E is sitting to the immediate right of A. B is sitting at the extreme right end. D is to the immediate left of C. Who is sitting at the extreme left end?",
+    "options": ["A", "B", "D", "E"],
+    "correctAnswerIndex": 0,
+    "explanation": "Positions 1 to 5 from left to right: C is at 3, D is at 2 (immediate left of C), B is at 5 (extreme right). Remaining are 1 and 4 for A and E. Since E is to the immediate right of A, the order is A, D, C, E, B. Thus A is at the extreme left.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Seating Arrangement",
+    "difficulty": "Medium",
+    "questionTemplate": "Six people P, Q, R, S, T, and U are sitting in a circle facing the center. P is opposite S. R is between P and Q. T is between P and U. Who is sitting to the immediate right of S if Q is to the immediate right of R?",
+    "options": ["P", "Q", "T", "U"],
+    "correctAnswerIndex": 1,
+    "explanation": "Facing the center in circular clockwise order: P -> R -> Q -> S -> U -> T -> P. Looking from center outwards at position S, immediate right is position Q.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Seating Arrangement",
+    "difficulty": "Hard",
+    "questionTemplate": "Eight candidates (P1 to P8) sit in a straight line facing North during an assessment. P3 sits third to the left of P7. P7 sits at the rightmost end (position 8). P1 sits second to the right of P3. P2 sits to the immediate left of P1. Which position from the left end does P2 occupy?",
+    "options": ["4th", "5th", "6th", "7th"],
+    "correctAnswerIndex": 2,
+    "explanation": "P7 is at pos 8. P3 is 3rd to left of P7 = pos 5. P1 is 2nd to right of P3 = pos 7. P2 is immediate left of P1 = pos 6 (6th from left).",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Syllogisms",
+    "difficulty": "Easy",
+    "questionTemplate": "Statements: All mangoes are fruits. All fruits are sweet.\nConclusions:\nI. All mangoes are sweet.\nII. Some sweet things are mangoes.\nWhich of the conclusions logically follows?",
+    "options": ["Only conclusion I follows", "Only conclusion II follows", "Neither I nor II follows", "Both conclusions I and II follow"],
+    "correctAnswerIndex": 3,
+    "explanation": "Since all mangoes are fruits and all fruits are sweet, all mangoes are sweet (Conclusion I follows). Consequently, some sweet things are mangoes (Conclusion II follows).",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Syllogisms",
+    "difficulty": "Medium",
+    "questionTemplate": "Statements: Some dogs are birds. All birds are trees.\nConclusions:\nI. Some trees are dogs.\nII. Some birds are dogs.\nIII. All dogs are trees.\nWhich of the conclusions logically follows?",
+    "options": ["Only I follows", "Only II follows", "Only I and II follow", "All I, II, and III follow"],
+    "correctAnswerIndex": 2,
+    "explanation": "Some dogs are birds implies Some birds are dogs (II follows). The dogs that are birds are also trees, so Some trees are dogs (I follows). III does not necessarily follow.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Syllogisms",
+    "difficulty": "Hard",
+    "questionTemplate": "Statements: Some pens are books. No book is a pencil. All pencils are erasers.\nConclusions:\nI. Some pens are not pencils.\nII. Some erasers are not books.\nIII. Some pens are erasers.\nWhich conclusions logically follow?",
+    "options": ["Only I follows", "Only II follows", "Only I and II follow", "All I, II, and III follow"],
+    "correctAnswerIndex": 2,
+    "explanation": "The pens that are books cannot be pencils (I follows). The erasers that are pencils cannot be books (II follows). There is no direct relationship requiring pens to be erasers (III does not follow).",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Coding-Decoding",
+    "difficulty": "Easy",
+    "questionTemplate": "In a certain code language, 'APPLE' is written as 'BQQMF'. How will 'DELHI' be written in that same code language?",
+    "options": ["EFMIJ", "EDMIJ", "EFMIK", "EEMHJ"],
+    "correctAnswerIndex": 0,
+    "explanation": "Each letter is shifted by +1 forward in the alphabet: D->E, E->F, L->M, H->I, I->J => 'EFMIJ'.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Coding-Decoding",
+    "difficulty": "Medium",
+    "questionTemplate": "In a certain code language, 'SYSTEM' is coded as 'SYSMET' and 'NEARER' is coded as 'AENRER'. Using the same rule, how is 'FRACTION' coded?",
+    "options": ["CARFNOIT", "CARFTION", "ARFCNOIT", "FRACNOIT"],
+    "correctAnswerIndex": 0,
+    "explanation": "The word is divided into two equal halves of 4 letters and each half is reversed: 'FRAC' reversed is 'CARF', and 'TION' reversed is 'NOIT'. Combined: 'CARFNOIT'.",
+    "isVariable": false
+  },
+  {
+    "category": "Logical",
+    "subtopic": "Coding-Decoding",
+    "difficulty": "Hard",
+    "questionTemplate": "In a certain code language, 'COMPUTER' is written as 'RFUVQNPC'. How is 'MEDICINE' written in that code?",
+    "options": ["EOJDEJFM", "EOJDJEFM", "MFEDJJOE", "EOJDJFEM"],
+    "correctAnswerIndex": 1,
+    "explanation": "The first and last letters are swapped (E at start, M at end). The middle letters are shifted by +1 forward (E->F, D->E, I->J, C->D, I->J, N->O) and reversed (O, J, D, J, E, F), yielding 'EOJDJEFM'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Sentence Correction",
+    "difficulty": "Easy",
+    "questionTemplate": "Identify the grammatically correct sentence from the options below:",
+    "options": [
+      "Neither of the two candidates have submitted their portfolio.",
+      "Neither of the two candidates has submitted his portfolio.",
+      "Neither of the two candidates have submitted his portfolio.",
+      "Neither of the two candidates are submitting their portfolio."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "'Neither' referring to two items is singular and governs the singular verb 'has' and singular possessive pronoun 'his/her'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Sentence Correction",
+    "difficulty": "Medium",
+    "questionTemplate": "Choose the correct substitution for the underlined part:\n'Despite of having worked late into the night, she arrived on time for the presentation.'",
+    "options": [
+      "Despite having worked late into the night",
+      "In spite having worked late into the night",
+      "Despite of her working late into the night",
+      "Although working late in the night"
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "'Despite' takes a direct noun/gerund without the preposition 'of'. ('In spite' requires 'of').",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Sentence Correction",
+    "difficulty": "Hard",
+    "questionTemplate": "Identify the sentence that correctly follows the rules of subjunctive mood and subject-verb agreement:",
+    "options": [
+      "The committee recommended that the lead developer resigns immediately from his post.",
+      "The committee recommended that the lead developer resign immediately from his post.",
+      "The committee recommended that the lead developer should be resigning immediately from his post.",
+      "The committee recommended that the lead developer will resign immediately from his post."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Mandative verbs of proposal or recommendation ('recommended that...') require the subjunctive bare infinitive 'resign' rather than indicative 'resigns'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Reading Comprehension",
+    "difficulty": "Easy",
+    "questionTemplate": "Read the passage:\n'Distributed version control systems like Git allow developers to record changes to files over time so that specific versions can be recalled later. Unlike centralized systems, every developer\\'s local working copy contains a full mirror of the entire repository history, enabling seamless offline work and rapid branching.'\n\nAccording to the passage, what is a primary advantage of distributed version control systems over centralized ones?",
+    "options": [
+      "They require a continuous high-speed internet connection.",
+      "Every local repository contains the complete historical archive, allowing offline operations.",
+      "They eliminate the need for branching and merging code.",
+      "They prevent multiple developers from editing the same file concurrently."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The text directly states that each local working copy contains a full mirror of the history, enabling seamless offline work.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Reading Comprehension",
+    "difficulty": "Medium",
+    "questionTemplate": "Read the passage:\n'While microservices architecture offers agility and independent service deployments, it inevitably introduces substantial operational overhead. Distributed systems suffer from network latency, complex observability requirements, and eventual consistency challenges that monolithic architectures naturally avoid.'\n\nWhat can be inferred from the passage regarding the trade-offs of microservices?",
+    "options": [
+      "Microservices eliminate the need for logging and observability monitoring.",
+      "Monolithic architectures are universally obsolete in modern engineering.",
+      "The architectural benefits of microservices come at the cost of distributed system complexity.",
+      "Network latency is significantly lower in distributed microservices than in monolithic setups."
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The passage emphasizes that benefits like agility come with operational overhead, network latency, and observability challenges.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Reading Comprehension",
+    "difficulty": "Hard",
+    "questionTemplate": "Read the passage:\n'The illusion of explanatory depth refers to our psychological propensity to overestimate our comprehension of how complex mechanisms work—until we are forced to articulate step-by-step causality. When engineers are required to formulate explicit documentation or explain failure modes aloud, superficial intuitions collapse into rigorous conceptual clarity.'\n\nWhich statement best captures the central premise of this passage?",
+    "options": [
+      "Superficial intuitions are generally sufficient for operating intricate systems without formal documentation.",
+      "Articulating causality and failure modes exposes cognitive overconfidence and promotes true technical understanding.",
+      "Complex mechanisms can only be understood through mathematical proof rather than verbal explanation.",
+      "Engineers rarely overestimate their technical domain expertise when designing distributed software."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The passage argues that forced articulation of causality breaks down the illusion of deep understanding and fosters genuine clarity.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Synonyms & Antonyms",
+    "difficulty": "Easy",
+    "questionTemplate": "Choose the word that is most nearly SYNONYMOUS with 'LUCID':",
+    "options": ["Ambiguous", "Clear", "Obscure", "Intricate"],
+    "correctAnswerIndex": 1,
+    "explanation": "'Lucid' means expressed clearly and easy to understand.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Synonyms & Antonyms",
+    "difficulty": "Easy",
+    "questionTemplate": "Choose the word that is most nearly OPPOSITE (ANTONYM) to 'TRANSIENT':",
+    "options": ["Ephemeral", "Permanent", "Fleeting", "Volatile"],
+    "correctAnswerIndex": 1,
+    "explanation": "'Transient' means lasting only for a short time; its direct antonym is 'Permanent'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Synonyms & Antonyms",
+    "difficulty": "Medium",
+    "questionTemplate": "Choose the word that is most nearly SYNONYMOUS with 'METICULOUS':",
+    "options": ["Careless", "Painstaking", "Hasty", "Indifferent"],
+    "correctAnswerIndex": 1,
+    "explanation": "'Meticulous' means showing great attention to detail and precision, synonymous with 'Painstaking'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Synonyms & Antonyms",
+    "difficulty": "Hard",
+    "questionTemplate": "Choose the word that is most nearly OPPOSITE (ANTONYM) to 'PERNICIOUS':",
+    "options": ["Beneficial", "Deleterious", "Malicious", "Invidious"],
+    "correctAnswerIndex": 0,
+    "explanation": "'Pernicious' means having a harmful, destructive, or lethal effect; its antonym is 'Beneficial'.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Para-Jumbles",
+    "difficulty": "Easy",
+    "questionTemplate": "Rearrange the following sentences (P, Q, R, S) into a coherent paragraph:\nP: It allows teams to iterate rapidly and catch defects early.\nQ: Continuous Integration is a software engineering practice.\nR: Developers merge their code changes into a central repository frequently.\nS: Each merge is verified by an automated build and test suite.",
+    "options": ["Q - R - S - P", "Q - S - R - P", "R - Q - P - S", "S - R - Q - P"],
+    "correctAnswerIndex": 0,
+    "explanation": "Q introduces the topic, R explains the action taken, S describes the verification process, and P concludes with the core benefit.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Para-Jumbles",
+    "difficulty": "Medium",
+    "questionTemplate": "Rearrange the following sentences (P, Q, R, S) into a coherent paragraph:\nP: However, without proper indexing, query performance degrades exponentially as tables grow.\nQ: Relational databases use structured schemas to organize and access relational data.\nR: By creating B-tree indices on frequently filtered columns, lookups achieve logarithmic time complexity.\nS: Consequently, database administrators must carefully balance read acceleration with index write overhead.",
+    "options": ["Q - P - R - S", "P - Q - R - S", "Q - R - P - S", "R - P - Q - S"],
+    "correctAnswerIndex": 0,
+    "explanation": "Q establishes the context, P introduces the performance problem, R provides the indexing solution, and S highlights the operational trade-off.",
+    "isVariable": false
+  },
+  {
+    "category": "Verbal",
+    "subtopic": "Para-Jumbles",
+    "difficulty": "Hard",
+    "questionTemplate": "Rearrange the following sentences (P, Q, R, S) into a coherent paragraph:\nP: In asymmetric cryptography, a public key encrypts data while a private key decrypts it.\nQ: This fundamental property resolves the key-distribution dilemma that plagued classical symmetric ciphers.\nR: Secure communication across untrusted public networks relies on mathematical trapdoor functions.\nS: Modern TLS protocols harness this mechanism during handshakes to securely negotiate symmetric session keys.",
+    "options": ["R - P - Q - S", "P - R - Q - S", "R - Q - P - S", "Q - P - R - S"],
+    "correctAnswerIndex": 0,
+    "explanation": "R opens with the foundational principle, P details the asymmetric mechanism, Q explains the key-exchange problem solved, and S provides the real-world TLS application.",
+    "isVariable": false
+  }
+]

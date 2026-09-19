@@ -1,0 +1,2600 @@
+{
+  "datasetName": "PlacementOS RAG Dataset Batch 1",
+  "version": "1.0.0",
+  "description": "Curated PlacementOS RAG Knowledge Base - Core Technical, Aptitude, and Interview Experiences",
+  "records": [
+    {
+      "sourceId": "rag-tech-dsa-001",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Data Structures & Algorithms - Concept & Analysis (Intermediate)",
+      "content": "Skill: Data Structures & Algorithms\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What is the worst-case and average-case time complexity of searching in a balanced Binary Search Tree (such as an AVL or Red-Black Tree) containing N elements?\n\nEducational Explanation:\nBalanced BSTs (like AVL and Red-Black trees) maintain self-balancing invariants that guarantee tree height remains bounded by O(log N). Thus, lookup, insertion, and deletion are all strictly O(log N) in both average and worst cases.",
+      "skills": [
+        "Data Structures & Algorithms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "dsa",
+        "technical",
+        "intermediate",
+        "data",
+        "structures",
+        "algorithms"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "dsa",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-dsa-002",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Data Structures & Algorithms - Concept & Analysis (Advanced)",
+      "content": "Skill: Data Structures & Algorithms\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: Given an undirected connected graph with V vertices and E edges, which algorithm finds the Single-Source Shortest Path when edge weights are strictly positive?\n\nEducational Explanation:\nDijkstra's Algorithm with a min-heap (priority queue) solves Single-Source Shortest Path in O((V + E) log V) time when all edge weights are strictly non-negative.",
+      "skills": [
+        "Data Structures & Algorithms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "dsa",
+        "technical",
+        "advanced",
+        "data",
+        "structures",
+        "algorithms"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "dsa",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-programming_fundamentals-003",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Programming Fundamentals - Concept & Analysis (Beginner)",
+      "content": "Skill: Programming Fundamentals\n\nCategory: technical\n\nDifficulty: Beginner\n\nQuestion: What is the primary difference between pass-by-value and pass-by-reference when passing an argument into a function?\n\nEducational Explanation:\nIn pass-by-value, the called function receives a copy of the argument's value, preserving the caller's variable. In pass-by-reference, the function receives an alias/memory address to the actual variable.",
+      "skills": [
+        "Programming Fundamentals"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "programming_fundamentals",
+        "technical",
+        "beginner",
+        "programming",
+        "fundamentals"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "programming_fundamentals",
+        "category": "technical",
+        "difficulty": "Beginner",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-java-004",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Java - Concept & Analysis (Intermediate)",
+      "content": "Skill: Java\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: In modern Java (Java 8+), which statement regarding the 'final' keyword and immutability is true?\n\nEducational Explanation:\nThe 'final' modifier on a reference variable simply binds that reference permanently to a single memory address/object. It does not freeze or protect the mutable fields inside that referenced object.",
+      "skills": [
+        "Java"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "java",
+        "technical",
+        "intermediate",
+        "java"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "java",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-java-005",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Java - Concept & Analysis (Advanced)",
+      "content": "Skill: Java\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: What happens when two threads invoke synchronized methods on two DIFFERENT instances of the same class simultaneously?\n\nEducational Explanation:\nInstance synchronized methods acquire the monitor lock on 'this' specific instance. Because the two threads are operating on distinct instances, they hold distinct locks and proceed concurrently.",
+      "skills": [
+        "Java"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "java",
+        "technical",
+        "advanced",
+        "java"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "java",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-python-006",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Python - Concept & Analysis (Intermediate)",
+      "content": "Skill: Python\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What does the Python Global Interpreter Lock (GIL) enforce in CPython?\n\nEducational Explanation:\nThe GIL is a mutex in CPython that prevents multiple native threads from executing Python bytecodes at once, simplifying memory management but requiring multiprocessing for CPU-bound parallelism.",
+      "skills": [
+        "Python"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "python",
+        "technical",
+        "intermediate",
+        "python"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "python",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-python-007",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Python - Concept & Analysis (Beginner)",
+      "content": "Skill: Python\n\nCategory: technical\n\nDifficulty: Beginner\n\nQuestion: What is the time complexity of checking whether a key exists in a standard Python dictionary ('key in my_dict')?\n\nEducational Explanation:\nPython dictionaries are implemented as hash tables with open addressing, yielding average O(1) key lookups and membership checks.",
+      "skills": [
+        "Python"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "python",
+        "technical",
+        "beginner",
+        "python"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "python",
+        "category": "technical",
+        "difficulty": "Beginner",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-javascript-008",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "JavaScript - Concept & Analysis (Intermediate)",
+      "content": "Skill: JavaScript\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What is the expected console output order of the following JavaScript code snippet?\n\nCode Snippet:\n```\nconsole.log('1');\nsetTimeout(() => console.log('2'), 0);\nPromise.resolve().then(() => console.log('3'));\nconsole.log('4');\n```\n\nEducational Explanation:\nSynchronous code runs first ('1', '4'). Next, microtasks (Promise resolution) run before macrotasks ('3'). Finally, the macrotask timer callback runs ('2'). Output: 1, 4, 3, 2.",
+      "skills": [
+        "JavaScript"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "javascript",
+        "technical",
+        "intermediate",
+        "javascript"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "javascript",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": true
+      }
+    },
+    {
+      "sourceId": "rag-tech-javascript-009",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "JavaScript - Concept & Analysis (Advanced)",
+      "content": "Skill: JavaScript\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: What occurs when a JavaScript closure is created?\n\nEducational Explanation:\nA closure combines a function bundled together with references to its surrounding lexical state, allowing it to access outer variables after the parent execution context finishes.",
+      "skills": [
+        "JavaScript"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "javascript",
+        "technical",
+        "advanced",
+        "javascript"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "javascript",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-cpp-010",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "C++ - Concept & Analysis (Intermediate)",
+      "content": "Skill: C++\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: In Modern C++ (C++11 and later), what does 'std::unique_ptr' provide over raw pointers?\n\nEducational Explanation:\n'std::unique_ptr' represents unique, exclusive ownership with zero runtime overhead over a raw pointer, automatically freeing the resource upon destruction (RAII).",
+      "skills": [
+        "C++"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "cpp",
+        "technical",
+        "intermediate",
+        "c++"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "cpp",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-sql-011",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "SQL - Concept & Analysis (Intermediate)",
+      "content": "Skill: SQL\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: Consider two tables: Employees (E) and Departments (D). Which JOIN query returns all departments, including those that currently have zero assigned employees?\n\nEducational Explanation:\nA RIGHT JOIN on Departments (or a LEFT JOIN starting from Departments) preserves all rows from the Departments table, filling in NULLs for departments with no matching employee rows.",
+      "skills": [
+        "SQL"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "sql",
+        "technical",
+        "intermediate",
+        "sql"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "sql",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-sql-012",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "SQL - Concept & Analysis (Advanced)",
+      "content": "Skill: SQL\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: What is the primary difference between the SQL WHERE clause and the HAVING clause?\n\nEducational Explanation:\nThe WHERE clause acts as a predicate filter on raw table rows before any grouping or aggregation. The HAVING clause acts on aggregated groups produced by GROUP BY.",
+      "skills": [
+        "SQL"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "sql",
+        "technical",
+        "advanced",
+        "sql"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "sql",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-dbms-013",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Database Management - Concept & Analysis (Intermediate)",
+      "content": "Skill: Database Management\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What does the 'A' in ACID transactions stand for, and what does it guarantee?\n\nEducational Explanation:\nAtomicity ensures an 'all-or-nothing' execution model: if any statement in a transaction fails, the entire transaction is aborted and rolled back to its previous state.",
+      "skills": [
+        "Database Management"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "dbms",
+        "technical",
+        "intermediate",
+        "database",
+        "management"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "dbms",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-react-014",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "React - Concept & Analysis (Intermediate)",
+      "content": "Skill: React\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: Why is modifying React state directly (e.g. 'state.counter = state.counter + 1') considered an anti-pattern?\n\nEducational Explanation:\nReact uses Object.is / reference equality checks to identify state changes. Mutating state objects directly retains the same memory reference, so React fails to trigger re-renders.",
+      "skills": [
+        "React"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "react",
+        "technical",
+        "intermediate",
+        "react"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "react",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-react-015",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "React - Concept & Analysis (Advanced)",
+      "content": "Skill: React\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: When should the 'useCallback' hook be used in React?\n\nEducational Explanation:\nuseCallback returns a memoized version of the callback function that only changes if one of the dependencies has changed, avoiding unnecessary re-renders of memoized child components.",
+      "skills": [
+        "React"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "react",
+        "technical",
+        "advanced",
+        "react"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "react",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-nodejs-016",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Node.js - Concept & Analysis (Intermediate)",
+      "content": "Skill: Node.js\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: Why should CPU-intensive tasks (such as large matrix operations or image manipulation) be avoided on the main Node.js thread?\n\nEducational Explanation:\nThe Node.js event loop executes JavaScript on a single thread. CPU-intensive operations monopolize that thread, preventing it from handling other network sockets or I/O events.",
+      "skills": [
+        "Node.js"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "nodejs",
+        "technical",
+        "intermediate",
+        "node.js"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "nodejs",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-mongodb-017",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "MongoDB - Concept & Analysis (Intermediate)",
+      "content": "Skill: MongoDB\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: In MongoDB, what is the primary benefit of creating an index on a frequently queried field?\n\nEducational Explanation:\nIndexes store a small portion of the collection's data set in an ordered B-Tree structure, allowing MongoDB to traverse ordered keys rather than scanning every document in the collection.",
+      "skills": [
+        "MongoDB"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "mongodb",
+        "technical",
+        "intermediate",
+        "mongodb"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "mongodb",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-rest_apis-018",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "REST APIs - Concept & Analysis (Intermediate)",
+      "content": "Skill: REST APIs\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: Which HTTP method is considered idempotent according to the official HTTP/1.1 RFC specification?\n\nEducational Explanation:\nPUT is idempotent: invoking it multiple times with identical payload produces the same side-effects as invoking it once. In contrast, multiple POST requests create multiple resources.",
+      "skills": [
+        "REST APIs"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "rest_apis",
+        "technical",
+        "intermediate",
+        "rest",
+        "apis"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "rest_apis",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-git-019",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Git/GitHub - Concept & Analysis (Intermediate)",
+      "content": "Skill: Git/GitHub\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What is the primary difference between 'git merge' and 'git rebase' when integrating changes from a feature branch into main?\n\nEducational Explanation:\n'git merge' preserves complete historical context by adding a merge commit with multiple parents. 'git rebase' rewrites history by moving the base of your branch, resulting in a single linear history.",
+      "skills": [
+        "Git/GitHub"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "git",
+        "technical",
+        "intermediate",
+        "git",
+        "github"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "git",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-cloud_fundamentals-020",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Cloud Fundamentals - Concept & Analysis (Intermediate)",
+      "content": "Skill: Cloud Fundamentals\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: Which statement accurately describes horizontal scaling versus vertical scaling in cloud architecture?\n\nEducational Explanation:\nHorizontal scaling (scaling out) adds additional machine instances behind a load balancer to share traffic. Vertical scaling (scaling up) upgrades the hardware capacity (CPU, RAM) of an existing node.",
+      "skills": [
+        "Cloud Fundamentals"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "cloud_fundamentals",
+        "technical",
+        "intermediate",
+        "cloud",
+        "fundamentals"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "cloud_fundamentals",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-computer_networks-021",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Computer Networks - Concept & Analysis (Intermediate)",
+      "content": "Skill: Computer Networks\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: How does the TCP 3-way handshake establish a reliable connection between client and server?\n\nEducational Explanation:\nThe 3-way handshake uses SYN (synchronize sequence number), SYN-ACK (server acknowledges client sequence number and sends its own), and ACK (client acknowledges server sequence number).",
+      "skills": [
+        "Computer Networks"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "computer_networks",
+        "technical",
+        "intermediate",
+        "computer",
+        "networks"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "computer_networks",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-operating_systems-022",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Operating Systems - Concept & Analysis (Intermediate)",
+      "content": "Skill: Operating Systems\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What four conditions must hold simultaneously for a Deadlock to occur in an operating system?\n\nEducational Explanation:\nCoffman conditions for deadlock: Mutual Exclusion (non-shareable resources), Hold and Wait, No Preemption (resources cannot be forcibly confiscated), and Circular Wait.",
+      "skills": [
+        "Operating Systems"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "operating_systems",
+        "technical",
+        "intermediate",
+        "operating",
+        "systems"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "operating_systems",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-oop-023",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "Object-Oriented Programming - Concept & Analysis (Intermediate)",
+      "content": "Skill: Object-Oriented Programming\n\nCategory: technical\n\nDifficulty: Intermediate\n\nQuestion: What does the Liskov Substitution Principle (the 'L' in SOLID) require?\n\nEducational Explanation:\nLSP states that if S is a subtype of T, objects of type T may be replaced with objects of type S without breaking program contracts or correctness.",
+      "skills": [
+        "Object-Oriented Programming"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "oop",
+        "technical",
+        "intermediate",
+        "object-oriented",
+        "programming"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "oop",
+        "category": "technical",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-system_design-024",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "System Design - Concept & Analysis (Advanced)",
+      "content": "Skill: System Design\n\nCategory: technical\n\nDifficulty: Advanced\n\nQuestion: According to the CAP Theorem, what trade-off must a distributed data store make during a network partition (P)?\n\nEducational Explanation:\nNetwork partitions are inevitable in real-world distributed systems. When partition P occurs, the system must choose between Consistency (CP: refusing non-synchronized writes) or Availability (AP: accepting reads/writes despite divergence).",
+      "skills": [
+        "System Design"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "system_design",
+        "technical",
+        "advanced",
+        "system",
+        "design"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "system_design",
+        "category": "technical",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-html_css-025",
+      "sourceType": "skill_question",
+      "category": "technical",
+      "title": "HTML/CSS - Concept & Analysis (Beginner)",
+      "content": "Skill: HTML/CSS\n\nCategory: technical\n\nDifficulty: Beginner\n\nQuestion: In modern CSS Flexbox, what does 'justify-content: space-between;' accomplish along the main axis?\n\nEducational Explanation:\nspace-between distributes available free space equally between child items, placing the first child flush against the container start and the last child flush against the end.",
+      "skills": [
+        "HTML/CSS"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "html_css",
+        "technical",
+        "beginner",
+        "html",
+        "css"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "html_css",
+        "category": "technical",
+        "difficulty": "Beginner",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-teamwork-026",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Teamwork - Concept & Analysis (Intermediate)",
+      "content": "Skill: Teamwork\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: What would you most likely do?\n\nScenario:\nYour engineering squad is 48 hours away from a critical sprint demo to stakeholders. A teammate responsible for the payment gateway integration encounters an unexpected SDK bug and privately admits they are overwhelmed and cannot finish on time.\n\nEducational Explanation:\nCollaborative pairing and constructive workload re-balancing demonstrates empathetic, mature teamwork while maintaining team transparency without dumping blame.",
+      "skills": [
+        "Teamwork"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "teamwork",
+        "soft",
+        "intermediate",
+        "teamwork"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "teamwork",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-communication-027",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Communication - Concept & Analysis (Intermediate)",
+      "content": "Skill: Communication\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: How would you structure your communication?\n\nScenario:\nYou are presenting a complex architectural refactor from monolithic REST endpoints to event-driven webhooks to a mixed audience containing both non-technical product managers and senior staff engineers.\n\nEducational Explanation:\nEffective technical communication bridges domain gaps by anchoring on business/user outcomes first and layering technical complexity appropriately for the audience.",
+      "skills": [
+        "Communication"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "communication",
+        "soft",
+        "intermediate",
+        "communication"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "communication",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-leadership-028",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Leadership - Concept & Analysis (Advanced)",
+      "content": "Skill: Leadership\n\nCategory: soft\n\nDifficulty: Advanced\n\nQuestion: How would you intervene to demonstrate leadership?\n\nScenario:\nDuring a cross-functional project planning session, two senior developers strongly disagree on whether to use GraphQL or gRPC, causing tension and stalling the team's roadmap for over a week.\n\nEducational Explanation:\nTrue leadership de-escalates emotional debates by introducing objective decision frameworks, time-boxed empirical prototypes (spikes), and shared alignment.",
+      "skills": [
+        "Leadership"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "leadership",
+        "soft",
+        "advanced",
+        "leadership"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "leadership",
+        "category": "soft",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-problem_solving-029",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Problem Solving - Concept & Analysis (Intermediate)",
+      "content": "Skill: Problem Solving\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: What structured problem-solving approach do you take?\n\nScenario:\nA critical production service reports an intermittent 500 Internal Server Error affecting approximately 2% of user requests. The stack trace is inconclusive and the bug cannot be reproduced on local development machines.\n\nEducational Explanation:\nRigorous problem-solving relies on observational data, telemetry correlation, hypothesis testing, and controlled validation rather than guesswork or reactive patching.",
+      "skills": [
+        "Problem Solving"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "problem_solving",
+        "soft",
+        "intermediate",
+        "problem",
+        "solving"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "problem_solving",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-time_management-030",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Time Management - Concept & Analysis (Intermediate)",
+      "content": "Skill: Time Management\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: How do you manage your time effectively?\n\nScenario:\nYou are juggling three urgent tasks due by the end of the week: fixing a high-priority bug for an ongoing enterprise trial, completing your scheduled sprint feature tickets, and reviewing pull requests for colleagues.\n\nEducational Explanation:\nDisciplined time management balances deep focus blocks, priority matrices, batching reactive tasks (like code reviews), and proactive stakeholder communication.",
+      "skills": [
+        "Time Management"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "time_management",
+        "soft",
+        "intermediate",
+        "time",
+        "management"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "time_management",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-adaptability-031",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Adaptability - Concept & Analysis (Intermediate)",
+      "content": "Skill: Adaptability\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: How do you respond?\n\nScenario:\nThree weeks into developing a feature, company leadership announces a strategic pivot to comply with a new data regulation, requiring your team to discard your current implementation and adopt a completely unfamiliar framework.\n\nEducational Explanation:\nAdaptability in high-growth environments means understanding business drivers behind strategic shifts, staying resilient, and embracing learning curves constructively.",
+      "skills": [
+        "Adaptability"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "adaptability",
+        "soft",
+        "intermediate",
+        "adaptability"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "adaptability",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-critical_thinking-032",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Critical Thinking - Concept & Analysis (Advanced)",
+      "content": "Skill: Critical Thinking\n\nCategory: soft\n\nDifficulty: Advanced\n\nQuestion: What critical thinking analysis do you perform before committing?\n\nScenario:\nA vendor proposes an AI-powered third-party API claiming to automate 90% of your platform's customer verification workflow. The sales pitch is impressive and senior management is eager to purchase.\n\nEducational Explanation:\nCritical thinking demands independent validation of vendor claims through empirical benchmarking, SLA verification, total cost modeling, and compliance stress-testing.",
+      "skills": [
+        "Critical Thinking"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "critical_thinking",
+        "soft",
+        "advanced",
+        "critical",
+        "thinking"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "critical_thinking",
+        "category": "soft",
+        "difficulty": "Advanced",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-tech-collaboration-033",
+      "sourceType": "skill_question",
+      "category": "soft",
+      "title": "Collaboration - Concept & Analysis (Intermediate)",
+      "content": "Skill: Collaboration\n\nCategory: soft\n\nDifficulty: Intermediate\n\nQuestion: What is the most professional and collaborative response?\n\nScenario:\nDuring a pull request code review, a peer leaves blunt, critical comments on your code that you feel are overly harsh and dismissive of your effort.\n\nEducational Explanation:\nCollaborative maturity focuses on code quality over ego, separating tone from substantive critique, and proactively using face-to-face syncs to maintain psychological safety.",
+      "skills": [
+        "Collaboration"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "skill_question",
+        "collaboration",
+        "soft",
+        "intermediate",
+        "collaboration"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "skillId": "collaboration",
+        "category": "soft",
+        "difficulty": "Intermediate",
+        "hasCodeSnippet": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-percentages-001",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Percentages (Easy)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Percentages\n\nDifficulty: Easy\n\nProblem Concept:\nA student scored {{score}} marks out of {{totalMarks}} in an examination. What is the percentage of marks scored by the student?\n\nEducational Explanation & Solution Approach:\nPercentage = (Marks Scored / Total Marks) * 100 = (360 / 500) * 100 = 72%.",
+      "skills": [
+        "Quantitative",
+        "Percentages"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "percentages",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Percentages",
+        "difficulty": "Easy",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-percentages-002",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Percentages (Medium)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Percentages\n\nDifficulty: Medium\n\nProblem Concept:\nIf the price of a commodity increases by {{percentIncrease}}%, by what percentage must a household reduce its consumption so that the total expenditure remains unchanged?\n\nEducational Explanation & Solution Approach:\nRequired percentage reduction = [R / (100 + R)] * 100 = [25 / (100 + 25)] * 100 = (25 / 125) * 100 = 20%.",
+      "skills": [
+        "Quantitative",
+        "Percentages"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "percentages",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Percentages",
+        "difficulty": "Medium",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-percentages-003",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Percentages (Hard)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Percentages\n\nDifficulty: Hard\n\nProblem Concept:\nIn an election between two candidates, the winner received {{winPct}}% of the total votes polled and won by a majority of {{voteMargin}} votes. What was the total number of votes polled (assuming no invalid votes)?\n\nEducational Explanation & Solution Approach:\nWinner received 58% of votes, so the loser received (100 - 58) = 42%. Margin = 58% - 42% = 16% of total votes. Total votes = 2,400 / 0.16 = 15,000.",
+      "skills": [
+        "Quantitative",
+        "Percentages"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "percentages",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Percentages",
+        "difficulty": "Hard",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-work-004",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time & Work (Easy)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time & Work\n\nDifficulty: Easy\n\nProblem Concept:\nA can complete a piece of work in {{daysA}} days and B can complete the same work in {{daysB}} days. In how many days can they complete the work together?\n\nEducational Explanation & Solution Approach:\nRate of work per day: A = 1/12, B = 1/24. Combined rate = 1/12 + 1/24 = 3/24 = 1/8. Total days = 8 days.",
+      "skills": [
+        "Quantitative",
+        "Time & Work"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-work",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time & Work",
+        "difficulty": "Easy",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-work-005",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time & Work (Medium)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time & Work\n\nDifficulty: Medium\n\nProblem Concept:\nA and B together can do a piece of work in 12 days, B and C together in 15 days, and C and A together in 20 days. How many days will A, B, and C take to finish the work working together?\n\nEducational Explanation & Solution Approach:\n2 * (A + B + C)'s 1-day work = 1/12 + 1/15 + 1/20 = (5 + 4 + 3)/60 = 12/60 = 1/5. Therefore, (A + B + C)'s 1-day work = 1/10. Together they take 10 days.",
+      "skills": [
+        "Quantitative",
+        "Time & Work"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-work",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time & Work",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-work-006",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time & Work (Hard)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time & Work\n\nDifficulty: Hard\n\nProblem Concept:\nA can finish a work in 18 days and B can do the same work in 15 days. B worked for 10 days and left the job. In how many additional days can A alone finish the remaining work?\n\nEducational Explanation & Solution Approach:\nWork done by B in 10 days = 10 * (1/15) = 2/3. Remaining work = 1 - 2/3 = 1/3. Time taken by A for remaining work = (1/3) / (1/18) = 6 days.",
+      "skills": [
+        "Quantitative",
+        "Time & Work"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-work",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time & Work",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-profit-loss-007",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Profit & Loss (Easy)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Profit & Loss\n\nDifficulty: Easy\n\nProblem Concept:\nAn article was purchased for ${{costPrice}} and sold for ${{sellingPrice}}. What is the profit percentage?\n\nEducational Explanation & Solution Approach:\nProfit = $500 - $400 = $100. Profit % = (100 / 400) * 100 = 25%.",
+      "skills": [
+        "Quantitative",
+        "Profit & Loss"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "profit-loss",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Profit & Loss",
+        "difficulty": "Easy",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-profit-loss-008",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Profit & Loss (Medium)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Profit & Loss\n\nDifficulty: Medium\n\nProblem Concept:\nA shopkeeper sells a product at a profit of 15% after allowing a discount of 10% on the marked price. If the cost price is $180, what is the marked price?\n\nEducational Explanation & Solution Approach:\nSelling Price (SP) = CP * (1 + 0.15) = 180 * 1.15 = $207. Since SP = Marked Price (MP) * (1 - 0.10) = 0.90 * MP, MP = 207 / 0.90 = $230.",
+      "skills": [
+        "Quantitative",
+        "Profit & Loss"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "profit-loss",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Profit & Loss",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-profit-loss-009",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Profit & Loss (Hard)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Profit & Loss\n\nDifficulty: Hard\n\nProblem Concept:\nA dishonest dealer professes to sell his goods at cost price, but uses a false weight of 950 grams instead of a 1 kilogram weight. What is his gain percentage (rounded to two decimal places)?\n\nEducational Explanation & Solution Approach:\nGain % = [Error / (True Value - Error)] * 100 = [50 / (1000 - 50)] * 100 = (50 / 950) * 100 = 5.263% ≈ 5.26%.",
+      "skills": [
+        "Quantitative",
+        "Profit & Loss"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "profit-loss",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Profit & Loss",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-ratios-010",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Ratios (Easy)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Ratios\n\nDifficulty: Easy\n\nProblem Concept:\nTwo numbers are in the ratio 3 : 5. If their sum is {{sumValue}}, what is the larger number?\n\nEducational Explanation & Solution Approach:\nLet the numbers be 3x and 5x. 3x + 5x = 160 => 8x = 160 => x = 20. Larger number = 5 * 20 = 100.",
+      "skills": [
+        "Quantitative",
+        "Ratios"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "ratios",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Ratios",
+        "difficulty": "Easy",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-ratios-011",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Ratios (Medium)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Ratios\n\nDifficulty: Medium\n\nProblem Concept:\nIn a mixture of 60 liters, the ratio of milk to water is 2 : 1. How much water must be added to this mixture to make the ratio of milk to water 1 : 2?\n\nEducational Explanation & Solution Approach:\nInitial Milk = (2/3) * 60 = 40L, Initial Water = 20L. Let x liters of water be added: 40 / (20 + x) = 1 / 2 => 20 + x = 80 => x = 60 liters.",
+      "skills": [
+        "Quantitative",
+        "Ratios"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "ratios",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Ratios",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-ratios-012",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Ratios (Hard)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Ratios\n\nDifficulty: Hard\n\nProblem Concept:\nSalaries of A, B, and C are in the ratio 2 : 3 : 5. If increments of 15%, 10%, and 20% are allowed respectively in their salaries, what will be the new ratio of their salaries?\n\nEducational Explanation & Solution Approach:\nLet original salaries be 20k, 30k, 50k. New salaries: A = 20k * 1.15 = 23k; B = 30k * 1.10 = 33k; C = 50k * 1.20 = 60k. Ratio = 23 : 33 : 60.",
+      "skills": [
+        "Quantitative",
+        "Ratios"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "ratios",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Ratios",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-speed-distance-013",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time-Speed-Distance (Easy)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time-Speed-Distance\n\nDifficulty: Easy\n\nProblem Concept:\nA car travels a distance of {{distance}} km in {{hours}} hours. What is its speed in meters per second?\n\nEducational Explanation & Solution Approach:\nSpeed = 180 km / 3 hours = 60 km/h. Convert to m/s: 60 * (5 / 18) = 50 / 3 ≈ 16.67 m/s.",
+      "skills": [
+        "Quantitative",
+        "Time-Speed-Distance"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-speed-distance",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time-Speed-Distance",
+        "difficulty": "Easy",
+        "isVariable": true
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-speed-distance-014",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time-Speed-Distance (Medium)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time-Speed-Distance\n\nDifficulty: Medium\n\nProblem Concept:\nA train 150 meters long is running at a speed of 54 km/h. How many seconds will it take to pass a telegraph post?\n\nEducational Explanation & Solution Approach:\nSpeed = 54 * (5 / 18) = 15 m/s. Time = Distance / Speed = 150 m / 15 m/s = 10 seconds.",
+      "skills": [
+        "Quantitative",
+        "Time-Speed-Distance"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-speed-distance",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time-Speed-Distance",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-time-speed-distance-015",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Quantitative - Time-Speed-Distance (Hard)",
+      "content": "Aptitude Category: Quantitative\n\nSubtopic: Time-Speed-Distance\n\nDifficulty: Hard\n\nProblem Concept:\nA man travels from point A to point B at an average speed of 40 km/h and returns from B to A along the same route at 60 km/h. What is his average speed for the entire round trip?\n\nEducational Explanation & Solution Approach:\nAverage Speed for equal distance = (2 * v1 * v2) / (v1 + v2) = (2 * 40 * 60) / (40 + 60) = 4800 / 100 = 48 km/h.",
+      "skills": [
+        "Quantitative",
+        "Time-Speed-Distance"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "quantitative",
+        "time-speed-distance",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Quantitative",
+        "subtopic": "Time-Speed-Distance",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-blood-relations-016",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Blood Relations (Easy)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Blood Relations\n\nDifficulty: Easy\n\nProblem Concept:\nPointing to a photograph of a boy, Suresh said, 'He is the son of the only son of my mother.' How is Suresh related to that boy?\n\nEducational Explanation & Solution Approach:\nThe 'only son of my mother' is Suresh himself. Therefore, the boy is Suresh's son, making Suresh the father of the boy.",
+      "skills": [
+        "Logical",
+        "Blood Relations"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "blood-relations",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Blood Relations",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-blood-relations-017",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Blood Relations (Medium)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Blood Relations\n\nDifficulty: Medium\n\nProblem Concept:\nIf 'A + B' means A is the brother of B; 'A - B' means A is the sister of B; and 'A * B' means A is the father of B. Which of the following expressions indicates that 'P is the aunt of Q'?\n\nEducational Explanation & Solution Approach:\nIn 'P - R * Q', P is the sister of R, and R is the father of Q. Sister of Q's father is Q's aunt (paternal aunt).",
+      "skills": [
+        "Logical",
+        "Blood Relations"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "blood-relations",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Blood Relations",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-blood-relations-018",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Blood Relations (Hard)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Blood Relations\n\nDifficulty: Hard\n\nProblem Concept:\nA family consists of six members: P, Q, R, S, T, and U. There are two married couples. Q is a doctor and the mother of T. R is the grandmother of U. S is the father of P and grandfather of T. T is the brother of U. How is P related to T?\n\nEducational Explanation & Solution Approach:\nS (grandfather) is father of P. Q (mother) is married to P. T and U are their children. Hence, P is the father of T.",
+      "skills": [
+        "Logical",
+        "Blood Relations"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "blood-relations",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Blood Relations",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-seating-arrangement-019",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Seating Arrangement (Easy)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Seating Arrangement\n\nDifficulty: Easy\n\nProblem Concept:\nFive friends A, B, C, D, and E are sitting in a row facing North. C is sitting in the middle. E is sitting to the immediate right of A. B is sitting at the extreme right end. D is to the immediate left of C. Who is sitting at the extreme left end?\n\nEducational Explanation & Solution Approach:\nPositions 1 to 5 from left to right: C is at 3, D is at 2 (immediate left of C), B is at 5 (extreme right). Remaining are 1 and 4 for A and E. Since E is to the immediate right of A, the order is A, D, C, E, B. Thus A is at the extreme left.",
+      "skills": [
+        "Logical",
+        "Seating Arrangement"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "seating-arrangement",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Seating Arrangement",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-seating-arrangement-020",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Seating Arrangement (Medium)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Seating Arrangement\n\nDifficulty: Medium\n\nProblem Concept:\nSix people P, Q, R, S, T, and U are sitting in a circle facing the center. P is opposite S. R is between P and Q. T is between P and U. Who is sitting to the immediate right of S if Q is to the immediate right of R?\n\nEducational Explanation & Solution Approach:\nFacing the center in circular clockwise order: P -> R -> Q -> S -> U -> T -> P. Looking from center outwards at position S, immediate right is position Q.",
+      "skills": [
+        "Logical",
+        "Seating Arrangement"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "seating-arrangement",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Seating Arrangement",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-seating-arrangement-021",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Seating Arrangement (Hard)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Seating Arrangement\n\nDifficulty: Hard\n\nProblem Concept:\nEight candidates (P1 to P8) sit in a straight line facing North during an assessment. P3 sits third to the left of P7. P7 sits at the rightmost end (position 8). P1 sits second to the right of P3. P2 sits to the immediate left of P1. Which position from the left end does P2 occupy?\n\nEducational Explanation & Solution Approach:\nP7 is at pos 8. P3 is 3rd to left of P7 = pos 5. P1 is 2nd to right of P3 = pos 7. P2 is immediate left of P1 = pos 6 (6th from left).",
+      "skills": [
+        "Logical",
+        "Seating Arrangement"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "seating-arrangement",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Seating Arrangement",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-syllogisms-022",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Syllogisms (Easy)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Syllogisms\n\nDifficulty: Easy\n\nProblem Concept:\nStatements: All mangoes are fruits. All fruits are sweet.\nConclusions:\nI. All mangoes are sweet.\nII. Some sweet things are mangoes.\nWhich of the conclusions logically follows?\n\nEducational Explanation & Solution Approach:\nSince all mangoes are fruits and all fruits are sweet, all mangoes are sweet (Conclusion I follows). Consequently, some sweet things are mangoes (Conclusion II follows).",
+      "skills": [
+        "Logical",
+        "Syllogisms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "syllogisms",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Syllogisms",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-syllogisms-023",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Syllogisms (Medium)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Syllogisms\n\nDifficulty: Medium\n\nProblem Concept:\nStatements: Some dogs are birds. All birds are trees.\nConclusions:\nI. Some trees are dogs.\nII. Some birds are dogs.\nIII. All dogs are trees.\nWhich of the conclusions logically follows?\n\nEducational Explanation & Solution Approach:\nSome dogs are birds implies Some birds are dogs (II follows). The dogs that are birds are also trees, so Some trees are dogs (I follows). III does not necessarily follow.",
+      "skills": [
+        "Logical",
+        "Syllogisms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "syllogisms",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Syllogisms",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-syllogisms-024",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Syllogisms (Hard)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Syllogisms\n\nDifficulty: Hard\n\nProblem Concept:\nStatements: Some pens are books. No book is a pencil. All pencils are erasers.\nConclusions:\nI. Some pens are not pencils.\nII. Some erasers are not books.\nIII. Some pens are erasers.\nWhich conclusions logically follow?\n\nEducational Explanation & Solution Approach:\nThe pens that are books cannot be pencils (I follows). The erasers that are pencils cannot be books (II follows). There is no direct relationship requiring pens to be erasers (III does not follow).",
+      "skills": [
+        "Logical",
+        "Syllogisms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "syllogisms",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Syllogisms",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-coding-decoding-025",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Coding-Decoding (Easy)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Coding-Decoding\n\nDifficulty: Easy\n\nProblem Concept:\nIn a certain code language, 'APPLE' is written as 'BQQMF'. How will 'DELHI' be written in that same code language?\n\nEducational Explanation & Solution Approach:\nEach letter is shifted by +1 forward in the alphabet: D->E, E->F, L->M, H->I, I->J => 'EFMIJ'.",
+      "skills": [
+        "Logical",
+        "Coding-Decoding"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "coding-decoding",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Coding-Decoding",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-coding-decoding-026",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Coding-Decoding (Medium)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Coding-Decoding\n\nDifficulty: Medium\n\nProblem Concept:\nIn a certain code language, 'SYSTEM' is coded as 'SYSMET' and 'NEARER' is coded as 'AENRER'. Using the same rule, how is 'FRACTION' coded?\n\nEducational Explanation & Solution Approach:\nThe word is divided into two equal halves of 4 letters and each half is reversed: 'FRAC' reversed is 'CARF', and 'TION' reversed is 'NOIT'. Combined: 'CARFNOIT'.",
+      "skills": [
+        "Logical",
+        "Coding-Decoding"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "coding-decoding",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Coding-Decoding",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-coding-decoding-027",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Logical - Coding-Decoding (Hard)",
+      "content": "Aptitude Category: Logical\n\nSubtopic: Coding-Decoding\n\nDifficulty: Hard\n\nProblem Concept:\nIn a certain code language, 'COMPUTER' is written as 'RFUVQNPC'. How is 'MEDICINE' written in that code?\n\nEducational Explanation & Solution Approach:\nThe first and last letters are swapped (E at start, M at end). The middle letters are shifted by +1 forward (E->F, D->E, I->J, C->D, I->J, N->O) and reversed (O, J, D, J, E, F), yielding 'EOJDJEFM'.",
+      "skills": [
+        "Logical",
+        "Coding-Decoding"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "logical",
+        "coding-decoding",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Logical",
+        "subtopic": "Coding-Decoding",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-sentence-correction-028",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Sentence Correction (Easy)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Sentence Correction\n\nDifficulty: Easy\n\nProblem Concept:\nIdentify the grammatically correct sentence from the options below:\n\nEducational Explanation & Solution Approach:\n'Neither' referring to two items is singular and governs the singular verb 'has' and singular possessive pronoun 'his/her'.",
+      "skills": [
+        "Verbal",
+        "Sentence Correction"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "sentence-correction",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Sentence Correction",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-sentence-correction-029",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Sentence Correction (Medium)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Sentence Correction\n\nDifficulty: Medium\n\nProblem Concept:\nChoose the correct substitution for the underlined part:\n'Despite of having worked late into the night, she arrived on time for the presentation.'\n\nEducational Explanation & Solution Approach:\n'Despite' takes a direct noun/gerund without the preposition 'of'. ('In spite' requires 'of').",
+      "skills": [
+        "Verbal",
+        "Sentence Correction"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "sentence-correction",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Sentence Correction",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-sentence-correction-030",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Sentence Correction (Hard)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Sentence Correction\n\nDifficulty: Hard\n\nProblem Concept:\nIdentify the sentence that correctly follows the rules of subjunctive mood and subject-verb agreement:\n\nEducational Explanation & Solution Approach:\nMandative verbs of proposal or recommendation ('recommended that...') require the subjunctive bare infinitive 'resign' rather than indicative 'resigns'.",
+      "skills": [
+        "Verbal",
+        "Sentence Correction"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "sentence-correction",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Sentence Correction",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-reading-comprehension-031",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Reading Comprehension (Easy)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Reading Comprehension\n\nDifficulty: Easy\n\nProblem Concept:\nRead the passage:\n'Distributed version control systems like Git allow developers to record changes to files over time so that specific versions can be recalled later. Unlike centralized systems, every developer\\'s local working copy contains a full mirror of the entire repository history, enabling seamless offline work and rapid branching.'\n\nAccording to the passage, what is a primary advantage of distributed version control systems over centralized ones?\n\nEducational Explanation & Solution Approach:\nThe text directly states that each local working copy contains a full mirror of the history, enabling seamless offline work.",
+      "skills": [
+        "Verbal",
+        "Reading Comprehension"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "reading-comprehension",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Reading Comprehension",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-reading-comprehension-032",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Reading Comprehension (Medium)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Reading Comprehension\n\nDifficulty: Medium\n\nProblem Concept:\nRead the passage:\n'While microservices architecture offers agility and independent service deployments, it inevitably introduces substantial operational overhead. Distributed systems suffer from network latency, complex observability requirements, and eventual consistency challenges that monolithic architectures naturally avoid.'\n\nWhat can be inferred from the passage regarding the trade-offs of microservices?\n\nEducational Explanation & Solution Approach:\nThe passage emphasizes that benefits like agility come with operational overhead, network latency, and observability challenges.",
+      "skills": [
+        "Verbal",
+        "Reading Comprehension"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "reading-comprehension",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Reading Comprehension",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-reading-comprehension-033",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Reading Comprehension (Hard)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Reading Comprehension\n\nDifficulty: Hard\n\nProblem Concept:\nRead the passage:\n'The illusion of explanatory depth refers to our psychological propensity to overestimate our comprehension of how complex mechanisms work—until we are forced to articulate step-by-step causality. When engineers are required to formulate explicit documentation or explain failure modes aloud, superficial intuitions collapse into rigorous conceptual clarity.'\n\nWhich statement best captures the central premise of this passage?\n\nEducational Explanation & Solution Approach:\nThe passage argues that forced articulation of causality breaks down the illusion of deep understanding and fosters genuine clarity.",
+      "skills": [
+        "Verbal",
+        "Reading Comprehension"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "reading-comprehension",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Reading Comprehension",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-synonyms-antonyms-034",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Synonyms & Antonyms (Easy)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Synonyms & Antonyms\n\nDifficulty: Easy\n\nProblem Concept:\nChoose the word that is most nearly SYNONYMOUS with 'LUCID':\n\nEducational Explanation & Solution Approach:\n'Lucid' means expressed clearly and easy to understand.",
+      "skills": [
+        "Verbal",
+        "Synonyms & Antonyms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "synonyms-antonyms",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Synonyms & Antonyms",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-synonyms-antonyms-035",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Synonyms & Antonyms (Easy)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Synonyms & Antonyms\n\nDifficulty: Easy\n\nProblem Concept:\nChoose the word that is most nearly OPPOSITE (ANTONYM) to 'TRANSIENT':\n\nEducational Explanation & Solution Approach:\n'Transient' means lasting only for a short time; its direct antonym is 'Permanent'.",
+      "skills": [
+        "Verbal",
+        "Synonyms & Antonyms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "synonyms-antonyms",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Synonyms & Antonyms",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-synonyms-antonyms-036",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Synonyms & Antonyms (Medium)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Synonyms & Antonyms\n\nDifficulty: Medium\n\nProblem Concept:\nChoose the word that is most nearly SYNONYMOUS with 'METICULOUS':\n\nEducational Explanation & Solution Approach:\n'Meticulous' means showing great attention to detail and precision, synonymous with 'Painstaking'.",
+      "skills": [
+        "Verbal",
+        "Synonyms & Antonyms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "synonyms-antonyms",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Synonyms & Antonyms",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-synonyms-antonyms-037",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Synonyms & Antonyms (Hard)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Synonyms & Antonyms\n\nDifficulty: Hard\n\nProblem Concept:\nChoose the word that is most nearly OPPOSITE (ANTONYM) to 'PERNICIOUS':\n\nEducational Explanation & Solution Approach:\n'Pernicious' means having a harmful, destructive, or lethal effect; its antonym is 'Beneficial'.",
+      "skills": [
+        "Verbal",
+        "Synonyms & Antonyms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "synonyms-antonyms",
+        "hard"
+      ],
+      "difficulty": "Hard",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Synonyms & Antonyms",
+        "difficulty": "Hard",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-para-jumbles-038",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Para-Jumbles (Easy)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Para-Jumbles\n\nDifficulty: Easy\n\nProblem Concept:\nRearrange the following sentences (P, Q, R, S) into a coherent paragraph:\nP: It allows teams to iterate rapidly and catch defects early.\nQ: Continuous Integration is a software engineering practice.\nR: Developers merge their code changes into a central repository frequently.\nS: Each merge is verified by an automated build and test suite.\n\nEducational Explanation & Solution Approach:\nQ introduces the topic, R explains the action taken, S describes the verification process, and P concludes with the core benefit.",
+      "skills": [
+        "Verbal",
+        "Para-Jumbles"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "para-jumbles",
+        "easy"
+      ],
+      "difficulty": "Easy",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Para-Jumbles",
+        "difficulty": "Easy",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-apt-para-jumbles-039",
+      "sourceType": "aptitude_question",
+      "category": "aptitude",
+      "title": "Aptitude: Verbal - Para-Jumbles (Medium)",
+      "content": "Aptitude Category: Verbal\n\nSubtopic: Para-Jumbles\n\nDifficulty: Medium\n\nProblem Concept:\nRearrange the following sentences (P, Q, R, S) into a coherent paragraph:\nP: However, without proper indexing, query performance degrades exponentially as tables grow.\nQ: Relational databases use structured schemas to organize and access relational data.\nR: By creating B-tree indices on frequently filtered columns, lookups achieve logarithmic time complexity.\nS: Consequently, database administrators must carefully balance read acceleration with index write overhead.\n\nEducational Explanation & Solution Approach:\nQ establishes the context, P introduces the performance problem, R provides the indexing solution, and S highlights the operational trade-off.",
+      "skills": [
+        "Verbal",
+        "Para-Jumbles"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Analyst",
+        "Graduate Trainee"
+      ],
+      "tags": [
+        "aptitude_question",
+        "verbal",
+        "para-jumbles",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Verbal",
+        "subtopic": "Para-Jumbles",
+        "difficulty": "Medium",
+        "isVariable": false
+      }
+    },
+    {
+      "sourceId": "rag-interview-google-001",
+      "sourceType": "interview_experience",
+      "category": "interview",
+      "title": "Google - Software Engineer Interview Experience & Concept Analysis",
+      "content": "Company: Google\n\nRole: Software Engineer\n\nDifficulty: Medium\n\nOutcome: Selected\n\nRounds & Interview Process:\nRound 1 (Online Assessment): Algorithmic coding and aptitude assessment focusing on Arrays, Strings, Trees, and Sliding Window techniques.\nRound 2 (Technical Interview): Data Structures & Algorithms problem-solving, Kadane's Algorithm, Binary Search complexity analysis, Binary Tree traversals, OOP concepts, DBMS normalization, and basic System Design.\nRound 3 (Technical & Googleyness): Deep-dive discussion into system architectures, clean coding patterns, and behavioral scenarios evaluated via the STAR method.\nRound 4 (HR/Managerial): Engineering culture fit, cross-functional communication, and career growth objectives.\n\nKey Concepts & Questions Asked:\n1. Kadane's Algorithm: Finding maximum subarray sum in O(N) time and O(1) space.\n2. Binary Search: Recursive vs iterative implementations with O(log N) runtime.\n3. Binary Tree Traversals: Inorder, Preorder, and Postorder tree exploration.\n4. Sliding Window: Longest substring without repeating characters in O(N) time.\n5. Object-Oriented Programming (OOP): Four pillars (Encapsulation, Abstraction, Inheritance, Polymorphism) applied to production architecture.\n6. Operating Systems: Differences between processes and threads, context switching, and shared memory.\n7. DBMS: Database normalization (1NF, 2NF, 3NF, BCNF) and primary key vs foreign key constraints.",
+      "skills": [
+        "Data Structures & Algorithms",
+        "System Design",
+        "DBMS",
+        "OOP",
+        "Operating Systems"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "google",
+        "software engineer",
+        "dsa",
+        "medium",
+        "selected"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Google",
+        "role": "Software Engineer",
+        "difficulty": "Medium",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-interview-tcs-001",
+      "sourceType": "interview_experience",
+      "category": "interview",
+      "title": "TCS - Software Developer Intern Interview Experience & Core Concepts",
+      "content": "Company: TCS\n\nRole: Software Developer Intern\n\nDifficulty: Medium\n\nOutcome: Awaiting Result\n\nRounds & Interview Process:\nRound 1: Online assessment covering quantitative aptitude, programming logic, and fundamental DSA.\nRound 2 (Technical Round): C++, OOP principles, array manipulation, stack and queue implementations, database relationships, and discussion of academic projects.\nRound 3 (HR Round): Communication skills, teamwork challenges, handling tight project deadlines, and professional motivations.\n\nKey Concepts & Questions Asked:\n1. Arrays: Finding the second largest element in a single pass without sorting in O(N) time.\n2. OOP: Explaining polymorphism (runtime method overriding vs compile-time method overloading).\n3. Data Structures: Implementing a stack using an array and comparing stack (LIFO) vs queue (FIFO) mechanics.\n4. Database: Primary keys vs foreign keys and referential integrity constraints.\n5. Project Walkthrough: Explaining architecture, tech stack choices, and individual contributions.",
+      "skills": [
+        "C++",
+        "Data Structures & Algorithms",
+        "OOP",
+        "DBMS"
+      ],
+      "roles": [
+        "Software Developer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "tcs",
+        "software developer",
+        "intern",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "TCS",
+        "role": "Software Developer intern",
+        "difficulty": "Medium",
+        "outcome": "Awaiting Result"
+      }
+    },
+    {
+      "sourceId": "rag-interview-amazon-001",
+      "sourceType": "interview_experience",
+      "category": "interview",
+      "title": "Amazon - SDE-1 Interview Experience & Leadership Principles Breakdown",
+      "content": "Company: Amazon\n\nRole: Software Development Engineer (SDE-1)\n\nDifficulty: Advanced\n\nOutcome: Selected\n\nRounds & Interview Process:\nRound 1 (Online Assessment): Two algorithmic coding challenges (Sliding Window, Dynamic Programming) and Amazon Work Style Assessment.\nRound 2 (Coding & LP): Graph traversal problem (connected components) along with two behavioral questions evaluated against Customer Obsession and Bias for Action.\nRound 3 (Data Structures & System Concepts): Designing a Least Recently Used (LRU) Cache in O(1) time using a Doubly Linked List and Hash Map, plus ownership questions.\nRound 4 (Bar Raiser): Deep dive on system design fundamentals (Rate Limiter / URL Shortener) and conflict resolution with team members.\n\nKey Concepts Asked:\n1. Doubly Linked List + Hash Map combination for LRU Cache O(1) get and put.\n2. Graph algorithms: Breadth-First Search (BFS) and Depth-First Search (DFS).\n3. Dynamic Programming: Longest Increasing Subsequence and Knapsack variants.\n4. Behavioral STAR method: Structuring stories with Situation, Task, Action, and quantifiable Results.",
+      "skills": [
+        "Data Structures & Algorithms",
+        "System Design",
+        "Dynamic Programming",
+        "Graph Algorithms"
+      ],
+      "roles": [
+        "Software Development Engineer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "amazon",
+        "sde",
+        "advanced",
+        "selected",
+        "leadership principles"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Amazon",
+        "role": "Software Development Engineer",
+        "difficulty": "Advanced",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-interview-msft-001",
+      "sourceType": "interview_experience",
+      "category": "interview",
+      "title": "Microsoft - Software Engineer Interview Experience & Problem Analysis",
+      "content": "Company: Microsoft\n\nRole: Software Engineer\n\nDifficulty: Medium\n\nOutcome: Selected\n\nRounds & Interview Process:\nRound 1: Screening round with string manipulation and two-pointer coding problems.\nRound 2: Tree data structures, Lowest Common Ancestor (LCA) in binary trees, and time/space complexity trade-offs.\nRound 3: Concurrency, threads vs processes, race conditions, mutexes vs semaphores, and memory management.\nRound 4: High-level system design of an asynchronous notification service using queues and worker pools.\n\nKey Concepts Asked:\n1. Lowest Common Ancestor (LCA) in Binary Trees.\n2. Two-pointer technique for palindromes and sorted array merging.\n3. Concurrency primitives: Deadlocks, race conditions, and thread safety.\n4. REST API design best practices and HTTP status codes.",
+      "skills": [
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Concurrency",
+        "System Design"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Systems Engineer"
+      ],
+      "tags": [
+        "interview_experience",
+        "microsoft",
+        "software engineer",
+        "concurrency",
+        "medium"
+      ],
+      "difficulty": "Medium",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Microsoft",
+        "role": "Software Engineer",
+        "difficulty": "Medium",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-job-backend-001",
+      "sourceType": "job_posting",
+      "category": "job",
+      "title": "Backend Software Engineer - Distributed Systems & API Services",
+      "content": "Role: Backend Software Engineer\n\nIndustry Category: Fintech / Distributed Systems\n\nLocation: Bengaluru / Hybrid\n\nCompensation Range: ₹18 - ₹24 LPA\n\nRole Overview:\nSeeking backend software engineers to build resilient, distributed financial backend services and scalable developer interfaces. You will design, build, and deploy low-latency microservices handling millions of transactional events per day.\n\nKey Competencies & Required Skills:\n- Strong foundation in Node.js, TypeScript, and Express or Fastify frameworks.\n- Proficient in relational database modeling and indexing with PostgreSQL.\n- Familiarity with in-memory caching solutions using Redis.\n- Understanding of RESTful API principles, idempotency keys, and asynchronous event streams.\n- Knowledge of containerization with Docker and CI/CD automated deployment pipelines.",
+      "skills": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "REST APIs"
+      ],
+      "roles": [
+        "Backend Developer",
+        "Software Engineer"
+      ],
+      "tags": [
+        "job_posting",
+        "backend",
+        "software engineer",
+        "bengaluru",
+        "fintech"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "PlacementOS Partner Network",
+        "role": "Backend Software Engineer",
+        "type": "Full-Time Job",
+        "location": "Bengaluru / Hybrid",
+        "ctc": "₹18 - ₹24 LPA"
+      }
+    },
+    {
+      "sourceId": "rag-job-frontend-001",
+      "sourceType": "job_posting",
+      "category": "job",
+      "title": "Frontend Engineer - Modern Web Applications & Performance",
+      "content": "Role: Frontend Engineer\n\nIndustry Category: SaaS / Cloud Platforms\n\nLocation: Bengaluru / Hybrid\n\nCompensation Range: ₹14 - ₹20 LPA\n\nRole Overview:\nLooking for passionate Frontend Engineers to create performant, accessible, and elegant user interfaces for enterprise analytics dashboards. You will collaborate with product designers, implement state management architectures, and optimize Core Web Vitals.\n\nKey Competencies & Required Skills:\n- Deep expertise in modern React (React 18/19), TypeScript, and component-driven architecture.\n- Proficient in modern CSS utility frameworks like Tailwind CSS.\n- Solid understanding of client-side state management, React Query / SWR, and asynchronous data fetching.\n- Strong comprehension of browser rendering performance, bundle splitting, and Web Vitals.\n- Experience with automated unit and component testing (Vitest, React Testing Library).",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "JavaScript",
+        "Web Performance"
+      ],
+      "roles": [
+        "Frontend Engineer",
+        "Web Developer"
+      ],
+      "tags": [
+        "job_posting",
+        "frontend",
+        "react",
+        "typescript",
+        "bengaluru"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "PlacementOS Partner Network",
+        "role": "Frontend Engineer",
+        "type": "Full-Time Job",
+        "location": "Bengaluru / Hybrid",
+        "ctc": "₹14 - ₹20 LPA"
+      }
+    },
+    {
+      "sourceId": "rag-job-fullstack-001",
+      "sourceType": "job_posting",
+      "category": "job",
+      "title": "Full Stack Developer - Cloud Platforms & Application Engineering",
+      "content": "Role: Full Stack Developer\n\nIndustry Category: Enterprise Software / Cloud\n\nLocation: Remote / Hybrid\n\nCompensation Range: ₹16 - ₹22 LPA\n\nRole Overview:\nSeeking Full Stack Developers capable of shipping features end-to-end. You will work across both client interfaces (React/TypeScript) and server architectures (Node.js/Express/MongoDB), implementing secure authentication, database schemas, and intuitive dashboards.\n\nKey Competencies & Required Skills:\n- End-to-end full stack development experience using TypeScript, React, and Node.js.\n- Database proficiency across MongoDB and relational SQL systems.\n- Enterprise authentication protocols: JWT, OAuth 2.0, and role-based access control (RBAC).\n- API design, schema validation, and server-side defensive coding.\n- Version control with Git, collaborative pull request workflows, and automated testing.",
+      "skills": [
+        "TypeScript",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "REST APIs"
+      ],
+      "roles": [
+        "Full Stack Developer",
+        "Software Engineer"
+      ],
+      "tags": [
+        "job_posting",
+        "fullstack",
+        "react",
+        "node.js",
+        "mongodb"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "PlacementOS Partner Network",
+        "role": "Full Stack Developer",
+        "type": "Full-Time Job",
+        "location": "Remote / Hybrid",
+        "ctc": "₹16 - ₹22 LPA"
+      }
+    },
+    {
+      "sourceId": "rag-job-cloud-001",
+      "sourceType": "job_posting",
+      "category": "job",
+      "title": "DevOps & Cloud Engineer - Infrastructure & CI/CD Automation",
+      "content": "Role: DevOps & Cloud Engineer\n\nIndustry Category: Cloud Infrastructure\n\nLocation: Remote / Hybrid\n\nCompensation Range: ₹15 - ₹22 LPA\n\nRole Overview:\nJoin the infrastructure team to architect, automate, and monitor scalable cloud environments. You will maintain containerized production workloads, optimize CI/CD pipelines, and enforce zero-trust security postures.\n\nKey Competencies & Required Skills:\n- Hands-on experience with Docker containerization and Kubernetes orchestration.\n- Cloud infrastructure engineering on AWS or Google Cloud Platform (GCP).\n- Infrastructure as Code (IaC) using Terraform or CloudFormation.\n- Continuous Integration / Continuous Deployment (CI/CD) pipelines with GitHub Actions or GitLab CI.\n- Linux system administration, bash scripting, and monitoring with Prometheus/Grafana.",
+      "skills": [
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "CI/CD",
+        "Linux",
+        "Terraform"
+      ],
+      "roles": [
+        "DevOps Engineer",
+        "Cloud Engineer"
+      ],
+      "tags": [
+        "job_posting",
+        "devops",
+        "cloud",
+        "docker",
+        "kubernetes"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "PlacementOS Partner Network",
+        "role": "DevOps & Cloud Engineer",
+        "type": "Full-Time Job",
+        "location": "Remote / Hybrid",
+        "ctc": "₹15 - ₹22 LPA"
+      }
+    },
+    {
+      "sourceId": "rag-career-prep-001",
+      "sourceType": "career_guidance",
+      "category": "career",
+      "title": "Campus Placement Preparation Roadmap - Technical & Behavioral Strategy",
+      "content": "Topic: Campus Placement Preparation Playbook\n\nCategory: Career Guidance & Placement Strategy\n\nOverview:\nA systematic roadmap designed for engineering students preparing for on-campus and off-campus placement drives across product and service engineering companies.\n\nCore Preparation Pillars:\n1. Data Structures & Algorithms (DSA):\n- Master fundamental arrays, strings, two-pointers, and sliding window techniques.\n- Practice trees, BSTs, graphs (BFS/DFS), heaps, and dynamic programming on LeetCode/GeeksforGeeks.\n- Focus on clean syntax, edge case identification, and time/space complexity analysis.\n\n2. Computer Science Fundamentals:\n- Object-Oriented Programming (OOP): Inheritance, Encapsulation, Polymorphism, Abstraction, and SOLID principles.\n- Database Management Systems (DBMS): ACID properties, normalization forms (1NF-BCNF), indexing, and SQL queries.\n- Operating Systems: Process scheduling, threads, synchronization, semaphores, and virtual memory.\n- Computer Networks: OSI model, TCP vs UDP, HTTP/HTTPS, DNS resolution, and RESTful principles.\n\n3. Resume & Project Artifacts:\n- Structure project descriptions using action verbs and technical impact metrics.\n- Deploy live applications with working GitHub repositories, readable README files, and clean commit history.\n\n4. Behavioral & HR Rounds:\n- Use the STAR framework (Situation, Task, Action, Result) to narrate past challenges, team conflicts, and leadership moments.",
+      "skills": [
+        "Placement Preparation",
+        "Data Structures & Algorithms",
+        "System Design",
+        "Resume Building"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Full Stack Developer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "career_guidance",
+        "placement",
+        "roadmap",
+        "interview prep",
+        "dsa"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Career Strategy",
+        "targetAudience": "Undergraduate Students",
+        "scope": "Comprehensive Campus Placement Roadmap"
+      }
+    },
+    {
+      "sourceId": "rag-career-star-002",
+      "sourceType": "career_guidance",
+      "category": "career",
+      "title": "Mastering the STAR Technique for Behavioral & HR Interviews",
+      "content": "Topic: Behavioral Interview Mastery Using the STAR Method\n\nCategory: Soft Skills & Behavioral Evaluation\n\nOverview:\nRecruiters and hiring managers use behavioral questions to evaluate how candidates react under pressure, collaborate across teams, and overcome engineering obstacles.\n\nThe STAR Structure:\n- Situation (20% of answer): Set the scene. Describe the project context, technical challenge, or team environment.\n- Task (15% of answer): Explain what your specific responsibility was in that situation. What needed to be achieved?\n- Action (50% of answer): Detail the exact steps YOU took. Mention the technologies chosen, trade-offs evaluated, and collaboration techniques used.\n- Result (15% of answer): Share quantifiable outcomes and retrospective learnings. What was the impact? What did you learn?\n\nKey Examples to Prepare:\n1. A time you encountered a critical production bug or tight deadline.\n2. A scenario where you had a disagreement with a team member or technical disagreement on design.\n3. A moment where you had to learn an unfamiliar programming language or framework under time constraints.\n4. A project where you took leadership initiative to improve code quality or performance.",
+      "skills": [
+        "Behavioral Interviews",
+        "Communication",
+        "STAR Framework",
+        "Soft Skills"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Full Stack Developer",
+        "Product Manager"
+      ],
+      "tags": [
+        "career_guidance",
+        "behavioral",
+        "star framework",
+        "hr interview",
+        "soft skills"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "category": "Soft Skills",
+        "targetAudience": "All Candidates",
+        "framework": "STAR (Situation, Task, Action, Result)"
+      }
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+[
+  {
+    "category": "technical",
+    "skill": "Data Structures & Algorithms",
+    "skillId": "dsa",
+    "difficulty": "Intermediate",
+    "questionText": "What is the worst-case and average-case time complexity of searching in a balanced Binary Search Tree (such as an AVL or Red-Black Tree) containing N elements?",
+    "options": [
+      "O(1) average, O(N) worst-case",
+      "O(log N) average, O(log N) worst-case",
+      "O(log N) average, O(N) worst-case",
+      "O(N) average, O(N log N) worst-case"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Balanced BSTs (like AVL and Red-Black trees) maintain self-balancing invariants that guarantee tree height remains bounded by O(log N). Thus, lookup, insertion, and deletion are all strictly O(log N) in both average and worst cases.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Data Structures & Algorithms",
+    "skillId": "dsa",
+    "difficulty": "Advanced",
+    "questionText": "Given an undirected connected graph with V vertices and E edges, which algorithm finds the Single-Source Shortest Path when edge weights are strictly positive?",
+    "options": [
+      "Floyd-Warshall Algorithm",
+      "Kruskal's Minimum Spanning Tree Algorithm",
+      "Dijkstra's Algorithm using a Min-Heap",
+      "Bellman-Ford Algorithm with negative cycle detection"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Dijkstra's Algorithm with a min-heap (priority queue) solves Single-Source Shortest Path in O((V + E) log V) time when all edge weights are strictly non-negative.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Programming Fundamentals",
+    "skillId": "programming_fundamentals",
+    "difficulty": "Beginner",
+    "questionText": "What is the primary difference between pass-by-value and pass-by-reference when passing an argument into a function?",
+    "options": [
+      "Pass-by-value creates a separate copy of the variable's value; modifications inside the function do not affect the original caller variable.",
+      "Pass-by-value allows direct memory access to the original variable, whereas pass-by-reference creates a deep copy.",
+      "Pass-by-reference is only available in interpreted languages like Python, whereas compiled languages only support pass-by-value.",
+      "There is no functional difference; compilers optimize both into register swaps."
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "In pass-by-value, the called function receives a copy of the argument's value, preserving the caller's variable. In pass-by-reference, the function receives an alias/memory address to the actual variable.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Java",
+    "skillId": "java",
+    "difficulty": "Intermediate",
+    "questionText": "In modern Java (Java 8+), which statement regarding the 'final' keyword and immutability is true?",
+    "options": [
+      "Declaring an object reference 'final' makes the object's internal fields completely immutable.",
+      "A final class can still be subclassed if its methods are non-final.",
+      "Declaring a reference 'final' prevents the variable from being reassigned to a different object, but does NOT make the referenced object's internal state immutable.",
+      "The 'final' keyword cannot be applied to static variables."
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "The 'final' modifier on a reference variable simply binds that reference permanently to a single memory address/object. It does not freeze or protect the mutable fields inside that referenced object.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Java",
+    "skillId": "java",
+    "difficulty": "Advanced",
+    "questionText": "What happens when two threads invoke synchronized methods on two DIFFERENT instances of the same class simultaneously?",
+    "options": [
+      "Both threads execute concurrently without blocking each other because the synchronization lock is acquired on the object instance (this).",
+      "One thread blocks until the other finishes because Java locks the class byte-code by default.",
+      "A Deadlock exception is thrown by the JVM garbage collector.",
+      "The JVM queues the threads into a global CPU mutex."
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "Instance synchronized methods acquire the monitor lock on 'this' specific instance. Because the two threads are operating on distinct instances, they hold distinct locks and proceed concurrently.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Python",
+    "skillId": "python",
+    "difficulty": "Intermediate",
+    "questionText": "What does the Python Global Interpreter Lock (GIL) enforce in CPython?",
+    "options": [
+      "It restricts Python code to only run on single-core 32-bit CPU architectures.",
+      "It ensures that only one native OS thread executes Python bytecode at any given instant within a single CPython process.",
+      "It automatically synchronizes all SQLite transactions executed within the application.",
+      "It guarantees complete thread safety for all third-party C extensions."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The GIL is a mutex in CPython that prevents multiple native threads from executing Python bytecodes at once, simplifying memory management but requiring multiprocessing for CPU-bound parallelism.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Python",
+    "skillId": "python",
+    "difficulty": "Beginner",
+    "questionText": "What is the time complexity of checking whether a key exists in a standard Python dictionary ('key in my_dict')?",
+    "options": [
+      "O(N) linear time scan",
+      "O(log N) binary search",
+      "O(1) average case time complexity",
+      "O(N^2) quadratic lookup"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Python dictionaries are implemented as hash tables with open addressing, yielding average O(1) key lookups and membership checks.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "JavaScript",
+    "skillId": "javascript",
+    "difficulty": "Intermediate",
+    "questionText": "What is the expected console output order of the following JavaScript code snippet?",
+    "codeSnippet": "console.log('1');\nsetTimeout(() => console.log('2'), 0);\nPromise.resolve().then(() => console.log('3'));\nconsole.log('4');",
+    "options": [
+      "1, 2, 3, 4",
+      "1, 4, 2, 3",
+      "1, 4, 3, 2",
+      "1, 3, 4, 2"
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Synchronous code runs first ('1', '4'). Next, microtasks (Promise resolution) run before macrotasks ('3'). Finally, the macrotask timer callback runs ('2'). Output: 1, 4, 3, 2.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "JavaScript",
+    "skillId": "javascript",
+    "difficulty": "Advanced",
+    "questionText": "What occurs when a JavaScript closure is created?",
+    "options": [
+      "The JavaScript engine clones all global variables onto the heap.",
+      "An inner function retains access to the lexical scope in which it was declared, even after the outer enclosing function has returned.",
+      "The function is converted into an asynchronous Web Worker thread.",
+      "All memory referenced by the outer function is immediately freed by Garbage Collection."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A closure combines a function bundled together with references to its surrounding lexical state, allowing it to access outer variables after the parent execution context finishes.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "C++",
+    "skillId": "cpp",
+    "difficulty": "Intermediate",
+    "questionText": "In Modern C++ (C++11 and later), what does 'std::unique_ptr' provide over raw pointers?",
+    "options": [
+      "Multiple owners sharing ownership of a resource with reference counting.",
+      "Exclusive ownership of a dynamically allocated object, automatically deallocating memory via RAII when the pointer goes out of scope.",
+      "Automatic conversion of all stack variables into thread-safe registers.",
+      "Garbage collection executed via a background thread."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "'std::unique_ptr' represents unique, exclusive ownership with zero runtime overhead over a raw pointer, automatically freeing the resource upon destruction (RAII).",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "SQL",
+    "skillId": "sql",
+    "difficulty": "Intermediate",
+    "questionText": "Consider two tables: Employees (E) and Departments (D). Which JOIN query returns all departments, including those that currently have zero assigned employees?",
+    "options": [
+      "SELECT * FROM Employees E INNER JOIN Departments D ON E.dept_id = D.id",
+      "SELECT * FROM Employees E RIGHT JOIN Departments D ON E.dept_id = D.id",
+      "SELECT * FROM Employees E LEFT JOIN Departments D ON E.dept_id = D.id",
+      "SELECT * FROM Employees E CROSS JOIN Departments D"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "A RIGHT JOIN on Departments (or a LEFT JOIN starting from Departments) preserves all rows from the Departments table, filling in NULLs for departments with no matching employee rows.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "SQL",
+    "skillId": "sql",
+    "difficulty": "Advanced",
+    "questionText": "What is the primary difference between the SQL WHERE clause and the HAVING clause?",
+    "options": [
+      "WHERE filters individual rows before aggregation occurs, whereas HAVING filters grouped result sets after aggregation (e.g. with GROUP BY).",
+      "WHERE can only be used with numeric columns, whereas HAVING is for string columns.",
+      "HAVING is evaluated before GROUP BY, whereas WHERE is evaluated after GROUP BY.",
+      "WHERE is only supported in MySQL, whereas HAVING is only in PostgreSQL."
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The WHERE clause acts as a predicate filter on raw table rows before any grouping or aggregation. The HAVING clause acts on aggregated groups produced by GROUP BY.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Database Management",
+    "skillId": "dbms",
+    "difficulty": "Intermediate",
+    "questionText": "What does the 'A' in ACID transactions stand for, and what does it guarantee?",
+    "options": [
+      "Availability — The database node responds even during network partitions.",
+      "Atomicity — All operations within a transaction succeed completely, or all are rolled back so no partial state persists.",
+      "Asynchrony — Transactions are processed in background message queues.",
+      "Authentication — Every query must be signed with cryptographic keys."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Atomicity ensures an 'all-or-nothing' execution model: if any statement in a transaction fails, the entire transaction is aborted and rolled back to its previous state.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "React",
+    "skillId": "react",
+    "difficulty": "Intermediate",
+    "questionText": "Why is modifying React state directly (e.g. 'state.counter = state.counter + 1') considered an anti-pattern?",
+    "options": [
+      "It causes an immediate JavaScript compile error.",
+      "React will not detect the change because state comparison relies on shallow reference equality, causing UI components to skip re-rendering.",
+      "Direct mutations immediately crash the browser's JavaScript V8 heap.",
+      "It removes the component from the React Virtual DOM entirely."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "React uses Object.is / reference equality checks to identify state changes. Mutating state objects directly retains the same memory reference, so React fails to trigger re-renders.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "React",
+    "skillId": "react",
+    "difficulty": "Advanced",
+    "questionText": "When should the 'useCallback' hook be used in React?",
+    "options": [
+      "To memoize expensive mathematical values between renders.",
+      "To cache a function reference across re-renders, preventing unnecessary renders of optimized child components wrapped in React.memo that receive the callback as a prop.",
+      "To handle asynchronous HTTP requests during initial mount.",
+      "To replace standard JavaScript try-catch blocks."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "useCallback returns a memoized version of the callback function that only changes if one of the dependencies has changed, avoiding unnecessary re-renders of memoized child components.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Node.js",
+    "skillId": "nodejs",
+    "difficulty": "Intermediate",
+    "questionText": "Why should CPU-intensive tasks (such as large matrix operations or image manipulation) be avoided on the main Node.js thread?",
+    "options": [
+      "Node.js runs on a single-threaded event loop; blocking the thread freezes processing of all other concurrent I/O events and incoming network requests.",
+      "Node.js will terminate the process due to operating system memory limits.",
+      "V8 engine automatically disables garbage collection during math calculations.",
+      "Express.js does not allow functions that take longer than 5 milliseconds."
+    ],
+    "correctAnswerIndex": 0,
+    "explanation": "The Node.js event loop executes JavaScript on a single thread. CPU-intensive operations monopolize that thread, preventing it from handling other network sockets or I/O events.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "MongoDB",
+    "skillId": "mongodb",
+    "difficulty": "Intermediate",
+    "questionText": "In MongoDB, what is the primary benefit of creating an index on a frequently queried field?",
+    "options": [
+      "It compresses the document size by 50%.",
+      "It replaces full collection scans (COLLSCAN) with efficient B-tree index scans (IXSCAN), dramatically reducing query response time.",
+      "It enforces strict SQL data type constraints on all fields.",
+      "It duplicates the document across all replica nodes automatically."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Indexes store a small portion of the collection's data set in an ordered B-Tree structure, allowing MongoDB to traverse ordered keys rather than scanning every document in the collection.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "REST APIs",
+    "skillId": "rest_apis",
+    "difficulty": "Intermediate",
+    "questionText": "Which HTTP method is considered idempotent according to the official HTTP/1.1 RFC specification?",
+    "options": [
+      "POST",
+      "PUT",
+      "PATCH (when appending elements)",
+      "CONNECT"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "PUT is idempotent: invoking it multiple times with identical payload produces the same side-effects as invoking it once. In contrast, multiple POST requests create multiple resources.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Git/GitHub",
+    "skillId": "git",
+    "difficulty": "Intermediate",
+    "questionText": "What is the primary difference between 'git merge' and 'git rebase' when integrating changes from a feature branch into main?",
+    "options": [
+      "Git merge rewrites commit hashes, whereas git rebase preserves all original commit dates and hashes.",
+      "Git merge creates a new merge commit combining history, while git rebase reapplies commits on top of the base branch creating a clean linear commit history.",
+      "Git rebase deletes the feature branch automatically from remote repositories.",
+      "Git merge cannot handle binary assets or merge conflicts."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "'git merge' preserves complete historical context by adding a merge commit with multiple parents. 'git rebase' rewrites history by moving the base of your branch, resulting in a single linear history.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Cloud Fundamentals",
+    "skillId": "cloud_fundamentals",
+    "difficulty": "Intermediate",
+    "questionText": "Which statement accurately describes horizontal scaling versus vertical scaling in cloud architecture?",
+    "options": [
+      "Vertical scaling means adding more servers or containers to a distributed cluster.",
+      "Horizontal scaling means adding more machine instances/nodes to distribute load, while vertical scaling upgrades the CPU/RAM of a single existing instance.",
+      "Vertical scaling is only applicable to serverless architectures.",
+      "Horizontal scaling always eliminates the need for a load balancer."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Horizontal scaling (scaling out) adds additional machine instances behind a load balancer to share traffic. Vertical scaling (scaling up) upgrades the hardware capacity (CPU, RAM) of an existing node.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Computer Networks",
+    "skillId": "computer_networks",
+    "difficulty": "Intermediate",
+    "questionText": "How does the TCP 3-way handshake establish a reliable connection between client and server?",
+    "options": [
+      "Client sends PING, Server sends PONG, Client sends ACK",
+      "Client sends SYN, Server replies with SYN-ACK, Client replies with ACK",
+      "Client sends ACK, Server sends SYN, Client sends FIN",
+      "Server broadcasts SYN to the subnet, Client responds with ARP"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "The 3-way handshake uses SYN (synchronize sequence number), SYN-ACK (server acknowledges client sequence number and sends its own), and ACK (client acknowledges server sequence number).",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Operating Systems",
+    "skillId": "operating_systems",
+    "difficulty": "Intermediate",
+    "questionText": "What four conditions must hold simultaneously for a Deadlock to occur in an operating system?",
+    "options": [
+      "High CPU, Low RAM, Network Partition, Disk Full",
+      "Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait",
+      "Process Priority Inversion, Semaphore Starvation, Page Fault, Thrashing",
+      "Context Switch, Kernel Panic, Zombie Process, Orphan Thread"
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "Coffman conditions for deadlock: Mutual Exclusion (non-shareable resources), Hold and Wait, No Preemption (resources cannot be forcibly confiscated), and Circular Wait.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "Object-Oriented Programming",
+    "skillId": "oop",
+    "difficulty": "Intermediate",
+    "questionText": "What does the Liskov Substitution Principle (the 'L' in SOLID) require?",
+    "options": [
+      "Classes should have one and only one reason to change.",
+      "Subtypes must be substitutable for their base types without altering the correctness or desirable properties of the program.",
+      "High-level modules should not depend on low-level modules; both should depend on abstractions.",
+      "Objects should always be serialized into immutable JSON records."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "LSP states that if S is a subtype of T, objects of type T may be replaced with objects of type S without breaking program contracts or correctness.",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "System Design",
+    "skillId": "system_design",
+    "difficulty": "Advanced",
+    "questionText": "According to the CAP Theorem, what trade-off must a distributed data store make during a network partition (P)?",
+    "options": [
+      "It must sacrifice Performance (P) to maintain Encryption (E).",
+      "It can guarantee all three: Consistency, Availability, and Partition Tolerance simultaneously.",
+      "It must choose between Consistency (returning errors or blocking until consistency is achieved) or Availability (returning stale or divergent data).",
+      "It must drop all write requests and convert into read-only replication mode."
+    ],
+    "correctAnswerIndex": 2,
+    "explanation": "Network partitions are inevitable in real-world distributed systems. When partition P occurs, the system must choose between Consistency (CP: refusing non-synchronized writes) or Availability (AP: accepting reads/writes despite divergence).",
+    "isActive": true
+  },
+  {
+    "category": "technical",
+    "skill": "HTML/CSS",
+    "skillId": "html_css",
+    "difficulty": "Beginner",
+    "questionText": "In modern CSS Flexbox, what does 'justify-content: space-between;' accomplish along the main axis?",
+    "options": [
+      "Centers all items with identical 10px margins.",
+      "Distributes items evenly along the main axis; the first item aligns with the start edge and the last item aligns with the end edge.",
+      "Wraps overflowing items onto subsequent lines.",
+      "Expands item heights to fill the entire container cross axis."
+    ],
+    "correctAnswerIndex": 1,
+    "explanation": "space-between distributes available free space equally between child items, placing the first child flush against the container start and the last child flush against the end.",
+    "isActive": true
+  },
+
+  {
+    "category": "soft",
+    "skill": "Teamwork",
+    "skillId": "teamwork",
+    "difficulty": "Intermediate",
+    "scenarioText": "Your engineering squad is 48 hours away from a critical sprint demo to stakeholders. A teammate responsible for the payment gateway integration encounters an unexpected SDK bug and privately admits they are overwhelmed and cannot finish on time.",
+    "questionText": "What would you most likely do?",
+    "options": [
+      "Immediately schedule a 30-minute sync to pair-program on the blocker, redistribute non-critical tasks across the team, and keep the sprint lead informed of the coordinated recovery plan.",
+      "Take over their entire module quietly and work overnight to deliver it yourself without telling anyone.",
+      "Advise the teammate to raise it during tomorrow's standup and continue working exclusively on your own assigned tickets.",
+      "Inform the project manager that the release will fail because the teammate failed to complete their task."
+    ],
+    "optionWeights": [100, 60, 35, 10],
+    "explanation": "Collaborative pairing and constructive workload re-balancing demonstrates empathetic, mature teamwork while maintaining team transparency without dumping blame.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Communication",
+    "skillId": "communication",
+    "difficulty": "Intermediate",
+    "scenarioText": "You are presenting a complex architectural refactor from monolithic REST endpoints to event-driven webhooks to a mixed audience containing both non-technical product managers and senior staff engineers.",
+    "questionText": "How would you structure your communication?",
+    "options": [
+      "Lead with high-level user and business benefits (e.g. 70% faster checkout response and zero checkout timeouts), followed by a clear conceptual diagram, and reserve low-level message queue details for an engineering breakout or appendix.",
+      "Dive straight into Kafka partition offsets and TCP serialization protocols to prove technical depth.",
+      "Present purely financial metrics and refuse to explain the technical approach to avoid confusing anyone.",
+      "Send a 40-page technical specification document and ask everyone to read it before asking questions."
+    ],
+    "optionWeights": [100, 25, 40, 15],
+    "explanation": "Effective technical communication bridges domain gaps by anchoring on business/user outcomes first and layering technical complexity appropriately for the audience.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Leadership",
+    "skillId": "leadership",
+    "difficulty": "Advanced",
+    "scenarioText": "During a cross-functional project planning session, two senior developers strongly disagree on whether to use GraphQL or gRPC, causing tension and stalling the team's roadmap for over a week.",
+    "questionText": "How would you intervene to demonstrate leadership?",
+    "options": [
+      "Facilitate an objective decision matrix session: define concrete evaluation criteria (client requirements, latency constraints, team skill curve), run a time-boxed 1-day spike for both, and align the team on the evidence-backed choice.",
+      "Pick the technology you personally prefer and declare the debate closed.",
+      "Escalate the argument to the VP of Engineering to decide for the team so you avoid personal friction.",
+      "Wait for the developers to argue it out until one gives up from exhaustion."
+    ],
+    "optionWeights": [100, 30, 45, 10],
+    "explanation": "True leadership de-escalates emotional debates by introducing objective decision frameworks, time-boxed empirical prototypes (spikes), and shared alignment.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Problem Solving",
+    "skillId": "problem_solving",
+    "difficulty": "Intermediate",
+    "scenarioText": "A critical production service reports an intermittent 500 Internal Server Error affecting approximately 2% of user requests. The stack trace is inconclusive and the bug cannot be reproduced on local development machines.",
+    "questionText": "What structured problem-solving approach do you take?",
+    "options": [
+      "Isolate correlation patterns in APM logs (e.g. specific payload attributes, tenant ID, geographical region, or database connection pool spikes), formulate a testable hypothesis, reproduce in a staging sandbox with production-like telemetry, and verify the fix.",
+      "Randomly modify suspected lines of code and immediately push updates directly to production to see if the error rate drops.",
+      "Ignore the 2% error rate since 98% of users are experiencing successful requests.",
+      "Restart the production server every two hours via a cron job without investigating the root cause."
+    ],
+    "optionWeights": [100, 15, 10, 20],
+    "explanation": "Rigorous problem-solving relies on observational data, telemetry correlation, hypothesis testing, and controlled validation rather than guesswork or reactive patching.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Time Management",
+    "skillId": "time_management",
+    "difficulty": "Intermediate",
+    "scenarioText": "You are juggling three urgent tasks due by the end of the week: fixing a high-priority bug for an ongoing enterprise trial, completing your scheduled sprint feature tickets, and reviewing pull requests for colleagues.",
+    "questionText": "How do you manage your time effectively?",
+    "options": [
+      "Use an Eisenhower urgency/impact prioritization matrix: block dedicated focus time for the enterprise bug, schedule PR review windows between deep work blocks, and proactively communicate sprint ticket status with your scrum master if trade-offs are required.",
+      "Context-switch rapidly every 15 minutes between all three tasks simultaneously.",
+      "Ignore the bug and PR reviews entirely until all personal sprint tickets are 100% complete.",
+      "Work continuous 16-hour days without communicating with the team."
+    ],
+    "optionWeights": [100, 20, 30, 40],
+    "explanation": "Disciplined time management balances deep focus blocks, priority matrices, batching reactive tasks (like code reviews), and proactive stakeholder communication.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Adaptability",
+    "skillId": "adaptability",
+    "difficulty": "Intermediate",
+    "scenarioText": "Three weeks into developing a feature, company leadership announces a strategic pivot to comply with a new data regulation, requiring your team to discard your current implementation and adopt a completely unfamiliar framework.",
+    "questionText": "How do you respond?",
+    "options": [
+      "Acknowledge the business rationale behind the regulatory shift, organize rapid knowledge-sharing sessions on the new framework with the team, and focus energy on architecting the compliant solution.",
+      "Complain publicly in team channels about wasted effort and resist writing code in the new framework.",
+      "Silently disengage from the project and deliver the bare minimum required.",
+      "Insist on continuing the old implementation regardless of compliance risks."
+    ],
+    "optionWeights": [100, 15, 20, 5],
+    "explanation": "Adaptability in high-growth environments means understanding business drivers behind strategic shifts, staying resilient, and embracing learning curves constructively.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Critical Thinking",
+    "skillId": "critical_thinking",
+    "difficulty": "Advanced",
+    "scenarioText": "A vendor proposes an AI-powered third-party API claiming to automate 90% of your platform's customer verification workflow. The sales pitch is impressive and senior management is eager to purchase.",
+    "questionText": "What critical thinking analysis do you perform before committing?",
+    "options": [
+      "Conduct a rigorous evaluation: verify total cost of ownership (API pricing at scale vs build), evaluate latency/SLA guarantees, assess data privacy/compliance risks, and benchmark accuracy on a blind sample of edge-case test records.",
+      "Accept all claims made in the vendor's slide deck and immediately sign the agreement.",
+      "Reject the vendor outright simply because it was not built in-house.",
+      "Agree with whatever the most vocal manager in the room says to avoid confrontation."
+    ],
+    "optionWeights": [100, 10, 25, 20],
+    "explanation": "Critical thinking demands independent validation of vendor claims through empirical benchmarking, SLA verification, total cost modeling, and compliance stress-testing.",
+    "isActive": true
+  },
+  {
+    "category": "soft",
+    "skill": "Collaboration",
+    "skillId": "collaboration",
+    "difficulty": "Intermediate",
+    "scenarioText": "During a pull request code review, a peer leaves blunt, critical comments on your code that you feel are overly harsh and dismissive of your effort.",
+    "questionText": "What is the most professional and collaborative response?",
+    "options": [
+      "Separate the technical feedback from the personal tone: review each technical suggestion objectively, ask clarifying questions on the PR for points of disagreement, and if necessary, request a brief 5-minute video sync to align on code standards amicably.",
+      "Respond with equally harsh comments on their own open pull requests in retaliation.",
+      "Close the pull request and refuse to work with that developer again.",
+      "Complain to HR immediately without addressing the technical suggestions."
+    ],
+    "optionWeights": [100, 10, 15, 25],
+    "explanation": "Collaborative maturity focuses on code quality over ego, separating tone from substantive critique, and proactively using face-to-face syncs to maintain psychological safety.",
+    "isActive": true
+  }
+]

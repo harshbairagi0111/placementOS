@@ -1,0 +1,11 @@
+{
+  "name": "Remix placementOS",
+  "description": "Minimalist placement preparation platform hero landing page on plain black background with DM Sans typography.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

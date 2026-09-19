@@ -1,0 +1,622 @@
+{
+  "datasetName": "PlacementOS RAG Dataset Batch 2",
+  "version": "1.0.0",
+  "description": "Curated Tier-1 placement preparation knowledge covering Distributed System Design, OS Internals, Algorithmic Patterns, Aptitude, and Company Interview Experiences.",
+  "records": [
+    {
+      "sourceId": "rag-batch2-sysdes-001",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "System Design: Distributed Caching Invalidation & Strategies",
+      "content": "Concept: Distributed Caching Strategies (Cache-Aside, Write-Through, Write-Behind)\n\nCategory: System Design & Scalability\n\nEducational Explanation:\nIn large-scale distributed systems, choosing the correct caching pattern depends on write-to-read ratios and consistency requirements:\n1. Cache-Aside (Lazy Loading): The application first queries cache; on cache miss, reads from DB and updates cache. Writes update DB directly and invalidate cache entry. Best for read-heavy workloads.\n2. Write-Through: Data is written to the cache and the backing store simultaneously. Ensures cache is never stale, but incurs higher write latency.\n3. Write-Behind (Write-Back): Data is written only to cache first, then asynchronously flushed to DB in batches. Provides high write throughput, but risks data loss on cache node failure.\nCache invalidation techniques include TTL expiration, event-driven invalidation via CDC (Change Data Capture like Debezium), and versioned cache keys.",
+      "skills": [
+        "System Design",
+        "Distributed Systems",
+        "Caching",
+        "Redis"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "System Architect"
+      ],
+      "tags": [
+        "system_design",
+        "distributed_systems",
+        "caching",
+        "redis",
+        "scalability"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "system_design",
+        "subtopic": "caching"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-sysdes-002",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "System Design: API Rate Limiting Algorithms",
+      "content": "Concept: API Rate Limiting Algorithms (Token Bucket vs Leaky Bucket vs Sliding Window)\n\nCategory: System Design & Scalability\n\nEducational Explanation:\nRate limiting protects backend APIs from DDoS attacks and abusive consumption:\n1. Token Bucket: Tokens are added to a bucket of capacity B at a constant rate R. Each request consumes 1 token. Allows short bursts up to capacity B. Memory efficient and widely used in AWS API Gateway and Stripe.\n2. Leaky Bucket: Requests enter a FIFO queue of fixed capacity and leak out to the processor at a constant rate. Smooths out traffic bursts into a steady processing stream.\n3. Sliding Window Log: Stores request timestamps in a sorted set (e.g., Redis ZSET). Discards timestamps older than (current_time - window_size). Very accurate but high memory overhead.\n4. Sliding Window Counter: Combines current window count with weighted previous window count. Memory efficient (only 2 counters) with negligible error margin.",
+      "skills": [
+        "System Design",
+        "API Design",
+        "Rate Limiting",
+        "Redis"
+      ],
+      "roles": [
+        "Backend Developer",
+        "Software Engineer",
+        "DevOps Engineer"
+      ],
+      "tags": [
+        "system_design",
+        "rate_limiting",
+        "token_bucket",
+        "api_security"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "system_design",
+        "subtopic": "rate_limiting"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-sysdes-003",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "System Design: Database Sharding & Consistent Hashing",
+      "content": "Concept: Horizontal Database Sharding and Consistent Hashing\n\nCategory: System Design & Databases\n\nEducational Explanation:\nWhen dataset size or write throughput exceeds a single database node capacity, horizontal partitioning (sharding) divides the database into distinct physical shards:\n1. Shard Key Selection: A good shard key distributes reads and writes evenly across shards without hot-spotting (e.g. hash(userId) vs range(date)).\n2. Hash-based Sharding: Standard hash(key) % N causes massive rebalancing when N changes (all keys must move).\n3. Consistent Hashing: Maps both nodes and keys onto a virtual ring [0, 2^32 - 1]. When a new node is added or removed, only k/N keys need remapping on average. Virtual nodes (vnodes) ensure balanced distribution across physical servers with differing capacities.",
+      "skills": [
+        "System Design",
+        "Databases",
+        "Consistent Hashing",
+        "Sharding"
+      ],
+      "roles": [
+        "Backend Developer",
+        "Software Engineer",
+        "Database Engineer"
+      ],
+      "tags": [
+        "system_design",
+        "sharding",
+        "consistent_hashing",
+        "databases"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "system_design",
+        "subtopic": "database_sharding"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-sysdes-004",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "System Design: Microservice Resiliency Patterns",
+      "content": "Concept: Circuit Breaker, Bulkhead, and Retry Patterns in Microservices\n\nCategory: System Design & Distributed Systems\n\nEducational Explanation:\nIn a distributed microservice topology, cascading failures occur when downstream service latency consumes upstream thread pools:\n1. Circuit Breaker: Tracks failure rates across three states:\n   - Closed: Requests pass normally. Failures increment counter.\n   - Open: When failure threshold is breached (e.g. >50% errors), calls fail fast immediately without hitting downstream service.\n   - Half-Open: After a reset timeout, allows trial requests. If successful, resets to Closed; if failed, returns to Open.\n2. Bulkhead Pattern: Isolates resources (such as separate thread pools or connection pools) for different services so failure in one cannot exhaust shared container threads.\n3. Retry with Exponential Backoff & Jitter: Retries transient errors with delay 2^k + random_jitter to prevent thundering herd spikes.",
+      "skills": [
+        "Microservices",
+        "System Design",
+        "Distributed Systems",
+        "Fault Tolerance"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer",
+        "DevOps Engineer"
+      ],
+      "tags": [
+        "microservices",
+        "circuit_breaker",
+        "resilience",
+        "system_design"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "system_design",
+        "subtopic": "microservices_resilience"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-sysdes-005",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "System Design: Event Streaming & Message Queues (Kafka vs RabbitMQ)",
+      "content": "Concept: Kafka Architecture (Partitions, Consumer Groups, Offsets) vs RabbitMQ\n\nCategory: Distributed Systems & Messaging\n\nEducational Explanation:\nKey differences between message brokers and event streaming logs:\n1. RabbitMQ (Smart Broker, Dumb Consumer): Implements AMQP. Messages are routed through exchanges into queues and deleted once acknowledged. Ideal for complex routing, priority queues, and transient task distribution.\n2. Apache Kafka (Dumb Broker, Smart Consumer): An append-only partitioned commit log. Messages are persisted to disk for retention period regardless of consumption. Consumers track their own offsets.\n3. Kafka Partitioning: Topics are split into partitions. Ordering is strictly guaranteed within a partition, but not across partitions. Each partition within a consumer group is consumed by exactly one consumer instance, allowing linear read scalability.",
+      "skills": [
+        "Kafka",
+        "RabbitMQ",
+        "Distributed Systems",
+        "Event Driven Architecture"
+      ],
+      "roles": [
+        "Backend Developer",
+        "Software Engineer",
+        "Data Engineer"
+      ],
+      "tags": [
+        "kafka",
+        "rabbitmq",
+        "message_broker",
+        "event_streaming"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "distributed_systems",
+        "subtopic": "messaging"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-cs-001",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "Operating Systems: Deadlock Conditions & Banker Algorithm",
+      "content": "Concept: Coffman Deadlock Conditions and Deadlock Avoidance\n\nCategory: Operating Systems\n\nEducational Explanation:\nA deadlock occurs when two or more processes are permanently blocked waiting for resources held by each other. Four Coffman conditions MUST hold simultaneously:\n1. Mutual Exclusion: At least one resource must be held in non-shareable mode.\n2. Hold and Wait: A process holding resources requests additional resources.\n3. No Preemption: Resources cannot be forcibly seized; only released voluntarily.\n4. Circular Wait: A closed loop of processes where each waits for a resource held by the next.\n\nBanker Algorithm: A deadlock avoidance algorithm that checks if resource allocation leaves the system in a Safe State (an order <P1, P2, ... Pn> exists where each process can finish with remaining available resources). If safe, allocation proceeds; otherwise, process waits.",
+      "skills": [
+        "Operating Systems",
+        "Concurrency",
+        "Algorithms"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Systems Programmer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "operating_systems",
+        "deadlock",
+        "concurrency",
+        "banker_algorithm"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "core_cs",
+        "subtopic": "operating_systems"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-cs-002",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "Operating Systems: Virtual Memory, Paging, and Page Faults",
+      "content": "Concept: Virtual Memory, TLB, Page Tables, and Page Fault Handling\n\nCategory: Operating Systems\n\nEducational Explanation:\nVirtual memory gives processes the illusion of contiguous, private address spaces exceeding physical RAM:\n1. Paging: Virtual address space is divided into fixed-size Pages (typically 4KB); physical memory is divided into Frames.\n2. Page Table: Maps virtual page numbers (VPN) to physical frame numbers (PFN). Multi-level page tables reduce memory overhead for sparse address spaces.\n3. TLB (Translation Lookaside Buffer): Hardware cache of recent page translations. On TLB hit, translation takes <1 CPU cycle.\n4. Page Fault Handling: When a page valid bit is 0, CPU traps to kernel. OS locates page in swap space on disk, finds free physical frame (running page replacement like LRU if full), reads page into frame, updates page table valid bit, and restarts instruction.",
+      "skills": [
+        "Operating Systems",
+        "Computer Architecture",
+        "Memory Management"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Systems Engineer",
+        "Embedded Developer"
+      ],
+      "tags": [
+        "operating_systems",
+        "virtual_memory",
+        "paging",
+        "page_fault"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "core_cs",
+        "subtopic": "virtual_memory"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-cs-003",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "Computer Networks: TCP Congestion Control vs Flow Control",
+      "content": "Concept: TCP Flow Control (Sliding Window) vs Congestion Control (Tahoe / Reno / CUBIC)\n\nCategory: Computer Networks\n\nEducational Explanation:\n1. Flow Control: Prevents the sender from overwhelming the receiver buffer. Receiver advertises its available buffer space via the Receive Window (rwnd) field in the TCP header. Sender ensures (Bytes Sent - Bytes Acked) <= rwnd.\n2. Congestion Control: Prevents the sender from overwhelming network intermediate routers. Managed via Congestion Window (cwnd):\n   - Slow Start: cwnd starts at initial value (e.g. 10 MSS) and doubles every RTT (exponential growth) until slow-start threshold (ssthresh).\n   - Congestion Avoidance: cwnd increases linearly by 1 MSS per RTT (additive increase).\n   - Fast Retransmit / Fast Recovery: On 3 duplicate ACKs, infers single segment loss; retransmits lost segment immediately without waiting for RTO, sets ssthresh = cwnd / 2, and recovers cwnd quickly.",
+      "skills": [
+        "Computer Networks",
+        "TCP/IP",
+        "Protocols"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Network Engineer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "computer_networks",
+        "tcp",
+        "congestion_control",
+        "flow_control"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "core_cs",
+        "subtopic": "networking"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-cs-004",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "Database Internals: Transaction Isolation Levels & Anomalies",
+      "content": "Concept: ANSI SQL Transaction Isolation Levels and Concurrency Anomalies\n\nCategory: Database Management Systems (DBMS)\n\nEducational Explanation:\nACID Isolation prevents concurrent transaction anomalies:\n1. Dirty Read: T2 reads uncommitted modifications made by T1. If T1 rolls back, T2 operated on phantom data.\n2. Non-Repeatable (Fuzzy) Read: T1 reads a row; T2 updates or deletes that row and commits; T1 re-reads the row and sees different values.\n3. Phantom Read: T1 executes a range query (e.g., salary > 50000); T2 inserts new row satisfying condition and commits; T1 re-executes query and sees newly created row.\n\nIsolation Levels:\n- Read Uncommitted: Permits Dirty Reads.\n- Read Committed (Postgres default): Prevents Dirty Reads using MVCC snapshots per statement.\n- Repeatable Read (MySQL InnoDB default): Prevents Dirty & Non-Repeatable reads using snapshot taken at transaction start; InnoDB uses Next-Key Locking to prevent Phantoms.\n- Serializable: Strict serial execution via 2PL (Two-Phase Locking) or SSI (Serializable Snapshot Isolation).",
+      "skills": [
+        "DBMS",
+        "SQL",
+        "Transactions",
+        "ACID"
+      ],
+      "roles": [
+        "Backend Developer",
+        "Database Administrator",
+        "Software Engineer"
+      ],
+      "tags": [
+        "dbms",
+        "transactions",
+        "acid",
+        "isolation_levels"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "core_cs",
+        "subtopic": "database_internals"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-dsa-001",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "DSA Pattern: Monotonic Stack for Next Greater Element",
+      "content": "Skill: Data Structures & Algorithms\n\nConcept: Monotonic Stack Technique (O(N) Processing)\n\nEducational Explanation:\nA monotonic stack maintains elements in strictly increasing or decreasing order. When iterating through an array, elements are popped until the monotonic invariant is preserved:\n1. Next Greater Element: Maintain a monotonic decreasing stack (storing indices). When current element A[i] > A[stack.top()], stack.top() has found its next greater element A[i]. Pop and record answer; repeat, then push i.\n2. Largest Rectangle in Histogram: Maintain increasing heights. When height drops, popped element represents height; width extends from current index to the new stack top.\n3. Complexity: Each element is pushed and popped at most once, yielding strictly O(N) linear time and O(N) space.",
+      "skills": [
+        "Data Structures & Algorithms",
+        "Stack",
+        "Problem Solving"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Frontend Developer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "dsa",
+        "stack",
+        "monotonic_stack",
+        "algorithms"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "dsa",
+        "subtopic": "monotonic_stack"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-dsa-002",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "DSA Pattern: Disjoint Set Union (Union-Find) with Optimizations",
+      "content": "Skill: Data Structures & Algorithms\n\nConcept: Disjoint Set Union (DSU) with Path Compression and Union by Rank\n\nEducational Explanation:\nDSU efficiently handles dynamic connectivity queries and cycle detection in undirected graphs:\n1. Representation: An array parent[] where parent[i] represents representative of element i.\n2. Find with Path Compression: Recursively finds the root and flattens the tree by pointing every traversed node directly to root:\n   find(x) = (parent[x] == x) ? x : (parent[x] = find(parent[x])).\n3. Union by Rank / Size: Attaches the shallower tree under the root of the deeper tree to keep maximum height small.\n4. Time Complexity: With both optimizations, any sequence of M operations on N elements takes O(M * alpha(N)) time, where alpha is the Inverse Ackermann function (practically <= 4 for all realistic inputs, effectively O(1) amortized).",
+      "skills": [
+        "Data Structures & Algorithms",
+        "Graph Algorithms",
+        "Disjoint Set Union"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Competitive Programmer"
+      ],
+      "tags": [
+        "dsa",
+        "dsu",
+        "union_find",
+        "graphs"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "dsa",
+        "subtopic": "dsu"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-dsa-003",
+      "sourceType": "rag_knowledge",
+      "category": "technical",
+      "title": "DSA Pattern: Trie (Prefix Tree) Implementation & Analysis",
+      "content": "Skill: Data Structures & Algorithms\n\nConcept: Trie Data Structure for Prefix Queries and Autocomplete\n\nEducational Explanation:\nA Trie is an N-ary tree where each node represents a character along string paths:\n1. Node Structure: Each node contains an array or hash map of children (e.g. TrieNode[26] for lowercase English letters) and a boolean isEndOfWord flag.\n2. Operations:\n   - Insert(word): Traverse or instantiate characters in word; set isEndOfWord=true on final node. O(L) time where L is word length.\n   - Search(word): Traverse nodes matching characters. Returns true if word exists and isEndOfWord=true. O(L) time.\n   - StartsWith(prefix): Traverse nodes matching prefix. Returns true if path exists. O(L) time.\n3. Applications: Autocomplete suggestions, spell checkers, IP routing longest-prefix matching, and Bitwise Trie for Maximum XOR pairs.",
+      "skills": [
+        "Data Structures & Algorithms",
+        "Strings",
+        "Trie"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Full Stack Developer"
+      ],
+      "tags": [
+        "dsa",
+        "trie",
+        "prefix_tree",
+        "strings"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "dsa",
+        "subtopic": "trie"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-apt-001",
+      "sourceType": "rag_knowledge",
+      "category": "aptitude",
+      "title": "Quantitative Aptitude: Probability & Bayes Theorem for Placement Tests",
+      "content": "Category: Quantitative Aptitude\n\nTopic: Probability & Conditional Probability with Bayes Theorem\n\nEducational Explanation:\n1. Conditional Probability: P(A|B) = P(A and B) / P(B)\n2. Bayes Theorem: P(A|B) = [P(B|A) * P(A)] / P(B)\nWhere P(B) = Sum_i [P(B|A_i) * P(A_i)] across all mutually exclusive partitions A_i.\n\nClassic Placement Example: A medical test is 99% accurate for a disease present in 0.1% of the population. What is the probability a person testing positive actually has the disease?\n- P(Disease) = 0.001, P(No Disease) = 0.999\n- P(Pos|Disease) = 0.99, P(Pos|No Disease) = 0.01 (1% false positive)\n- P(Pos) = (0.99 * 0.001) + (0.01 * 0.999) = 0.00099 + 0.00999 = 0.01098\n- P(Disease|Pos) = 0.00099 / 0.01098 approx 9.01%.\nInterview Takeaway: Always account for the low base rate when interpreting diagnostic test accuracies.",
+      "skills": [
+        "Quantitative Aptitude",
+        "Mathematics",
+        "Probability"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Data Analyst",
+        "Consultant"
+      ],
+      "tags": [
+        "aptitude",
+        "probability",
+        "bayes_theorem",
+        "mathematics"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "aptitude",
+        "subtopic": "probability"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-apt-002",
+      "sourceType": "rag_knowledge",
+      "category": "aptitude",
+      "title": "Quantitative Aptitude: Permutations & Combinations (P&C) Shortcuts",
+      "content": "Category: Quantitative Aptitude\n\nTopic: Permutations & Combinations for Interview Screening\n\nEducational Explanation:\n1. Fundamental Principle: An operation performed in m ways followed by n ways yields m * n total combinations.\n2. Permutation (Order matters): P(n, r) = n! / (n - r)!\n3. Combination (Selection, order irrelevant): C(n, r) = n! / [r! * (n - r)!]\n4. Circular Permutations: (n - 1)! for distinct items; (n - 1)! / 2 for identical items (like bead necklaces).\n5. Stars and Bars Theorem: Number of non-negative integer solutions to x1 + x2 + ... + xk = n is C(n + k - 1, k - 1). For positive integer solutions, it is C(n - 1, k - 1).",
+      "skills": [
+        "Quantitative Aptitude",
+        "Mathematics",
+        "Problem Solving"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Data Analyst"
+      ],
+      "tags": [
+        "aptitude",
+        "permutations",
+        "combinations",
+        "combinatorics"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "aptitude",
+        "subtopic": "combinatorics"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-apt-003",
+      "sourceType": "rag_knowledge",
+      "category": "aptitude",
+      "title": "Quantitative Aptitude: Time, Speed and Distance (Relative Speed)",
+      "content": "Category: Quantitative Aptitude\n\nTopic: Time, Speed and Distance - Relative Speed & Train Problems\n\nEducational Explanation:\n1. Unit Conversion: 1 km/hr = 5/18 m/s; 1 m/s = 18/5 km/hr.\n2. Relative Speed:\n   - Moving in opposite directions: Relative Speed = S1 + S2\n   - Moving in same direction: Relative Speed = |S1 - S2|\n3. Train Crossing Calculations:\n   - Crossing a pole/person (negligible length): Time = Length_train / Speed_train\n   - Crossing a platform/bridge: Time = (Length_train + Length_platform) / Speed_train\n   - Crossing another moving train: Time = (L1 + L2) / Relative_Speed\n4. Boats and Streams:\n   - Downstream speed (with current): U + V\n   - Upstream speed (against current): U - V\n   - Boat speed in still water U = (Downstream + Upstream) / 2\n   - Stream speed V = (Downstream - Upstream) / 2",
+      "skills": [
+        "Quantitative Aptitude",
+        "Mental Math"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Consultant",
+        "Data Analyst"
+      ],
+      "tags": [
+        "aptitude",
+        "time_speed_distance",
+        "relative_speed",
+        "trains"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "domain": "aptitude",
+        "subtopic": "time_speed_distance"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-exp-001",
+      "sourceType": "interview_experience",
+      "category": "interview_experience",
+      "title": "Atlassian SDE Interview Experience & Evaluation Criteria",
+      "content": "Company: Atlassian\nRole: Software Engineer (SDE)\nFormat: On-Campus Placement Drive\n\nInterview Structure & Rounds:\n1. Coding Assessment: 3 algorithmic questions on HackerRank (String manipulation, dynamic programming on trees, and modular arithmetic). 90 minutes.\n2. Technical Round 1 (Data Structures & Coding): Asked to implement an in-memory Rate Limiter with Sliding Window Counter. Follow-up: Concurrency safety using synchronized blocks or ReentrantReadWriteLock in Java.\n3. Technical Round 2 (System Design / Craft Demonstration): Design a real-time collaborative issue-tracking board (like Jira Kanban). Evaluated on data modeling, WebSocket event propagation, caching, and state synchronization.\n4. Values & Behavioral Round: Thorough deep dive into Atlassian core values: 'Open company, no bullshit', 'Build with heart and balance', and 'Don't fuck the customer'. Provide concrete project examples demonstrating accountability and blameless postmortems.\nCandidate Tip: Atlassian emphasizes clean code, unit test coverage in live coding, and authentic communication.",
+      "skills": [
+        "System Design",
+        "Concurrency",
+        "Java",
+        "Behavioral"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Full Stack Developer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "atlassian",
+        "sde",
+        "jira",
+        "values"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Atlassian",
+        "role": "Software Engineer",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-exp-002",
+      "sourceType": "interview_experience",
+      "category": "interview_experience",
+      "title": "Flipkart SDE-1 Machine Coding & Technical Interview Experience",
+      "content": "Company: Flipkart\nRole: SDE-1 (Software Development Engineer)\nFormat: Off-Campus / Campus Drive\n\nInterview Structure & Rounds:\n1. Machine Coding Round (90 minutes): Problem statement was to design and implement an in-memory Ride-Sharing / Cab Booking service (similar to Uber/Ola). Requirements:\n   - Drivers register with vehicle type and location (x, y).\n   - Riders request ride; system matches nearest available driver.\n   - Clean OOP design principles (SOLID, Strategy Pattern for pricing, Factory pattern for vehicle types, separation of controller/service/repository layers).\n   - Working console-executable code with edge case test assertions.\n2. Problem Solving & DSA (60 mins): LeetCode Hard question on Shortest Path with obstacle elimination (0-1 BFS / Dijkstra), followed by Trie implementation.\n3. Hiring Manager Round: Cultural fit, project deep dive, and handling technical trade-offs.\nCandidate Tip: In Flipkart Machine Coding, write clean modular interfaces first before writing implementation.",
+      "skills": [
+        "Machine Coding",
+        "Object Oriented Design",
+        "SOLID Principles",
+        "DSA"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Backend Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "flipkart",
+        "sde1",
+        "machine_coding",
+        "oop"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Flipkart",
+        "role": "SDE-1",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-exp-003",
+      "sourceType": "interview_experience",
+      "category": "interview_experience",
+      "title": "Adobe Member of Technical Staff (MTS) Interview Experience",
+      "content": "Company: Adobe\nRole: Member of Technical Staff (MTS-1)\nFormat: On-Campus Placement\n\nInterview Structure & Rounds:\n1. Online Test: 45 MCQs on OS, C++, DBMS, Computer Networks + 2 Coding questions (Dynamic Programming and Matrix traversal).\n2. Technical Round 1 (C++ & Core CS): Deep dive into virtual functions, vtable and vptr mechanics, memory alignment, padding in structs, smart pointers (unique_ptr vs shared_ptr reference count internals), and detecting memory leaks with Valgrind.\n3. Technical Round 2 (Algorithms & Data Structures): Problem 1: Word Ladder II (BFS + DFS backtracking). Problem 2: Serialize and Deserialize a Binary Tree.\n4. Technical Round 3 (Design & Problem Solving): Design an undo-redo buffer for an image editor (Command Pattern + Memento Pattern with memory bounds).\n5. HR Round: Discussion about relocation, Adobe culture, and aspirations.\nCandidate Tip: Adobe evaluates strong C++ fundamentals and OS memory internals thoroughly.",
+      "skills": [
+        "C++",
+        "Data Structures & Algorithms",
+        "Operating Systems",
+        "Design Patterns"
+      ],
+      "roles": [
+        "Software Engineer",
+        "MTS",
+        "C++ Developer"
+      ],
+      "tags": [
+        "interview_experience",
+        "adobe",
+        "mts",
+        "cpp",
+        "algorithms"
+      ],
+      "difficulty": "Advanced",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Adobe",
+        "role": "Member of Technical Staff",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-exp-004",
+      "sourceType": "interview_experience",
+      "category": "interview_experience",
+      "title": "Cisco Software Engineer Placement Interview Experience",
+      "content": "Company: Cisco Systems\nRole: Software Engineer\nFormat: Campus Recruitment\n\nInterview Structure & Rounds:\n1. Online Assessment: Aptitude, Networking MCQs (OSI layers, TCP headers, Subnetting, ARP, DNS), and 2 coding problems.\n2. Technical Round 1 (Networks & Operating Systems): Explain packet lifecycle from typing google.com to page rendering (ARP, DNS, TCP handshake, TLS negotiation, HTTP GET). Subnetting problem: given IP 192.168.10.0/26, determine usable host range and broadcast address.\n3. Technical Round 2 (Coding & Systems): Socket programming concepts (select vs poll vs epoll), multithreading in Python/C, and solving Trapping Rainwater.\n4. Managerial & HR Round: Situational scenarios regarding team leadership and adaptability.\nCandidate Tip: Master TCP/IP layers, subnetting math, and socket communication for Cisco interviews.",
+      "skills": [
+        "Computer Networks",
+        "Socket Programming",
+        "Cisco",
+        "Operating Systems"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Network Software Engineer"
+      ],
+      "tags": [
+        "interview_experience",
+        "cisco",
+        "networking",
+        "tcp_ip"
+      ],
+      "difficulty": "Intermediate",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "company": "Cisco",
+        "role": "Software Engineer",
+        "outcome": "Selected"
+      }
+    },
+    {
+      "sourceId": "rag-batch2-hr-001",
+      "sourceType": "rag_knowledge",
+      "category": "behavioral",
+      "title": "HR Behavioral: Answering Conflict Resolution using STAR Method",
+      "content": "Category: Behavioral & HR Interview Preparation\n\nQuestion: 'Tell me about a time you had a technical disagreement with a colleague or team member. How did you resolve it?'\n\nFramework (STAR Method):\n1. Situation: Set the context. 'During our capstone project, our 4-person team was architecting the backend for a real-time event booking app.'\n2. Task: Describe the conflict clearly. 'My teammate advocated for MongoDB because of rapid schema iteration, while I believed PostgreSQL was essential because ticketing requires strict ACID transactions and relational foreign keys to prevent double-booking.'\n3. Action: Explain objective, collaborative steps taken. 'Instead of arguing subjectively, I scheduled a benchmark session. We drafted a simple proof-of-concept for the seat reservation transaction in both databases under concurrent load. We discovered MongoDB required custom locking to avoid race conditions, whereas Postgres handled isolation natively with row-level SELECT FOR UPDATE.'\n4. Result: Conclude with team consensus and positive delivery. 'My teammate agreed Postgres was the safer choice. We shipped the ticketing module with zero concurrency booking anomalies and preserved our strong team camaraderie.'",
+      "skills": [
+        "Communication",
+        "Behavioral Interview",
+        "Leadership",
+        "STAR Method"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Frontend Developer",
+        "Backend Developer",
+        "Product Manager"
+      ],
+      "tags": [
+        "behavioral",
+        "hr",
+        "star_method",
+        "conflict_resolution",
+        "interview_prep"
+      ],
+      "difficulty": "Beginner",
+      "status": "active",
+      "version": "1.0.0",
+      "metadata": {
+        "framework": "STAR",
+        "domain": "behavioral"
+      }
+    }
+  ]
+}

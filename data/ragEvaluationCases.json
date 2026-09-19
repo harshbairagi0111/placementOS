@@ -1,0 +1,112 @@
+[
+  {
+    "id": "google-software-engineer",
+    "query": "What is asked in Google Software Engineer interviews?",
+    "expectedSourceTypes": ["interview_experience"],
+    "expectedCompany": "Google",
+    "expectedRole": "Software Engineer",
+    "expectedKeywords": ["Google", "Software Engineer"],
+    "description": "Interview process and rounds for Google Software Engineer"
+  },
+  {
+    "id": "tcs-intern-interview",
+    "query": "What technical questions are asked in TCS internship interview rounds?",
+    "expectedSourceTypes": ["interview_experience"],
+    "expectedCompany": "TCS",
+    "expectedKeywords": ["TCS", "Software Developer intern"],
+    "description": "Interview experience and questions for TCS developer internship"
+  },
+  {
+    "id": "java-concepts",
+    "query": "What key concepts should I review for Java programming?",
+    "expectedSourceTypes": ["skill_question"],
+    "expectedSkill": "Java",
+    "expectedKeywords": ["Java"],
+    "description": "Core Java technical skills and questions"
+  },
+  {
+    "id": "sql-dbms-concepts",
+    "query": "Explain database management and SQL concepts like primary key and foreign key",
+    "expectedSourceTypes": ["skill_question", "interview_experience"],
+    "expectedKeywords": ["Database Management", "SQL"],
+    "description": "Relational database concepts and SQL queries"
+  },
+  {
+    "id": "operating-systems-concepts",
+    "query": "What are the core operating systems fundamentals for technical interviews?",
+    "expectedSourceTypes": ["skill_question"],
+    "expectedSkill": "Operating Systems",
+    "expectedKeywords": ["Operating Systems"],
+    "description": "OS processes, memory, and threading concepts"
+  },
+  {
+    "id": "system-design-prep",
+    "query": "How should I approach System Design and scalability questions?",
+    "expectedSourceTypes": ["skill_question", "interview_experience"],
+    "expectedSkill": "System Design",
+    "expectedKeywords": ["System Design"],
+    "description": "System architecture and design principles"
+  },
+  {
+    "id": "dsa-patterns",
+    "query": "What are common Data Structures & Algorithms patterns like trees and arrays?",
+    "expectedSourceTypes": ["skill_question", "interview_experience"],
+    "expectedKeywords": ["Data Structures & Algorithms", "DSA"],
+    "description": "DSA coding problems and patterns"
+  },
+  {
+    "id": "python-fundamentals",
+    "query": "What Python programming fundamentals are tested in coding interviews?",
+    "expectedSourceTypes": ["skill_question"],
+    "expectedSkill": "Python",
+    "expectedKeywords": ["Python"],
+    "description": "Python language questions and constructs"
+  },
+  {
+    "id": "computer-networks",
+    "query": "What computer networks concepts should I prepare for placement rounds?",
+    "expectedSourceTypes": ["skill_question"],
+    "expectedSkill": "Computer Networks",
+    "expectedKeywords": ["Computer Networks"],
+    "description": "Networking protocols, OSI model, and transport layer"
+  },
+  {
+    "id": "react-frontend-skills",
+    "query": "What concepts in React and frontend development are asked?",
+    "expectedSourceTypes": ["skill_question", "job_posting"],
+    "expectedSkill": "React",
+    "expectedKeywords": ["React"],
+    "description": "React framework questions and frontend requirements"
+  },
+  {
+    "id": "quantitative-percentages",
+    "query": "How to solve percentage problem concepts in quantitative aptitude?",
+    "expectedSourceTypes": ["aptitude_question"],
+    "expectedKeywords": ["Percentages", "Quantitative"],
+    "description": "Aptitude percentages formulas and educational explanations"
+  },
+  {
+    "id": "time-and-work-aptitude",
+    "query": "How to calculate time and work problems where two people work together?",
+    "expectedSourceTypes": ["aptitude_question"],
+    "expectedKeywords": ["Time & Work", "Quantitative"],
+    "description": "Aptitude time and work concepts and rate of work"
+  },
+  {
+    "id": "corp-alpha-frontend-job",
+    "query": "What are the requirements and compensation for Corp Alpha Frontend Engineer role?",
+    "expectedSourceTypes": ["job_posting"],
+    "expectedCompany": "Corp Alpha",
+    "expectedRole": "Frontend Engineer",
+    "expectedKeywords": ["Corp Alpha", "Frontend Engineer"],
+    "description": "Active job posting details for Corp Alpha Frontend Engineer"
+  },
+  {
+    "id": "goggle-backend-developer-job",
+    "query": "Tell me about the backend developer opportunity at Goggle",
+    "expectedSourceTypes": ["job_posting"],
+    "expectedCompany": "Goggle",
+    "expectedKeywords": ["Goggle", "backend"],
+    "description": "Active job opening for backend developer at Goggle"
+  }
+]
